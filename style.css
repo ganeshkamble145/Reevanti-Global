@@ -623,7 +623,7 @@ main {
 
 /* Services & Trust */
 .services-header {
-  background-color: var(--accent);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
 }
 .services-intro {
   text-align: center;
