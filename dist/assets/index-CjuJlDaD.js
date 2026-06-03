@@ -34,7 +34,7 @@
       <p>International transactions carry financial risk for both parties. Common payment methods include Letter of Credit (LC), Telegraphic Transfer (TT), and Documentary Collection. Negotiate payment terms that balance your cash flow needs with the supplier's requirement for payment security. As trust builds over time, more flexible terms often become available.</p>
 
       <p><strong>At Reevanti Global</strong>, we apply all five principles rigorously in our sourcing operations — helping our partners access quality international products with confidence and clarity.</p>
-    `},{id:3,title:`Building Trust in Online Commerce`,category:`Trust & Transparency`,date:`April 28, 2026`,excerpt:`Why transparency and customer experience are essential in modern eCommerce.`,content:`
+    `},{id:3,title:`Building Trust in Online eCommerce`,category:`Trust & Transparency`,date:`April 28, 2026`,excerpt:`Why transparency and customer experience are essential in modern eCommerce.`,content:`
       <p>In the digital age, trust is currency. A consumer who trusts your brand will return, recommend, and defend you. One who does not will leave a negative review and never come back. For eCommerce businesses, building and sustaining trust is not optional — it is a core competitive advantage.</p>
 
       <h4>Why Trust Matters More Than Ever</h4>

@@ -54,7 +54,7 @@ const blogs = [
   },
   {
     id: 3,
-    title: 'Building Trust in Online Commerce',
+    title: 'Building Trust in Online eCommerce',
     category: 'Trust & Transparency',
     date: 'April 28, 2026',
     excerpt: 'Why transparency and customer experience are essential in modern eCommerce.',
