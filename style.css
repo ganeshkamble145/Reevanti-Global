@@ -680,6 +680,78 @@ main {
   color: var(--text-main);
 }
 
+/* --- Follow Us / Social Media --- */
+.footer-social {
+  width: 100%;
+  padding: 30px 0 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 30px;
+  text-align: center;
+}
+
+.footer-social h4 {
+  color: var(--bg-white);
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  opacity: 0.85;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.8);
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* Per-brand hover colours */
+#social-facebook:hover {
+  background: #1877F2;
+  color: #fff;
+  box-shadow: 0 4px 18px rgba(24, 119, 242, 0.5);
+  transform: translateY(-4px) scale(1.1);
+}
+
+#social-instagram:hover {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  color: #fff;
+  box-shadow: 0 4px 18px rgba(214, 36, 159, 0.5);
+  transform: translateY(-4px) scale(1.1);
+}
+
+#social-youtube:hover {
+  background: #FF0000;
+  color: #fff;
+  box-shadow: 0 4px 18px rgba(255, 0, 0, 0.5);
+  transform: translateY(-4px) scale(1.1);
+}
+
+#social-linkedin:hover {
+  background: #0A66C2;
+  color: #fff;
+  box-shadow: 0 4px 18px rgba(10, 102, 194, 0.5);
+  transform: translateY(-4px) scale(1.1);
+}
+
 /* --- Blog Article View --- */
 .clickable-card {
   cursor: pointer;
