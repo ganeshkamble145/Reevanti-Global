@@ -1,12 +1,4 @@
-// ─── Blog Data ────────────────────────────────────────────────────────────────
-const blogs = [
-  {
-    id: 1,
-    title: 'How eCommerce is Transforming Global Trade',
-    category: 'Global Trade',
-    date: 'June 2, 2026',
-    excerpt: 'Exploring how digital marketplaces are connecting businesses and consumers worldwide.',
-    content: `
+(function(){let e=document.createElement(`link`).relList;if(e&&e.supports&&e.supports(`modulepreload`))return;for(let e of document.querySelectorAll(`link[rel="modulepreload"]`))n(e);new MutationObserver(e=>{for(let t of e)if(t.type===`childList`)for(let e of t.addedNodes)e.tagName===`LINK`&&e.rel===`modulepreload`&&n(e)}).observe(document,{childList:!0,subtree:!0});function t(e){let t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin===`use-credentials`?t.credentials=`include`:e.crossOrigin===`anonymous`?t.credentials=`omit`:t.credentials=`same-origin`,t}function n(e){if(e.ep)return;e.ep=!0;let n=t(e);fetch(e.href,n)}})();var e=[{id:1,title:`How eCommerce is Transforming Global Trade`,category:`Global Trade`,date:`June 2, 2026`,excerpt:`Exploring how digital marketplaces are connecting businesses and consumers worldwide.`,content:`
       <p>The rise of eCommerce has fundamentally reshaped how global trade operates. What once required physical trade fairs, broker networks, and lengthy negotiations can now happen in minutes through digital platforms — connecting buyers in Mumbai with suppliers in Shanghai, or customers in New York with sellers in Bengaluru.</p>
 
       <h4>The Digital Marketplace Revolution</h4>
@@ -23,15 +15,7 @@ const blogs = [
 
       <h4>Reevanti Global's Approach</h4>
       <p>At Reevanti Global, we embrace eCommerce as the backbone of modern trade. Our active presence on Amazon and Flipkart, combined with our export-import expertise, allows us to bridge global supply with local demand — delivering genuine products with the speed and reliability that today's consumers expect.</p>
-    `
-  },
-  {
-    id: 2,
-    title: '5 Key Factors to Consider When Sourcing Products Internationally',
-    category: 'Sourcing',
-    date: 'May 15, 2026',
-    excerpt: 'A practical guide for businesses looking to expand their supply chains globally.',
-    content: `
+    `},{id:2,title:`5 Key Factors to Consider When Sourcing Products Internationally`,category:`Sourcing`,date:`May 15, 2026`,excerpt:`A practical guide for businesses looking to expand their supply chains globally.`,content:`
       <p>International product sourcing can unlock significant cost advantages and open access to unique goods unavailable in your local market. However, it also introduces complexities that require careful planning. Here are five critical factors every business must evaluate before sourcing internationally.</p>
 
       <h4>1. Supplier Verification and Due Diligence</h4>
@@ -50,15 +34,7 @@ const blogs = [
       <p>International transactions carry financial risk for both parties. Common payment methods include Letter of Credit (LC), Telegraphic Transfer (TT), and Documentary Collection. Negotiate payment terms that balance your cash flow needs with the supplier's requirement for payment security. As trust builds over time, more flexible terms often become available.</p>
 
       <p><strong>At Reevanti Global</strong>, we apply all five principles rigorously in our sourcing operations — helping our partners access quality international products with confidence and clarity.</p>
-    `
-  },
-  {
-    id: 3,
-    title: 'Building Trust in Online Commerce',
-    category: 'Trust & Transparency',
-    date: 'April 28, 2026',
-    excerpt: 'Why transparency and customer experience are essential in modern eCommerce.',
-    content: `
+    `},{id:3,title:`Building Trust in Online Commerce`,category:`Trust & Transparency`,date:`April 28, 2026`,excerpt:`Why transparency and customer experience are essential in modern eCommerce.`,content:`
       <p>In the digital age, trust is currency. A consumer who trusts your brand will return, recommend, and defend you. One who does not will leave a negative review and never come back. For eCommerce businesses, building and sustaining trust is not optional — it is a core competitive advantage.</p>
 
       <h4>Why Trust Matters More Than Ever</h4>
@@ -77,15 +53,7 @@ const blogs = [
       <p>Social proof is powerful. Genuine reviews from verified buyers build confidence for new customers. Actively encourage satisfied buyers to leave honest feedback. Respond professionally to negative reviews — acknowledging concerns and offering solutions. A few handled complaints can actually increase trust more than a perfect score with no reviews.</p>
 
       <p>At Reevanti Global, trust is not just a value — it is our operating model. Every decision we make, from supplier selection to fulfilment, is guided by our commitment to building long-term confidence with our customers, partners, and stakeholders.</p>
-    `
-  },
-  {
-    id: 4,
-    title: 'Emerging Trends in Export and Import Businesses',
-    category: 'Industry Trends',
-    date: 'April 10, 2026',
-    excerpt: 'Understanding the opportunities shaping global trade in 2026 and beyond.',
-    content: `
+    `},{id:4,title:`Emerging Trends in Export and Import Businesses`,category:`Industry Trends`,date:`April 10, 2026`,excerpt:`Understanding the opportunities shaping global trade in 2026 and beyond.`,content:`
       <p>Global trade is evolving rapidly, driven by technological innovation, shifting geopolitical dynamics, and changing consumer behaviour. For businesses engaged in export and import, staying ahead of these trends is essential to capturing new opportunities and managing emerging risks.</p>
 
       <h4>1. Digital Trade Documentation</h4>
@@ -104,15 +72,7 @@ const blogs = [
       <p>Small and artisan businesses can now directly export to global consumers through platforms like Amazon Global, Etsy, and eBay. This "micro-export" revolution enables individual craftspeople, small manufacturers, and niche product companies to participate in global trade without complex logistics infrastructure.</p>
 
       <p>Reevanti Global monitors these trends actively, positioning our trading operations to leverage emerging corridors and align with the direction of global commerce.</p>
-    `
-  },
-  {
-    id: 5,
-    title: 'How Marketplace Selling Benefits Brands and Consumers',
-    category: 'Marketplace Strategy',
-    date: 'March 22, 2026',
-    excerpt: 'The advantages of selling through trusted platforms such as Amazon and Flipkart.',
-    content: `
+    `},{id:5,title:`How Marketplace Selling Benefits Brands and Consumers`,category:`Marketplace Strategy`,date:`March 22, 2026`,excerpt:`The advantages of selling through trusted platforms such as Amazon and Flipkart.`,content:`
       <p>Online marketplaces like Amazon and Flipkart have transformed commerce in India and globally. For brands and sellers, they offer unparalleled reach. For consumers, they deliver convenience, trust, and competitive pricing. Understanding how to leverage marketplaces effectively is essential for any modern trading business.</p>
 
       <h4>For Sellers and Brands: Immediate Market Access</h4>
@@ -131,15 +91,7 @@ const blogs = [
       <p>Consumers benefit from price competition among multiple sellers, a wide product catalogue, fast delivery options, easy returns, and reliable customer support. The ability to compare products, read genuine reviews, and buy with confidence makes marketplaces the preferred shopping destination for millions of Indian consumers.</p>
 
       <p>Reevanti Global's active presence on Amazon and Flipkart is a deliberate strategy to place quality products where consumers already shop — delivering value to buyers while building a scalable, trusted brand presence.</p>
-    `
-  },
-  {
-    id: 6,
-    title: 'Quality Control in Global Supply Chains',
-    category: 'Quality & Operations',
-    date: 'March 5, 2026',
-    excerpt: 'Best practices for ensuring consistent product quality across international supply chains.',
-    content: `
+    `},{id:6,title:`Quality Control in Global Supply Chains`,category:`Quality & Operations`,date:`March 5, 2026`,excerpt:`Best practices for ensuring consistent product quality across international supply chains.`,content:`
       <p>In international trade, quality is non-negotiable. A single batch of defective products can damage a brand's reputation, trigger costly returns, and jeopardise supplier relationships. Implementing robust quality control processes across your global supply chain is one of the most valuable investments a trading business can make.</p>
 
       <h4>Defining Quality Standards Upfront</h4>
@@ -161,152 +113,32 @@ const blogs = [
       <p>Quality control is not a one-time event — it is an ongoing process. Maintain records of inspection results, track defect rates over time, and use this data to drive supplier improvement discussions. The best supplier relationships are collaborative ones where quality issues are addressed openly and corrective actions are implemented systematically.</p>
 
       <p>At Reevanti Global, quality assurance is embedded in every stage of our sourcing and trading operations. We partner only with suppliers who demonstrate a genuine commitment to quality — because our customers deserve nothing less.</p>
-    `
-  }
-];
-
-// ─── Blog Rendering ────────────────────────────────────────────────────────────
-function renderBlogGrid() {
-  const container = document.getElementById('blogs-content');
-  if (!container) return;
-
-  container.innerHTML = `
+    `}];function t(){let t=document.getElementById(`blogs-content`);t&&(t.innerHTML=`
     <div class="container blog-grid">
-      ${blogs.map(blog => `
-        <article class="blog-card clickable-card" data-blog-id="${blog.id}">
-          <div class="blog-img placeholder-img">${blog.category}</div>
+      ${e.map(e=>`
+        <article class="blog-card clickable-card" data-blog-id="${e.id}">
+          <div class="blog-img placeholder-img">${e.category}</div>
           <div class="blog-content">
-            <span class="blog-date">${blog.date}</span>
-            <h3>${blog.title}</h3>
-            <p>${blog.excerpt}</p>
+            <span class="blog-date">${e.date}</span>
+            <h3>${e.title}</h3>
+            <p>${e.excerpt}</p>
             <span class="read-more">Read More &rarr;</span>
           </div>
         </article>
-      `).join('')}
+      `).join(``)}
     </div>
-  `;
-
-  container.querySelectorAll('.clickable-card').forEach(card => {
-    card.addEventListener('click', () => {
-      const id = parseInt(card.getAttribute('data-blog-id'));
-      renderBlogArticle(id);
-    });
-  });
-}
-
-function renderBlogArticle(id) {
-  const blog = blogs.find(b => b.id === id);
-  if (!blog) return;
-
-  const container = document.getElementById('blogs-content');
-  container.innerHTML = `
+  `,t.querySelectorAll(`.clickable-card`).forEach(e=>{e.addEventListener(`click`,()=>{n(parseInt(e.getAttribute(`data-blog-id`)))})}))}function n(n){let r=e.find(e=>e.id===n);if(!r)return;let i=document.getElementById(`blogs-content`);i.innerHTML=`
     <div class="container blog-article">
       <button class="btn-back" id="backToBlogs">&larr; Back to Insights</button>
       <div class="article-meta">
-        <span class="blog-date">${blog.date}</span>
-        <span class="article-category">${blog.category}</span>
+        <span class="blog-date">${r.date}</span>
+        <span class="article-category">${r.category}</span>
       </div>
-      <h2 class="article-title">${blog.title}</h2>
-      <div class="article-body">${blog.content}</div>
+      <h2 class="article-title">${r.title}</h2>
+      <div class="article-body">${r.content}</div>
       <div class="article-footer">
         <p>Written by <strong>Reevanti Global</strong> &mdash; Insights from the world of global trade and eCommerce.</p>
         <button class="btn btn-primary" id="backToBlogsBottom">&larr; Back to All Insights</button>
       </div>
     </div>
-  `;
-
-  document.getElementById('backToBlogs').addEventListener('click', renderBlogGrid);
-  document.getElementById('backToBlogsBottom').addEventListener('click', renderBlogGrid);
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-// ─── SPA Navigation ────────────────────────────────────────────────────────────
-document.addEventListener('DOMContentLoaded', () => {
-  const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-  const navLinks = document.querySelector('.nav-links');
-
-  mobileMenuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-  });
-
-  const links = document.querySelectorAll('a[data-link]');
-  const sections = document.querySelectorAll('.page-section');
-  const actionButtons = document.querySelectorAll('button[data-target]');
-
-  function navigateTo(targetId) {
-    sections.forEach(section => section.classList.remove('active-section'));
-    const targetSection = document.getElementById(targetId);
-    if (targetSection) targetSection.classList.add('active-section');
-
-    links.forEach(link => {
-      link.classList.toggle('active', link.getAttribute('data-link') === targetId);
-    });
-
-    navLinks.classList.remove('active');
-
-    // Render blog grid when navigating to blogs
-    if (targetId === 'blogs') renderBlogGrid();
-
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-
-  links.forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      navigateTo(link.getAttribute('data-link'));
-    });
-  });
-
-  actionButtons.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      navigateTo(btn.getAttribute('data-target'));
-    });
-  });
-
-  // Initialise blogs on first load
-  renderBlogGrid();
-
-  // ─── Contact Form ──────────────────────────────────────────────────────────
-  const contactForm = document.getElementById('contactForm');
-  const formSuccess = document.getElementById('formSuccess');
-
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-
-      const submitBtn = contactForm.querySelector('button[type="submit"]');
-      const originalText = submitBtn.innerText;
-      submitBtn.innerText = 'Sending...';
-      submitBtn.disabled = true;
-
-      const formData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        inquiryType: document.getElementById('inquiryType').value,
-        message: document.getElementById('message').value,
-        _subject: 'New Inquiry from Reevanti Global Website',
-        _template: 'table'
-      };
-
-      fetch('https://formsubmit.co/ajax/contact@reevantiglobal.com', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify(formData)
-      })
-      .then(res => res.json())
-      .then(() => {
-        contactForm.reset();
-        submitBtn.innerText = originalText;
-        submitBtn.disabled = false;
-        formSuccess.classList.remove('hidden');
-        setTimeout(() => formSuccess.classList.add('hidden'), 5000);
-      })
-      .catch(() => {
-        submitBtn.innerText = originalText;
-        submitBtn.disabled = false;
-        alert('There was an error sending your message. Please try again later.');
-      });
-    });
-  }
-});
+  `,document.getElementById(`backToBlogs`).addEventListener(`click`,t),document.getElementById(`backToBlogsBottom`).addEventListener(`click`,t),window.scrollTo({top:0,behavior:`smooth`})}document.addEventListener(`DOMContentLoaded`,()=>{let e=document.querySelector(`.mobile-menu-toggle`),n=document.querySelector(`.nav-links`);e.addEventListener(`click`,()=>{n.classList.toggle(`active`)});let r=document.querySelectorAll(`a[data-link]`),i=document.querySelectorAll(`.page-section`),a=document.querySelectorAll(`button[data-target]`);function o(e){i.forEach(e=>e.classList.remove(`active-section`));let a=document.getElementById(e);a&&a.classList.add(`active-section`),r.forEach(t=>{t.classList.toggle(`active`,t.getAttribute(`data-link`)===e)}),n.classList.remove(`active`),e===`blogs`&&t(),window.scrollTo({top:0,behavior:`smooth`})}r.forEach(e=>{e.addEventListener(`click`,t=>{t.preventDefault(),o(e.getAttribute(`data-link`))})}),a.forEach(e=>{e.addEventListener(`click`,t=>{t.preventDefault(),o(e.getAttribute(`data-target`))})}),t();let s=document.getElementById(`contactForm`),c=document.getElementById(`formSuccess`);s&&s.addEventListener(`submit`,e=>{e.preventDefault();let t=s.querySelector(`button[type="submit"]`),n=t.innerText;t.innerText=`Sending...`,t.disabled=!0;let r={name:document.getElementById(`name`).value,email:document.getElementById(`email`).value,inquiryType:document.getElementById(`inquiryType`).value,message:document.getElementById(`message`).value,_subject:`New Inquiry from Reevanti Global Website`,_template:`table`};fetch(`https://formsubmit.co/ajax/contact@reevantiglobal.com`,{method:`POST`,headers:{"Content-Type":`application/json`,Accept:`application/json`},body:JSON.stringify(r)}).then(e=>e.json()).then(()=>{s.reset(),t.innerText=n,t.disabled=!1,c.classList.remove(`hidden`),setTimeout(()=>c.classList.add(`hidden`),5e3)}).catch(()=>{t.innerText=n,t.disabled=!1,alert(`There was an error sending your message. Please try again later.`)})})});
