@@ -233,11 +233,31 @@ document.addEventListener('DOMContentLoaded', () => {
   const sections = document.querySelectorAll('.page-section');
   const actionButtons = document.querySelectorAll('button[data-target]');
 
+  // ── SEO: per-page title & description ────────────────────────
+  const pageMeta = {
+    home:     { title: 'Reevanti Global | eCommerce & International Trading Company – Navi Mumbai', desc: 'Trusted eCommerce and international trading company in Navi Mumbai. Quality products on Amazon & Flipkart plus global export-import services.' },
+    about:    { title: 'About Us | Reevanti Global – Our Mission, Vision & Values', desc: 'Learn about Reevanti Global – our mission to deliver quality products, our vision for global trade, and why businesses trust us as a reliable eCommerce partner.' },
+    products: { title: 'Products | Reevanti Global – Home, Electronics, Health & More', desc: 'Explore our product categories: Home & Kitchen, Electronics, Health & Wellness, Sports & Fitness, Lifestyle and Industrial products on Amazon & Flipkart.' },
+    services: { title: 'Export & Import Services | Reevanti Global – Global Trade Solutions', desc: 'Reevanti Global offers export-import services, product sourcing, supplier identification, international procurement, and trade partnership facilitation.' },
+    blogs:    { title: 'Insights & Resources | Reevanti Global Blog – Trade & eCommerce Tips', desc: 'Read expert articles on global trade, eCommerce strategies, international sourcing, marketplace selling, and supply chain quality from Reevanti Global.' },
+    contact:  { title: 'Contact Reevanti Global | Partner With Us – Navi Mumbai', desc: 'Get in touch with Reevanti Global for product inquiries, supplier partnerships, export-import services, or general business enquiries. Navi Mumbai, India.' },
+    privacy:  { title: 'Privacy Policy | Reevanti Global', desc: 'Read the Reevanti Global Privacy Policy to understand how we collect, use, and protect your personal and business information.' },
+    terms:    { title: 'Terms of Service | Reevanti Global', desc: 'Review the Terms of Service governing your use of Reevanti Global\'s website, products, and international trading services.' }
+  };
+
+  function updateMeta(pageId) {
+    const meta = pageMeta[pageId] || pageMeta.home;
+    document.title = meta.title;
+    const descTag = document.querySelector('meta[name="description"]');
+    if (descTag) descTag.setAttribute('content', meta.desc);
+  }
+
   function navigateTo(targetId) {
     sections.forEach(section => section.classList.remove('active-section'));
     const targetSection = document.getElementById(targetId);
     if (targetSection) targetSection.classList.add('active-section');
 
+    updateMeta(targetId);
     links.forEach(link => {
       link.classList.toggle('active', link.getAttribute('data-link') === targetId);
     });
