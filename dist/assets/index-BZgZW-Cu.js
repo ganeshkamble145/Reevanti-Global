@@ -1,35 +1,4 @@
-// ─── URL → Section Map ────────────────────────────────────────────────────────
-const urlToPage = {
-  '/':               'home',
-  '/about-us':       'about',
-  '/products':       'products',
-  '/our-services':   'services',
-  '/blogs':          'blogs',
-  '/contact-us':     'contact',
-  '/privacy-policy': 'privacy',
-  '/terms-of-service': 'terms'
-};
-
-const pageToUrl = {
-  home:     '/',
-  about:    '/about-us',
-  products: '/products',
-  services: '/our-services',
-  blogs:    '/blogs',
-  contact:  '/contact-us',
-  privacy:  '/privacy-policy',
-  terms:    '/terms-of-service'
-};
-
-// ─── Blog Data ────────────────────────────────────────────────────────────────
-const blogs = [
-  {
-    id: 1,
-    title: 'How eCommerce is Changing Online Shopping in India',
-    category: 'eCommerce Trends',
-    date: 'June 2, 2026',
-    excerpt: 'Exploring how digital marketplaces are making quality products accessible to every corner of India.',
-    content: `
+(function(){let e=document.createElement(`link`).relList;if(e&&e.supports&&e.supports(`modulepreload`))return;for(let e of document.querySelectorAll(`link[rel="modulepreload"]`))n(e);new MutationObserver(e=>{for(let t of e)if(t.type===`childList`)for(let e of t.addedNodes)e.tagName===`LINK`&&e.rel===`modulepreload`&&n(e)}).observe(document,{childList:!0,subtree:!0});function t(e){let t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin===`use-credentials`?t.credentials=`include`:e.crossOrigin===`anonymous`?t.credentials=`omit`:t.credentials=`same-origin`,t}function n(e){if(e.ep)return;e.ep=!0;let n=t(e);fetch(e.href,n)}})();var e={"/":`home`,"/about-us":`about`,"/products":`products`,"/our-services":`services`,"/blogs":`blogs`,"/contact-us":`contact`,"/privacy-policy":`privacy`,"/terms-of-service":`terms`},t={home:`/`,about:`/about-us`,products:`/products`,services:`/our-services`,blogs:`/blogs`,contact:`/contact-us`,privacy:`/privacy-policy`,terms:`/terms-of-service`},n=[{id:1,title:`How eCommerce is Changing Online Shopping in India`,category:`eCommerce Trends`,date:`June 2, 2026`,excerpt:`Exploring how digital marketplaces are making quality products accessible to every corner of India.`,content:`
       <p>The rise of eCommerce has fundamentally reshaped how Indians shop. What once required a trip to a physical store can now happen in minutes — connecting buyers in small towns with quality products from trusted sellers anywhere in the country.</p>
 
       <h4>The Online Shopping Revolution</h4>
@@ -46,15 +15,7 @@ const blogs = [
 
       <h4>Reevanti Global's Approach</h4>
       <p>At Reevanti Global, we embrace eCommerce as the future of retail. Our active presence on Amazon and Flipkart, combined with our commitment to genuine products and customer satisfaction, allows us to deliver real value to online shoppers across India.</p>
-    `
-  },
-  {
-    id: 2,
-    title: '5 Things to Check Before Buying Products Online',
-    category: 'Shopping Tips',
-    date: 'May 15, 2026',
-    excerpt: 'A practical guide to help you shop smarter and avoid common online shopping pitfalls.',
-    content: `
+    `},{id:2,title:`5 Things to Check Before Buying Products Online`,category:`Shopping Tips`,date:`May 15, 2026`,excerpt:`A practical guide to help you shop smarter and avoid common online shopping pitfalls.`,content:`
       <p>Online shopping offers unmatched convenience, but it also requires a little more care than walking into a store. Here are five things every smart online shopper should check before hitting the "Buy Now" button.</p>
 
       <h4>1. Seller Ratings and Reviews</h4>
@@ -73,15 +34,7 @@ const blogs = [
       <p>If a deal looks too good to be true, it usually is. Compare prices across platforms and check whether the low price corresponds to a smaller size, lower quality variant, or a different product altogether. Trustworthy sellers price fairly and consistently.</p>
 
       <p><strong>At Reevanti Global</strong>, we apply all five standards to every product we list — giving our customers the confidence to shop without hesitation.</p>
-    `
-  },
-  {
-    id: 3,
-    title: 'Building Trust in Online eCommerce',
-    category: 'Trust & Transparency',
-    date: 'April 28, 2026',
-    excerpt: 'Why transparency and customer experience are essential in modern eCommerce.',
-    content: `
+    `},{id:3,title:`Building Trust in Online eCommerce`,category:`Trust & Transparency`,date:`April 28, 2026`,excerpt:`Why transparency and customer experience are essential in modern eCommerce.`,content:`
       <p>In the digital age, trust is currency. A customer who trusts your brand will return, recommend, and defend you. One who does not will leave a negative review and never come back. For eCommerce businesses, building and sustaining trust is not optional — it is a core competitive advantage.</p>
 
       <h4>Why Trust Matters More Than Ever</h4>
@@ -100,15 +53,7 @@ const blogs = [
       <p>Social proof is powerful. Genuine reviews from verified buyers build confidence for new customers. Actively encourage satisfied buyers to leave honest feedback. Respond professionally to negative reviews — acknowledging concerns and offering solutions.</p>
 
       <p>At Reevanti Global, trust is not just a value — it is our operating model. Every decision we make, from product selection to fulfilment, is guided by our commitment to building long-term confidence with our customers.</p>
-    `
-  },
-  {
-    id: 4,
-    title: 'Top eCommerce Trends in India for 2026',
-    category: 'Industry Trends',
-    date: 'April 10, 2026',
-    excerpt: 'Understanding the trends shaping online retail in India in 2026 and beyond.',
-    content: `
+    `},{id:4,title:`Top eCommerce Trends in India for 2026`,category:`Industry Trends`,date:`April 10, 2026`,excerpt:`Understanding the trends shaping online retail in India in 2026 and beyond.`,content:`
       <p>India's eCommerce market is one of the fastest-growing in the world. Driven by rising smartphone penetration, affordable internet, and growing consumer confidence in online shopping, the sector is evolving rapidly. Here are the key trends shaping online retail in 2026.</p>
 
       <h4>1. Quick Commerce (Q-Commerce)</h4>
@@ -127,15 +72,7 @@ const blogs = [
       <p>AI-driven product recommendations, dynamic pricing, and personalised marketing are enabling eCommerce platforms to deliver highly relevant shopping experiences. Sellers who leverage data and analytics to understand customer preferences will outperform those who don't.</p>
 
       <p>Reevanti Global monitors these trends actively, continuously expanding and refining our product portfolio to align with what Indian online shoppers want most.</p>
-    `
-  },
-  {
-    id: 5,
-    title: 'How Amazon and Flipkart Benefit Both Sellers and Buyers',
-    category: 'Marketplace Strategy',
-    date: 'March 22, 2026',
-    excerpt: 'The advantages of selling and shopping through India\'s leading online marketplaces.',
-    content: `
+    `},{id:5,title:`How Amazon and Flipkart Benefit Both Sellers and Buyers`,category:`Marketplace Strategy`,date:`March 22, 2026`,excerpt:`The advantages of selling and shopping through India's leading online marketplaces.`,content:`
       <p>Amazon and Flipkart have transformed retail in India. For sellers, they offer unparalleled reach. For consumers, they deliver convenience, trust, and competitive pricing. Understanding how these marketplaces work is essential for anyone involved in online retail.</p>
 
       <h4>For Sellers: Immediate Market Access</h4>
@@ -154,15 +91,7 @@ const blogs = [
       <p>Consumers benefit from price competition, a wide product catalogue, fast delivery options, easy returns, and reliable customer support. The ability to compare products, read genuine reviews, and buy with confidence makes marketplaces the preferred shopping destination for millions of Indian consumers.</p>
 
       <p>Reevanti Global's active presence on Amazon and Flipkart is a deliberate strategy to place quality products where consumers already shop — delivering value to buyers while building a trusted brand presence.</p>
-    `
-  },
-  {
-    id: 6,
-    title: 'How to Identify Genuine Products When Shopping Online',
-    category: 'Quality & Trust',
-    date: 'March 5, 2026',
-    excerpt: 'Practical tips to ensure you always receive authentic, quality products when shopping online.',
-    content: `
+    `},{id:6,title:`How to Identify Genuine Products When Shopping Online`,category:`Quality & Trust`,date:`March 5, 2026`,excerpt:`Practical tips to ensure you always receive authentic, quality products when shopping online.`,content:`
       <p>With millions of products listed across eCommerce platforms, ensuring product authenticity is one of the biggest concerns for online shoppers. Here is a practical guide to help you consistently identify and purchase genuine products.</p>
 
       <h4>Check the Seller's Profile</h4>
@@ -181,188 +110,32 @@ const blogs = [
       <p>Both Amazon and Flipkart offer buyer protection programmes. Familiarise yourself with the return window and how to raise a complaint if the product received is not as described. Buying from sellers with good return policies gives you a safety net.</p>
 
       <p>At Reevanti Global, product authenticity is non-negotiable. We source every product from verified manufacturers and conduct quality checks before dispatch — because our customers deserve nothing less.</p>
-    `
-  }
-];
-
-// ─── Blog Rendering ────────────────────────────────────────────────────────────
-function renderBlogGrid() {
-  const container = document.getElementById('blogs-content');
-  if (!container) return;
-
-  container.innerHTML = `
+    `}];function r(){let e=document.getElementById(`blogs-content`);e&&(e.innerHTML=`
     <div class="container blog-grid">
-      ${blogs.map(blog => `
-        <article class="blog-card clickable-card" data-blog-id="${blog.id}">
-          <div class="blog-img placeholder-img">${blog.category}</div>
+      ${n.map(e=>`
+        <article class="blog-card clickable-card" data-blog-id="${e.id}">
+          <div class="blog-img placeholder-img">${e.category}</div>
           <div class="blog-content">
-            <span class="blog-date">${blog.date}</span>
-            <h3>${blog.title}</h3>
-            <p>${blog.excerpt}</p>
+            <span class="blog-date">${e.date}</span>
+            <h3>${e.title}</h3>
+            <p>${e.excerpt}</p>
             <span class="read-more">Read More &rarr;</span>
           </div>
         </article>
-      `).join('')}
+      `).join(``)}
     </div>
-  `;
-
-  container.querySelectorAll('.clickable-card').forEach(card => {
-    card.addEventListener('click', () => {
-      const id = parseInt(card.getAttribute('data-blog-id'));
-      renderBlogArticle(id);
-    });
-  });
-}
-
-function renderBlogArticle(id) {
-  const blog = blogs.find(b => b.id === id);
-  if (!blog) return;
-
-  const container = document.getElementById('blogs-content');
-  container.innerHTML = `
+  `,e.querySelectorAll(`.clickable-card`).forEach(e=>{e.addEventListener(`click`,()=>{i(parseInt(e.getAttribute(`data-blog-id`)))})}))}function i(e){let t=n.find(t=>t.id===e);if(!t)return;let i=document.getElementById(`blogs-content`);i.innerHTML=`
     <div class="container blog-article">
       <button class="btn-back" id="backToBlogs">&larr; Back to Insights</button>
       <div class="article-meta">
-        <span class="blog-date">${blog.date}</span>
-        <span class="article-category">${blog.category}</span>
+        <span class="blog-date">${t.date}</span>
+        <span class="article-category">${t.category}</span>
       </div>
-      <h2 class="article-title">${blog.title}</h2>
-      <div class="article-body">${blog.content}</div>
+      <h2 class="article-title">${t.title}</h2>
+      <div class="article-body">${t.content}</div>
       <div class="article-footer">
         <p>Written by <strong>Reevanti Global</strong> &mdash; Insights on eCommerce, online shopping, and quality retail.</p>
         <button class="btn btn-primary" id="backToBlogsBottom">&larr; Back to All Insights</button>
       </div>
     </div>
-  `;
-
-  document.getElementById('backToBlogs').addEventListener('click', renderBlogGrid);
-  document.getElementById('backToBlogsBottom').addEventListener('click', renderBlogGrid);
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-// ─── SEO: per-page title & description ───────────────────────────────────────
-const pageMeta = {
-  home:     { title: 'Reevanti Global | eCommerce Company – Buy Quality Products Online in India', desc: 'Reevanti Global is a trusted eCommerce company in India. Shop quality products on Amazon & Flipkart — genuine products, fast delivery, great prices.' },
-  about:    { title: 'About Us | Reevanti Global – India\'s Trusted Online Store', desc: 'Learn about Reevanti Global — our mission to deliver quality products online, our values, and why customers across India trust us.' },
-  products: { title: 'Products | Reevanti Global – Home, Electronics, Health & More', desc: 'Explore our product categories: Home & Kitchen, Electronics, Health & Wellness, Sports & Fitness, Lifestyle and Office products on Amazon & Flipkart.' },
-  services: { title: 'Our eCommerce Services | Reevanti Global – Amazon & Flipkart Seller', desc: 'Reevanti Global offers Amazon & Flipkart marketplace selling, product listing optimisation, eCommerce account management, and online brand building.' },
-  blogs:    { title: 'Insights & Resources | Reevanti Global Blog – eCommerce Tips & Trends', desc: 'Read expert articles on eCommerce tips, online shopping trends, marketplace selling, and product quality from Reevanti Global.' },
-  contact:  { title: 'Contact Us | Reevanti Global – Get in Touch', desc: 'Contact Reevanti Global for product enquiries, order issues, returns, or feedback. We\'re here to help — reach us by email or WhatsApp.' },
-  privacy:  { title: 'Privacy Policy | Reevanti Global', desc: 'Read the Reevanti Global Privacy Policy to understand how we collect, use, and protect your personal information.' },
-  terms:    { title: 'Terms of Service | Reevanti Global', desc: 'Review the Terms of Service governing your use of Reevanti Global\'s website, products, and eCommerce services.' }
-};
-
-function updateMeta(pageId) {
-  const meta = pageMeta[pageId] || pageMeta.home;
-  document.title = meta.title;
-  const descTag = document.querySelector('meta[name="description"]');
-  if (descTag) descTag.setAttribute('content', meta.desc);
-}
-
-// ─── SPA Navigation ───────────────────────────────────────────────────────────
-document.addEventListener('DOMContentLoaded', () => {
-  const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-  const navLinksContainer = document.querySelector('.nav-links');
-  const sections = document.querySelectorAll('.page-section');
-
-  mobileMenuToggle.addEventListener('click', () => {
-    navLinksContainer.classList.toggle('active');
-  });
-
-  // ── Show a page by section ID ──────────────────────────────────────────────
-  function showPage(pageId) {
-    sections.forEach(s => s.classList.remove('active-section'));
-    const target = document.getElementById(pageId);
-    if (target) target.classList.add('active-section');
-
-    // Update active nav link
-    document.querySelectorAll('a[data-page]').forEach(link => {
-      link.classList.toggle('active', link.getAttribute('data-page') === pageId);
-    });
-
-    navLinksContainer.classList.remove('active');
-    updateMeta(pageId);
-
-    if (pageId === 'blogs') renderBlogGrid();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-
-  // ── Navigate: push URL + show page ────────────────────────────────────────
-  function navigateTo(pageId) {
-    const url = pageToUrl[pageId] || '/';
-    history.pushState({ page: pageId }, '', url);
-    showPage(pageId);
-  }
-
-  // ── Intercept all internal nav links (a[data-page]) ───────────────────────
-  document.querySelectorAll('a[data-page]').forEach(link => {
-    link.addEventListener('click', e => {
-      e.preventDefault();
-      const pageId = link.getAttribute('data-page');
-      navigateTo(pageId);
-    });
-  });
-
-  // ── Action buttons (data-target) ──────────────────────────────────────────
-  document.querySelectorAll('button[data-target]').forEach(btn => {
-    btn.addEventListener('click', e => {
-      e.preventDefault();
-      navigateTo(btn.getAttribute('data-target'));
-    });
-  });
-
-  // ── Browser back / forward ────────────────────────────────────────────────
-  window.addEventListener('popstate', e => {
-    const pageId = e.state?.page || urlToPage[window.location.pathname] || 'home';
-    showPage(pageId);
-  });
-
-  // ── Initial load: resolve URL → page ──────────────────────────────────────
-  const initialPage = urlToPage[window.location.pathname] || 'home';
-  showPage(initialPage);
-  // Replace state so popstate has correct data on first back-navigation
-  history.replaceState({ page: initialPage }, '', window.location.pathname);
-
-  // ── Contact Form ──────────────────────────────────────────────────────────
-  const contactForm = document.getElementById('contactForm');
-  const formSuccess = document.getElementById('formSuccess');
-
-  if (contactForm) {
-    contactForm.addEventListener('submit', e => {
-      e.preventDefault();
-
-      const submitBtn = contactForm.querySelector('button[type="submit"]');
-      const originalText = submitBtn.innerText;
-      submitBtn.innerText = 'Sending...';
-      submitBtn.disabled = true;
-
-      const formData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        inquiryType: document.getElementById('inquiryType').value,
-        message: document.getElementById('message').value,
-        _subject: 'New Inquiry from Reevanti Global Website',
-        _template: 'table'
-      };
-
-      fetch('https://formsubmit.co/ajax/contact@reevantiglobal.com', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify(formData)
-      })
-      .then(res => res.json())
-      .then(() => {
-        contactForm.reset();
-        submitBtn.innerText = originalText;
-        submitBtn.disabled = false;
-        formSuccess.classList.remove('hidden');
-        setTimeout(() => formSuccess.classList.add('hidden'), 5000);
-      })
-      .catch(() => {
-        submitBtn.innerText = originalText;
-        submitBtn.disabled = false;
-        alert('There was an error sending your message. Please try again later.');
-      });
-    });
-  }
-});
+  `,document.getElementById(`backToBlogs`).addEventListener(`click`,r),document.getElementById(`backToBlogsBottom`).addEventListener(`click`,r),window.scrollTo({top:0,behavior:`smooth`})}var a={home:{title:`Reevanti Global | eCommerce Company – Buy Quality Products Online in India`,desc:`Reevanti Global is a trusted eCommerce company in India. Shop quality products on Amazon & Flipkart — genuine products, fast delivery, great prices.`},about:{title:`About Us | Reevanti Global – India's Trusted Online Store`,desc:`Learn about Reevanti Global — our mission to deliver quality products online, our values, and why customers across India trust us.`},products:{title:`Products | Reevanti Global – Home, Electronics, Health & More`,desc:`Explore our product categories: Home & Kitchen, Electronics, Health & Wellness, Sports & Fitness, Lifestyle and Office products on Amazon & Flipkart.`},services:{title:`Our eCommerce Services | Reevanti Global – Amazon & Flipkart Seller`,desc:`Reevanti Global offers Amazon & Flipkart marketplace selling, product listing optimisation, eCommerce account management, and online brand building.`},blogs:{title:`Insights & Resources | Reevanti Global Blog – eCommerce Tips & Trends`,desc:`Read expert articles on eCommerce tips, online shopping trends, marketplace selling, and product quality from Reevanti Global.`},contact:{title:`Contact Us | Reevanti Global – Get in Touch`,desc:`Contact Reevanti Global for product enquiries, order issues, returns, or feedback. We're here to help — reach us by email or WhatsApp.`},privacy:{title:`Privacy Policy | Reevanti Global`,desc:`Read the Reevanti Global Privacy Policy to understand how we collect, use, and protect your personal information.`},terms:{title:`Terms of Service | Reevanti Global`,desc:`Review the Terms of Service governing your use of Reevanti Global's website, products, and eCommerce services.`}};function o(e){let t=a[e]||a.home;document.title=t.title;let n=document.querySelector(`meta[name="description"]`);n&&n.setAttribute(`content`,t.desc)}document.addEventListener(`DOMContentLoaded`,()=>{let n=document.querySelector(`.mobile-menu-toggle`),i=document.querySelector(`.nav-links`),a=document.querySelectorAll(`.page-section`);n.addEventListener(`click`,()=>{i.classList.toggle(`active`)});function s(e){a.forEach(e=>e.classList.remove(`active-section`));let t=document.getElementById(e);t&&t.classList.add(`active-section`),document.querySelectorAll(`a[data-page]`).forEach(t=>{t.classList.toggle(`active`,t.getAttribute(`data-page`)===e)}),i.classList.remove(`active`),o(e),e===`blogs`&&r(),window.scrollTo({top:0,behavior:`smooth`})}function c(e){let n=t[e]||`/`;history.pushState({page:e},``,n),s(e)}document.querySelectorAll(`a[data-page]`).forEach(e=>{e.addEventListener(`click`,t=>{t.preventDefault(),c(e.getAttribute(`data-page`))})}),document.querySelectorAll(`button[data-target]`).forEach(e=>{e.addEventListener(`click`,t=>{t.preventDefault(),c(e.getAttribute(`data-target`))})}),window.addEventListener(`popstate`,t=>{s(t.state?.page||e[window.location.pathname]||`home`)});let l=e[window.location.pathname]||`home`;s(l),history.replaceState({page:l},``,window.location.pathname);let u=document.getElementById(`contactForm`),d=document.getElementById(`formSuccess`);u&&u.addEventListener(`submit`,e=>{e.preventDefault();let t=u.querySelector(`button[type="submit"]`),n=t.innerText;t.innerText=`Sending...`,t.disabled=!0;let r={name:document.getElementById(`name`).value,email:document.getElementById(`email`).value,inquiryType:document.getElementById(`inquiryType`).value,message:document.getElementById(`message`).value,_subject:`New Inquiry from Reevanti Global Website`,_template:`table`};fetch(`https://formsubmit.co/ajax/contact@reevantiglobal.com`,{method:`POST`,headers:{"Content-Type":`application/json`,Accept:`application/json`},body:JSON.stringify(r)}).then(e=>e.json()).then(()=>{u.reset(),t.innerText=n,t.disabled=!1,d.classList.remove(`hidden`),setTimeout(()=>d.classList.add(`hidden`),5e3)}).catch(()=>{t.innerText=n,t.disabled=!1,alert(`There was an error sending your message. Please try again later.`)})})});
