@@ -16,7 +16,7 @@ const blogSlugToId = {
   '5-things-to-check-before-buying-products-online': 2,
   'building-trust-in-online-ecommerce': 3,
   'top-ecommerce-trends-in-india-for-2026': 4,
-  'how-amazon-and-flipkart-benefit-both-sellers-and-buyers': 5,
+  'how-online-shopping-platforms-benefit-both-sellers-and-buyers': 5,
   'how-to-identify-genuine-products-when-shopping-online': 6
 };
 
@@ -39,12 +39,12 @@ const blogs = [
     title: 'How eCommerce is Changing Online Shopping in India',
     category: 'eCommerce Trends',
     date: 'June 2, 2026',
-    excerpt: 'Exploring how digital marketplaces are making quality products accessible to every corner of India.',
+    excerpt: 'Exploring how digital platforms are making quality products accessible to every corner of India.',
     content: `
       <p>The rise of eCommerce has fundamentally reshaped how Indians shop. What once required a trip to a physical store can now happen in minutes — connecting buyers in small towns with quality products from trusted sellers anywhere in the country.</p>
 
       <h4>The Online Shopping Revolution</h4>
-      <p>Platforms like Amazon and Flipkart have democratised retail by removing traditional barriers. Customers in tier-2 and tier-3 cities now have access to the same quality products as those in metros — delivered to their doorstep within days. For a company like Reevanti Global, this means the ability to reach every customer across India with genuine, quality products.</p>
+      <p>Modern eCommerce platforms have democratised retail by removing traditional barriers. Customers in tier-2 and tier-3 cities now have access to the same quality products as those in metros — delivered to their doorstep within days. For a company like Reevanti Global, this means the ability to reach every customer across India with genuine, quality products.</p>
 
       <h4>Mobile-First Shopping</h4>
       <p>India's smartphone penetration has been the biggest driver of eCommerce growth. Today, over 70% of online purchases happen via mobile apps. This has pushed sellers to optimise listings, imagery, and descriptions for mobile screens — ensuring a smooth, fast shopping experience for every customer.</p>
@@ -56,7 +56,7 @@ const blogs = [
       <p>As eCommerce matures, customers are increasingly choosing sellers based on reviews, ratings, and product authenticity. Sellers who consistently deliver genuine products with excellent after-sales support build lasting customer loyalty — the true currency of online retail.</p>
 
       <h4>Reevanti Global's Approach</h4>
-      <p>At Reevanti Global, we embrace eCommerce as the future of retail. Our active presence on Amazon and Flipkart, combined with our commitment to genuine products and customer satisfaction, allows us to deliver real value to online shoppers across India.</p>
+      <p>At Reevanti Global, we embrace eCommerce as the future of retail. Our active presence on our direct store, combined with our commitment to genuine products and customer satisfaction, allows us to deliver real value to online shoppers across India.</p>
     `
   },
   {
@@ -76,7 +76,7 @@ const blogs = [
       <p>Read the product description carefully. Check dimensions, materials, compatibility (for electronics), and any included accessories. A clear, detailed description indicates a seller who takes quality seriously. Vague or incomplete descriptions are a red flag.</p>
 
       <h4>3. Return and Refund Policy</h4>
-      <p>Before buying, understand the return window and conditions. On Amazon and Flipkart, most products offer a 7–10 day return window. Check whether the return is free or if you bear return shipping costs. Knowing this upfront avoids unpleasant surprises.</p>
+      <p>Before buying, understand the return window and conditions. Most online products offer a 7–10 day return window. Check whether the return is free or if you bear return shipping costs. Knowing this upfront avoids unpleasant surprises.</p>
 
       <h4>4. Product Images</h4>
       <p>Look for products with multiple, high-quality photographs — ideally showing the product from different angles and in use. Be cautious of listings with only one generic image, as these may not accurately represent what you receive.</p>
@@ -129,7 +129,7 @@ const blogs = [
       <p>10-minute and same-day delivery is no longer a luxury — it is becoming an expectation, especially in metro cities. Platforms are investing heavily in dark stores and hyperlocal fulfilment networks to meet this demand. Sellers who optimise for speed will win customer loyalty.</p>
 
       <h4>2. Video Shopping and Live Commerce</h4>
-      <p>Short-form video content and live shopping streams are transforming how customers discover products. Platforms like Instagram Reels, YouTube Shorts, and dedicated live shopping features on Amazon and Flipkart allow sellers to demonstrate products in real-time, building trust and driving impulse purchases.</p>
+      <p>Short-form video content and live shopping streams are transforming how customers discover products. Platforms like Instagram Reels, YouTube Shorts, and dedicated live shopping features on eCommerce platforms allow sellers to demonstrate products in real-time, building trust and driving impulse purchases.</p>
 
       <h4>3. Vernacular Commerce</h4>
       <p>With internet penetration reaching tier-3 cities and rural India, eCommerce platforms are increasingly offering regional language support. Sellers who optimise product listings in Hindi and regional languages can tap into a vast, underserved customer base.</p>
@@ -145,30 +145,30 @@ const blogs = [
   },
   {
     id: 5,
-    slug: 'how-amazon-and-flipkart-benefit-both-sellers-and-buyers',
-    title: 'How Amazon and Flipkart Benefit Both Sellers and Buyers',
-    category: 'Marketplace Strategy',
+    slug: 'how-online-shopping-platforms-benefit-both-sellers-and-buyers',
+    title: 'How Online Shopping Platforms Benefit Both Sellers and Buyers',
+    category: 'eCommerce Strategy',
     date: 'March 22, 2026',
-    excerpt: 'The advantages of selling and shopping through India\'s leading online marketplaces.',
+    excerpt: 'The advantages of selling and shopping through India\'s leading shopping platforms.',
     content: `
-      <p>Amazon and Flipkart have transformed retail in India. For sellers, they offer unparalleled reach. For consumers, they deliver convenience, trust, and competitive pricing. Understanding how these marketplaces work is essential for anyone involved in online retail.</p>
+      <p>Online shopping platforms have transformed retail in India. For sellers, they offer unparalleled reach. For consumers, they deliver convenience, trust, and competitive pricing. Understanding how these platforms work is essential for anyone involved in online retail.</p>
 
       <h4>For Sellers: Immediate Market Access</h4>
-      <p>Setting up a store on Amazon or Flipkart provides instant access to hundreds of millions of active shoppers without the need to build a standalone eCommerce website. The marketplace handles payment processing, customer trust signals, and infrastructure — allowing sellers to focus on product quality and inventory management.</p>
+      <p>Setting up an online store provides instant access to hundreds of millions of active shoppers without the need to build a standalone eCommerce website. The platform handles payment processing, customer trust signals, and infrastructure — allowing sellers to focus on product quality and inventory management.</p>
 
       <h4>Fulfilment Infrastructure</h4>
-      <p>Amazon's Fulfilment by Amazon (FBA) and Flipkart's Fulfilment by Flipkart (FBF) programmes allow sellers to store inventory in marketplace warehouses. The platform then handles picking, packing, and shipping — enabling faster delivery, Prime/Flipkart Plus eligibility, and higher conversion rates.</p>
+      <p>Advanced fulfilment programmes allow sellers to store inventory in warehouses. The platform then handles picking, packing, and shipping — enabling faster delivery, Prime/our store Plus eligibility, and higher conversion rates.</p>
 
       <h4>Built-In Trust and Brand Credibility</h4>
-      <p>Consumers inherently trust established marketplaces. When a product is listed on Amazon or Flipkart, it carries an implicit trust signal. Seller ratings, verified reviews, and buyer protection policies create a safe environment that encourages purchase confidence.</p>
+      <p>Consumers inherently trust established platforms. When a product is listed on a trusted platform, it carries an implicit trust signal. Seller ratings, verified reviews, and buyer protection policies create a safe environment that encourages purchase confidence.</p>
 
       <h4>Data and Analytics</h4>
-      <p>Marketplaces provide sellers with rich data on customer behaviour, search trends, and product performance. These insights enable data-driven decisions around pricing, inventory planning, and product development.</p>
+      <p>Platforms provide sellers with rich data on customer behaviour, search trends, and product performance. These insights enable data-driven decisions around pricing, inventory planning, and product development.</p>
 
       <h4>For Consumers: Value and Convenience</h4>
-      <p>Consumers benefit from price competition, a wide product catalogue, fast delivery options, easy returns, and reliable customer support. The ability to compare products, read genuine reviews, and buy with confidence makes marketplaces the preferred shopping destination for millions of Indian consumers.</p>
+      <p>Consumers benefit from price competition, a wide product catalogue, fast delivery options, easy returns, and reliable customer support. The ability to compare products, read genuine reviews, and buy with confidence makes these platforms the preferred shopping destination for millions of Indian consumers.</p>
 
-      <p>Reevanti Global's active presence on Amazon and Flipkart is a deliberate strategy to place quality products where consumers already shop — delivering value to buyers while building a trusted brand presence.</p>
+      <p>Reevanti Global's active presence is a deliberate strategy to place quality products where consumers already shop — delivering value to buyers while building a trusted brand presence.</p>
     `
   },
   {
@@ -185,7 +185,7 @@ const blogs = [
       <p>Always review the seller's profile before purchasing. Look for high ratings (4+ stars), a significant number of completed orders, and recent positive reviews. Established sellers with a long track record are significantly less likely to sell counterfeit or substandard products.</p>
 
       <h4>Look for Brand Authentication</h4>
-      <p>Many brands on Amazon and Flipkart are registered under the platform's brand protection programmes. Look for "Sold by [Brand Name]" or "Fulfilled by Amazon" indicators. Brand-authorised listings come with a higher guarantee of authenticity.</p>
+      <p>Many online brands are registered under the platform's brand protection programmes. Look for "Sold by [Brand Name]" or "Verified Seller" indicators. Brand-authorised listings come with a higher guarantee of authenticity.</p>
 
       <h4>Read Product Reviews Carefully</h4>
       <p>Don't just look at the overall star rating — read the written reviews. Pay attention to reviews that mention build quality, packaging, and whether the product matches its description. A pattern of complaints about product quality or mismatch is a strong warning sign.</p>
@@ -194,7 +194,7 @@ const blogs = [
       <p>Genuine sellers invest in high-quality product photography and detailed, accurate descriptions. Multiple images from different angles, lifestyle shots, and specification tables are indicators of a professional, trustworthy listing.</p>
 
       <h4>Use Platform Buyer Protection</h4>
-      <p>Both Amazon and Flipkart offer buyer protection programmes. Familiarise yourself with the return window and how to raise a complaint if the product received is not as described. Buying from sellers with good return policies gives you a safety net.</p>
+      <p>Top platforms offer buyer protection programmes. Familiarise yourself with the return window and how to raise a complaint if the product received is not as described. Buying from sellers with good return policies gives you a safety net.</p>
 
       <p>At Reevanti Global, product authenticity is non-negotiable. We source every product from verified manufacturers and conduct quality checks before dispatch — because our customers deserve nothing less.</p>
     `
@@ -275,11 +275,11 @@ function renderBlogArticle(id) {
 
 // ─── SEO: per-page title & description ───────────────────────────────────────
 const pageMeta = {
-  home:     { title: 'Reevanti Global | eCommerce Company – Buy Quality Products Online in India', desc: 'Reevanti Global is a trusted eCommerce company in India. Shop quality products on Amazon & Flipkart — genuine products, fast delivery, great prices.' },
+  home:     { title: 'Reevanti Global | eCommerce Company – Buy Quality Products Online in India', desc: 'Reevanti Global is a trusted eCommerce company in India. Shop quality products directly through our store — genuine products, fast delivery, great prices.' },
   about:    { title: 'About Us | Reevanti Global – India\'s Trusted Online Store', desc: 'Learn about Reevanti Global — our mission to deliver quality products online, our values, and why customers across India trust us.' },
-  products: { title: 'Products | Reevanti Global – Home, Electronics, Health & More', desc: 'Explore our product categories: Home & Kitchen, Electronics, Health & Wellness, Sports & Fitness, Lifestyle and Office products on Amazon & Flipkart.' },
-  services: { title: 'Our eCommerce Services | Reevanti Global – Amazon & Flipkart Seller', desc: 'Reevanti Global offers Amazon & Flipkart marketplace selling, product listing optimisation, eCommerce account management, and online brand building.' },
-  blogs:    { title: 'Insights & Resources | Reevanti Global Blog – eCommerce Tips & Trends', desc: 'Read expert articles on eCommerce tips, online shopping trends, marketplace selling, and product quality from Reevanti Global.' },
+  products: { title: 'Products | Reevanti Global – Home, Electronics, Health & More', desc: 'Explore our product categories: Home & Kitchen, Electronics, Health & Wellness, Digital Products, and Lifestyle products directly through our store.' },
+  services: { title: 'Our eCommerce Services | Reevanti Global – Direct to Consumer Store', desc: 'Reevanti Global offers our direct store online selling, Global Sourcing Consulting, IT Consulting, and Import Export services.' },
+  blogs:    { title: 'Insights & Resources | Reevanti Global Blog – eCommerce Tips & Trends', desc: 'Read expert articles on eCommerce tips, online shopping trends, online selling, and product quality from Reevanti Global.' },
   contact:  { title: 'Contact Us | Reevanti Global – Get in Touch', desc: 'Contact Reevanti Global for product enquiries, order issues, returns, or feedback. We\'re here to help — reach us by email or WhatsApp.' },
   privacy:  { title: 'Privacy Policy | Reevanti Global', desc: 'Read the Reevanti Global Privacy Policy to understand how we collect, use, and protect your personal information.' },
   terms:    { title: 'Terms of Service | Reevanti Global', desc: 'Review the Terms of Service governing your use of Reevanti Global\'s website, products, and eCommerce services.' }

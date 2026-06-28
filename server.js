@@ -10,28 +10,28 @@ const BASE_URL = 'https://www.reevantiglobal.com';
 const routeMeta = {
   '/': {
     title: 'Reevanti Global | Buy Quality Products Online in India',
-    description: 'Shop quality products online with Reevanti Global. Genuine items across Home, Electronics, and Health on Amazon & Flipkart with fast delivery in India.',
-    keywords: 'Reevanti Global, eCommerce India, buy products online India, Amazon seller India, Flipkart seller India, online shopping India, quality products India, home kitchen products, electronics online India, health wellness products India'
+    description: 'Shop quality products online with Reevanti Global. Genuine items across Handcrafted & Artisan, Home, and Electronics with fast delivery in India.',
+    keywords: 'Reevanti Global, eCommerce India, buy products online India, online shopping India, quality products India, handcrafted artisan goods, eco-friendly products, home kitchen products, electronics online India, health wellness products, digital products'
   },
   '/about-us': {
     title: 'About Us | Reevanti Global – India\'s Trusted Online Store',
-    description: 'Learn about Reevanti Global — our mission, values, and why customers across India trust us for genuine products on Amazon and Flipkart.',
-    keywords: 'about Reevanti Global, eCommerce company India, trusted online store, online shopping company, Amazon Flipkart seller India'
+    description: 'Learn about Reevanti Global — our mission, values, and why customers across India trust us for genuine, high-quality products.',
+    keywords: 'about Reevanti Global, eCommerce company India, trusted online store, online shopping company, D2C brand India'
   },
   '/products': {
     title: 'Products | Reevanti Global – Home, Electronics & More',
-    description: 'Explore Home & Kitchen, Electronics, Health, Sports, and Office products. Shop Reevanti Global on Amazon & Flipkart for fast delivery across India.',
-    keywords: 'buy products online, home kitchen products India, electronics accessories, health wellness products, sports fitness equipment, lifestyle personal care, office stationery India'
+    description: 'Explore Handcrafted & Artisan, Home, Electronics, Health, and Digital Products. Shop Reevanti Global directly for fast delivery across India.',
+    keywords: 'buy products online, handcrafted artisan goods, sustainable products, eco-friendly goods, home kitchen products India, electronics accessories, health wellness products, digital products'
   },
   '/our-services': {
-    title: 'eCommerce Services | Reevanti Global on Amazon & Flipkart',
-    description: 'Reevanti Global offers Amazon & Flipkart marketplace selling, listing optimization, account management, and order fulfilment services in India.',
-    keywords: 'eCommerce services India, Amazon marketplace seller, Flipkart seller services, product listing optimization, eCommerce account management, order fulfilment India'
+    title: 'eCommerce Services | Reevanti Global',
+    description: 'Reevanti Global offers end-to-end direct-to-consumer eCommerce services, Global Sourcing Consulting, IT Consulting, and Import Export services in India.',
+    keywords: 'eCommerce services India, direct to consumer brand, D2C retail India, product curation, eCommerce order fulfilment India, global sourcing consulting, IT consulting, import export services'
   },
   '/blogs': {
     title: 'Reevanti Global Blog | eCommerce Insights & Tips',
-    description: 'Read expert articles on eCommerce tips, online shopping trends, marketplace selling strategies, and product quality insights from Reevanti Global.',
-    keywords: 'eCommerce blog India, online shopping tips, marketplace selling, eCommerce trends 2026, product quality guide, Amazon Flipkart selling tips'
+    description: 'Read expert articles on eCommerce tips, online shopping trends, digital retail strategies, and product quality insights from Reevanti Global.',
+    keywords: 'eCommerce blog India, online shopping tips, direct to consumer selling, eCommerce trends 2026, product quality guide, online retail tips'
   },
   '/contact-us': {
     title: 'Contact Us | Reevanti Global – Get in Touch',
