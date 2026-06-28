@@ -1,0 +1,20 @@
+{
+  "name": "Reevanti Global",
+  "short_name": "Reevanti",
+  "description": "Reevanti Global – Trusted eCommerce company delivering quality products online across India through Amazon & Flipkart.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#001B40",
+  "theme_color": "#001B40",
+  "orientation": "portrait-primary",
+  "lang": "en-IN",
+  "categories": ["shopping", "business"],
+  "icons": [
+    {
+      "src": "/Images/reevanti-global-logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

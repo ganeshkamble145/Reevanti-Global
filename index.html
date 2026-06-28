@@ -5,16 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- ── Primary SEO ─────────────────────────────────────────── -->
-    <title>Reevanti Global | eCommerce Company – Buy Quality Products Online in India</title>
-    <meta name="description" content="Reevanti Global is a trusted eCommerce company in India. Shop quality products across Home & Kitchen, Electronics, Health, Sports, and Lifestyle on Amazon & Flipkart. Fast delivery, genuine products, great prices." />
+    <title>Reevanti Global | Buy Quality Products Online in India</title>
+    <meta name="description" content="Shop quality products online with Reevanti Global. Genuine items across Home, Electronics, and Health on Amazon & Flipkart with fast delivery in India." />
     <meta name="keywords" content="Reevanti Global, eCommerce India, buy products online India, Amazon seller India, Flipkart seller India, online shopping India, quality products India, home kitchen products, electronics online India, health wellness products India" />
     <meta name="author" content="Reevanti Global" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <link rel="canonical" href="https://www.reevantiglobal.com/" />
 
+    <!-- ── Favicon & Icons ─────────────────────────────────────── -->
+    <link rel="icon" type="image/png" href="/Images/reevanti-global-logo.png" />
+    <link rel="apple-touch-icon" href="/Images/reevanti-global-logo.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- ── Performance & Pre-fetching ──────────────────────────── -->
+    <link rel="dns-prefetch" href="https://www.amazon.in" />
+    <link rel="dns-prefetch" href="https://www.flipkart.com" />
+
     <!-- ── Geo & Local SEO ─────────────────────────────────────── -->
     <meta name="geo.region" content="IN-MH" />
-    <meta name="geo.placename" content="Maharashtra, India" />
+    <meta name="geo.placename" content="Navi Mumbai, Maharashtra, India" />
     <meta name="geo.position" content="19.0330;73.0297" />
     <meta name="ICBM" content="19.0330, 73.0297" />
 
@@ -23,17 +32,20 @@
     <meta property="og:url" content="https://www.reevantiglobal.com/" />
     <meta property="og:title" content="Reevanti Global | eCommerce Company – Quality Products Online" />
     <meta property="og:description" content="Shop quality products on Amazon & Flipkart with Reevanti Global. Home, Electronics, Health, Sports & more — genuine products, fast delivery, great value." />
-    <meta property="og:image" content="https://www.reevantiglobal.com/Images/Reevanti Global Company Logo.png" />
+    <meta property="og:image" content="https://www.reevantiglobal.com/Images/reevanti-global-og.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Reevanti Global - Quality Products Delivered Online Across India" />
     <meta property="og:site_name" content="Reevanti Global" />
     <meta property="og:locale" content="en_IN" />
+    <meta property="fb:page_id" content="ReevantiGlobal" />
 
     <!-- ── Twitter / X Card ───────────────────────────────────── -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Reevanti Global | eCommerce Company – Quality Products Online" />
     <meta name="twitter:description" content="Shop quality products on Amazon & Flipkart with Reevanti Global. Genuine products, fast delivery across India." />
-    <meta name="twitter:image" content="https://www.reevantiglobal.com/Images/Reevanti Global Company Logo.png" />
+    <meta name="twitter:image" content="https://www.reevantiglobal.com/Images/reevanti-global-og.png" />
+    <meta name="twitter:image:alt" content="Reevanti Global - Quality Products Delivered Online Across India" />
 
     <!-- ── Theme ──────────────────────────────────────────────── -->
     <meta name="theme-color" content="#001B40" />
@@ -50,8 +62,11 @@
           "url": "https://www.reevantiglobal.com",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://www.reevantiglobal.com/Images/Reevanti Global Company Logo.png"
+            "url": "https://www.reevantiglobal.com/Images/reevanti-global-logo.png",
+            "width": 512,
+            "height": 512
           },
+          "image": "https://www.reevantiglobal.com/Images/reevanti-global-og.png",
           "description": "Reevanti Global is a trusted eCommerce company delivering quality products through Amazon and Flipkart, making genuine products accessible to everyone across India.",
           "foundingDate": "2024",
           "contactPoint": [{
@@ -67,13 +82,14 @@
             "https://www.instagram.com/reevanti_global",
             "https://www.youtube.com/@reevanti_global",
             "https://www.linkedin.com/company/reevanti-global"
-          ]
+          ],
+          "knowsAbout": ["eCommerce", "Online Retail", "Amazon Marketplace", "Flipkart Marketplace", "Product Listing", "Order Fulfilment"]
         },
         {
           "@type": "LocalBusiness",
           "@id": "https://www.reevantiglobal.com/#localbusiness",
           "name": "Reevanti Global",
-          "image": "https://www.reevantiglobal.com/Images/Reevanti Global Company Logo.png",
+          "image": "https://www.reevantiglobal.com/Images/reevanti-global-logo.png",
           "url": "https://www.reevantiglobal.com",
           "telephone": "+91-9987864090",
           "email": "contact@reevantiglobal.com",
@@ -113,17 +129,155 @@
           "url": "https://www.reevantiglobal.com",
           "name": "Reevanti Global",
           "description": "eCommerce Company – Quality Products Online in India",
-          "publisher": {"@id": "https://www.reevantiglobal.com/#organization"}
+          "publisher": {"@id": "https://www.reevantiglobal.com/#organization"},
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://www.reevantiglobal.com/products?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.reevantiglobal.com/#breadcrumb",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.reevantiglobal.com/"},
+            {"@type": "ListItem", "position": 2, "name": "Products", "item": "https://www.reevantiglobal.com/products"},
+            {"@type": "ListItem", "position": 3, "name": "About Us", "item": "https://www.reevantiglobal.com/about-us"},
+            {"@type": "ListItem", "position": 4, "name": "Services", "item": "https://www.reevantiglobal.com/our-services"},
+            {"@type": "ListItem", "position": 5, "name": "Blog", "item": "https://www.reevantiglobal.com/blogs"},
+            {"@type": "ListItem", "position": 6, "name": "Contact", "item": "https://www.reevantiglobal.com/contact-us"}
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://www.reevantiglobal.com/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is Reevanti Global?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Reevanti Global is a trusted eCommerce company based in Navi Mumbai, India. We sell quality products across Home & Kitchen, Electronics, Health & Wellness, Sports & Fitness, Lifestyle, and Office categories through Amazon and Flipkart."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Where can I buy Reevanti Global products?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "You can buy our products on Amazon India and Flipkart. All products come with fast delivery, genuine quality guarantee, and easy returns through the marketplace platforms."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does Reevanti Global sell genuine products?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, every product sold by Reevanti Global is sourced from verified manufacturers and brands. We conduct quality checks before dispatch and maintain strict authenticity standards."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How can I contact Reevanti Global?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "You can reach us via email at contact@reevantiglobal.com or call/WhatsApp at +91 9987864090. Our office is located in Navi Mumbai, Maharashtra, India."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is Reevanti Global's return policy?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Returns and refunds are handled through the marketplace platform (Amazon or Flipkart) where the purchase was made. Please refer to the respective platform's return policy for details."
+              }
+            }
+          ]
         }
       ]
     }
     </script>
 
-    <!-- ── Fonts ──────────────────────────────────────────────── -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/style.css">
+    <!-- ── Blog Article Structured Data ──────────────────────── -->
+    <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "How eCommerce is Changing Online Shopping in India",
+        "description": "Exploring how digital marketplaces are making quality products accessible to every corner of India.",
+        "author": {"@type": "Organization", "name": "Reevanti Global"},
+        "publisher": {"@type": "Organization", "name": "Reevanti Global", "logo": {"@type": "ImageObject", "url": "https://www.reevantiglobal.com/Images/reevanti-global-logo.png"}},
+        "datePublished": "2026-06-02",
+        "url": "https://www.reevantiglobal.com/blogs/how-ecommerce-is-changing-online-shopping-in-india",
+        "mainEntityOfPage": "https://www.reevantiglobal.com/blogs/how-ecommerce-is-changing-online-shopping-in-india"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "5 Things to Check Before Buying Products Online",
+        "description": "A practical guide to help you shop smarter and avoid common online shopping pitfalls.",
+        "author": {"@type": "Organization", "name": "Reevanti Global"},
+        "publisher": {"@type": "Organization", "name": "Reevanti Global", "logo": {"@type": "ImageObject", "url": "https://www.reevantiglobal.com/Images/reevanti-global-logo.png"}},
+        "datePublished": "2026-05-15",
+        "url": "https://www.reevantiglobal.com/blogs/5-things-to-check-before-buying-products-online",
+        "mainEntityOfPage": "https://www.reevantiglobal.com/blogs/5-things-to-check-before-buying-products-online"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Building Trust in Online eCommerce",
+        "description": "Why transparency and customer experience are essential in modern eCommerce.",
+        "author": {"@type": "Organization", "name": "Reevanti Global"},
+        "publisher": {"@type": "Organization", "name": "Reevanti Global", "logo": {"@type": "ImageObject", "url": "https://www.reevantiglobal.com/Images/reevanti-global-logo.png"}},
+        "datePublished": "2026-04-28",
+        "url": "https://www.reevantiglobal.com/blogs/building-trust-in-online-ecommerce",
+        "mainEntityOfPage": "https://www.reevantiglobal.com/blogs/building-trust-in-online-ecommerce"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Top eCommerce Trends in India for 2026",
+        "description": "Understanding the trends shaping online retail in India in 2026 and beyond.",
+        "author": {"@type": "Organization", "name": "Reevanti Global"},
+        "publisher": {"@type": "Organization", "name": "Reevanti Global", "logo": {"@type": "ImageObject", "url": "https://www.reevantiglobal.com/Images/reevanti-global-logo.png"}},
+        "datePublished": "2026-04-10",
+        "url": "https://www.reevantiglobal.com/blogs/top-ecommerce-trends-in-india-for-2026",
+        "mainEntityOfPage": "https://www.reevantiglobal.com/blogs/top-ecommerce-trends-in-india-for-2026"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "How Amazon and Flipkart Benefit Both Sellers and Buyers",
+        "description": "The advantages of selling and shopping through India's leading online marketplaces.",
+        "author": {"@type": "Organization", "name": "Reevanti Global"},
+        "publisher": {"@type": "Organization", "name": "Reevanti Global", "logo": {"@type": "ImageObject", "url": "https://www.reevantiglobal.com/Images/reevanti-global-logo.png"}},
+        "datePublished": "2026-03-22",
+        "url": "https://www.reevantiglobal.com/blogs/how-amazon-and-flipkart-benefit-both-sellers-and-buyers",
+        "mainEntityOfPage": "https://www.reevantiglobal.com/blogs/how-amazon-and-flipkart-benefit-both-sellers-and-buyers"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "How to Identify Genuine Products When Shopping Online",
+        "description": "Practical tips to ensure you always receive authentic, quality products when shopping online.",
+        "author": {"@type": "Organization", "name": "Reevanti Global"},
+        "publisher": {"@type": "Organization", "name": "Reevanti Global", "logo": {"@type": "ImageObject", "url": "https://www.reevantiglobal.com/Images/reevanti-global-logo.png"}},
+        "datePublished": "2026-03-05",
+        "url": "https://www.reevantiglobal.com/blogs/how-to-identify-genuine-products-when-shopping-online",
+        "mainEntityOfPage": "https://www.reevantiglobal.com/blogs/how-to-identify-genuine-products-when-shopping-online"
+      }
+    ]
+    </script>
+
+    <!-- ── Fonts & Performance ────────────────────────────────── -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="https://formsubmit.co" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
     <!-- Navbar -->
@@ -131,7 +285,7 @@
       <div class="nav-container">
         <div class="logo">
           <a href="/" data-page="home">
-            <img src="/Images/Reevanti Global Company Logo.png" alt="Reevanti Global Logo" class="logo-img" />
+            <img src="/Images/reevanti-global-logo.png" alt="Reevanti Global - Trusted eCommerce Company India" class="logo-img" fetchpriority="high" />
           </a>
         </div>
         <ul class="nav-links">
@@ -284,13 +438,59 @@
         </div>
       </section>
 
-      <!-- Blogs Section — rendered dynamically by main.js -->
+      <!-- Blogs Section — with crawlable static content for SEO -->
       <section id="blogs" class="page-section">
         <div class="page-header blogs-header">
           <h2>Insights &amp; Resources</h2>
           <p>Tips, trends, and insights for smarter online shopping and eCommerce.</p>
         </div>
-        <div id="blogs-content"></div>
+        <div id="blogs-content">
+          <!-- Static blog summaries for search engine crawlers (JS enhances this) -->
+          <div class="container blog-grid seo-blog-content">
+            <article class="blog-card">
+              <div class="blog-content">
+                <time class="blog-date" datetime="2026-06-02">June 2, 2026</time>
+                <h3>How eCommerce is Changing Online Shopping in India</h3>
+                <p>Exploring how digital marketplaces are making quality products accessible to every corner of India. Platforms like Amazon and Flipkart have democratised retail by removing traditional barriers. Mobile-first shopping, AI-powered recommendations, and same-day delivery are transforming how Indians shop online.</p>
+              </div>
+            </article>
+            <article class="blog-card">
+              <div class="blog-content">
+                <time class="blog-date" datetime="2026-05-15">May 15, 2026</time>
+                <h3>5 Things to Check Before Buying Products Online</h3>
+                <p>A practical guide to help you shop smarter and avoid common online shopping pitfalls. Learn to check seller ratings, read product descriptions carefully, understand return policies, examine product images, and compare prices before purchasing.</p>
+              </div>
+            </article>
+            <article class="blog-card">
+              <div class="blog-content">
+                <time class="blog-date" datetime="2026-04-28">April 28, 2026</time>
+                <h3>Building Trust in Online eCommerce</h3>
+                <p>Why transparency and customer experience are essential in modern eCommerce. Product authenticity, honest descriptions, transparent pricing, responsive customer support, and leveraging genuine reviews build lasting customer loyalty.</p>
+              </div>
+            </article>
+            <article class="blog-card">
+              <div class="blog-content">
+                <time class="blog-date" datetime="2026-04-10">April 10, 2026</time>
+                <h3>Top eCommerce Trends in India for 2026</h3>
+                <p>Understanding the trends shaping online retail in India. Quick Commerce, Video Shopping, Vernacular Commerce, Sustainable Products, and AI-Powered Personalisation are the key trends driving eCommerce growth in 2026.</p>
+              </div>
+            </article>
+            <article class="blog-card">
+              <div class="blog-content">
+                <time class="blog-date" datetime="2026-03-22">March 22, 2026</time>
+                <h3>How Amazon and Flipkart Benefit Both Sellers and Buyers</h3>
+                <p>The advantages of selling and shopping through India's leading online marketplaces. Immediate market access, fulfilment infrastructure, built-in trust, data analytics for sellers, and value and convenience for consumers.</p>
+              </div>
+            </article>
+            <article class="blog-card">
+              <div class="blog-content">
+                <time class="blog-date" datetime="2026-03-05">March 5, 2026</time>
+                <h3>How to Identify Genuine Products When Shopping Online</h3>
+                <p>Practical tips to ensure you always receive authentic, quality products when shopping online. Check seller profiles, look for brand authentication, read reviews carefully, examine product images, and use platform buyer protection.</p>
+              </div>
+            </article>
+          </div>
+        </div>
       </section>
 
       <!-- Contact Us Section -->
@@ -408,7 +608,7 @@
     <footer class="footer">
       <div class="container footer-content">
         <div class="footer-brand">
-          <img src="/Images/Reevanti Global Company Logo.png" alt="Reevanti Global Logo" class="footer-logo" />
+          <img src="/Images/reevanti-global-logo.png" alt="Reevanti Global Logo" class="footer-logo" />
           <p>Reevanti Global is a trusted eCommerce company dedicated to delivering quality products and exceptional online shopping experiences through Amazon and Flipkart. Customer satisfaction is at the heart of everything we do.</p>
         </div>
         <div class="footer-links">
@@ -455,6 +655,29 @@
         <p>&copy; 2026 Reevanti Global. All rights reserved.</p>
       </div>
     </footer>
+
+    <!-- Noscript fallback for search engine crawlers that don't execute JavaScript -->
+    <noscript>
+      <div style="max-width:800px;margin:80px auto;padding:40px 20px;font-family:sans-serif;">
+        <h1>Reevanti Global – Trusted eCommerce Company in India</h1>
+        <p>Reevanti Global is a trusted eCommerce company delivering quality products through Amazon and Flipkart across India. We offer genuine products in Home &amp; Kitchen, Electronics, Health &amp; Wellness, Sports &amp; Fitness, Lifestyle, and Office categories.</p>
+        <h2>Our Product Categories</h2>
+        <ul>
+          <li>Home &amp; Kitchen Products</li>
+          <li>Electronics &amp; Accessories</li>
+          <li>Health &amp; Wellness Products</li>
+          <li>Sports &amp; Fitness Equipment</li>
+          <li>Lifestyle &amp; Personal Care</li>
+          <li>Office &amp; Stationery</li>
+        </ul>
+        <h2>Why Choose Reevanti Global</h2>
+        <p>100% Genuine Products sourced from verified manufacturers. Fast and reliable delivery via Amazon FBA and Flipkart Fulfilment. Responsive customer support. Competitive and fair pricing. Hassle-free returns and refunds.</p>
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:contact@reevantiglobal.com">contact@reevantiglobal.com</a> | Phone/WhatsApp: +91 9987864090 | Headquarters: Navi Mumbai, Maharashtra, India</p>
+        <p>Follow us: <a href="https://www.facebook.com/ReevantiGlobal">Facebook</a> | <a href="https://www.instagram.com/reevanti_global">Instagram</a> | <a href="https://www.youtube.com/@reevanti_global">YouTube</a> | <a href="https://www.linkedin.com/company/reevanti-global">LinkedIn</a></p>
+        <p>Please enable JavaScript for the best experience on this website.</p>
+      </div>
+    </noscript>
 
     <script type="module" src="/main.js"></script>
   </body>

@@ -1,8 +1,13 @@
 User-agent: *
 Allow: /
+Crawl-delay: 1
 
 # Sitemaps
 Sitemap: https://www.reevantiglobal.com/sitemap.xml
 
-# Disallow admin or system paths (none currently, but good practice)
+# Disallow admin or system paths
 Disallow: /dist/
+Disallow: /node_modules/
+
+# Host
+Host: https://www.reevantiglobal.com

@@ -1,60 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- Homepage -->
   <url>
     <loc>https://www.reevantiglobal.com/</loc>
-    <lastmod>2026-06-13</lastmod>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
+  <!-- About Us -->
   <url>
     <loc>https://www.reevantiglobal.com/about-us</loc>
-    <lastmod>2026-06-13</lastmod>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
+  <!-- Products -->
   <url>
     <loc>https://www.reevantiglobal.com/products</loc>
-    <lastmod>2026-06-13</lastmod>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
+  <!-- Our Services -->
   <url>
     <loc>https://www.reevantiglobal.com/our-services</loc>
-    <lastmod>2026-06-13</lastmod>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
+  <!-- Blogs Index -->
   <url>
     <loc>https://www.reevantiglobal.com/blogs</loc>
-    <lastmod>2026-06-13</lastmod>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
+  <!-- Contact Us -->
   <url>
     <loc>https://www.reevantiglobal.com/contact-us</loc>
-    <lastmod>2026-06-13</lastmod>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
+  <!-- Privacy Policy -->
   <url>
     <loc>https://www.reevantiglobal.com/privacy-policy</loc>
-    <lastmod>2026-06-13</lastmod>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
+  <!-- Terms of Service -->
   <url>
     <loc>https://www.reevantiglobal.com/terms-of-service</loc>
-    <lastmod>2026-06-13</lastmod>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+  </url>
+
+  <!-- Blog Articles -->
+  <url>
+    <loc>https://www.reevantiglobal.com/blogs/how-ecommerce-is-changing-online-shopping-in-india</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.reevantiglobal.com/blogs/5-things-to-check-before-buying-products-online</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.reevantiglobal.com/blogs/building-trust-in-online-ecommerce</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.reevantiglobal.com/blogs/top-ecommerce-trends-in-india-for-2026</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.reevantiglobal.com/blogs/how-amazon-and-flipkart-benefit-both-sellers-and-buyers</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.reevantiglobal.com/blogs/how-to-identify-genuine-products-when-shopping-online</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
   </url>
 
 </urlset>
