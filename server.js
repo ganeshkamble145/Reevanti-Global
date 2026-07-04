@@ -11,7 +11,7 @@ const routeMeta = {
   '/': {
     title: 'Reevanti Global | Buy Quality Products Online in India',
     description: 'Shop quality products online with Reevanti Global. Genuine items across Handcrafted & Artisan, Home, and Electronics with fast delivery in India.',
-    keywords: 'Reevanti Global, eCommerce India, buy products online India, online shopping India, quality products India, handcrafted artisan goods, eco-friendly products, home kitchen products, electronics online India, health wellness products, digital products'
+    keywords: 'Reevanti Global, eCommerce India, buy products online India, online shopping India, quality products India, handicrafts, traders, artisans, export, digital product, content marketers, AI, prompt engineering, entrepreuner, marketing consultant, freelancer, digital marketing, business owner, developer, content creator, souvenir shop, gift shop, chatgpt, claude, automation, business operation, ebook, facebook ads, instagram ads, linkedin ads'
   },
   '/about-us': {
     title: 'About Us | Reevanti Global – India\'s Trusted Online Store',
@@ -21,7 +21,7 @@ const routeMeta = {
   '/products': {
     title: 'Products | Reevanti Global – Home, Electronics & More',
     description: 'Explore Handcrafted & Artisan, Home, Electronics, Health, and Digital Products. Shop Reevanti Global directly for fast delivery across India.',
-    keywords: 'buy products online, handcrafted artisan goods, sustainable products, eco-friendly goods, home kitchen products India, electronics accessories, health wellness products, digital products'
+    keywords: 'buy products online, handcrafted artisan goods, sustainable products, eco-friendly goods, handicrafts, traders, artisans, export, digital product, content marketers, AI, prompt engineering, entrepreuner, marketing consultant, freelancer, digital marketing, business owner, developer, content creator, souvenir shop, gift shop, chatgpt, claude, automation, business operation, ebook, facebook ads, instagram ads, linkedin ads'
   },
   '/our-services': {
     title: 'eCommerce Services | Reevanti Global',
@@ -47,6 +47,11 @@ const routeMeta = {
     title: 'Terms of Service | Reevanti Global',
     description: 'Review the Terms of Service governing your use of Reevanti Global website, products, and eCommerce services.',
     keywords: 'terms of service, terms and conditions, Reevanti Global terms'
+  },
+  '/products/digital/promptflowpro': {
+    title: 'PromptFlow Pro | The Complete AI Prompt System - Reevanti Global',
+    description: 'Get PromptFlow Pro: 100+ professional AI prompts for Content, Marketing, Coding, and Business Operations. Work smarter with ChatGPT, Claude & Copilot.',
+    keywords: 'AI prompts, PromptFlow Pro, ChatGPT prompts, Claude prompts, marketing prompts, coding prompts, digital products India, digital product, content marketers, AI, prompt engineering, entrepreuner, marketing consultant, freelancer, digital marketing, business owner, developer, content creator, chatgpt, claude, automation, business operation, ebook, facebook ads, instagram ads, linkedin ads'
   }
 };
 

@@ -7,7 +7,8 @@ const urlToPage = {
   '/blogs':          'blogs',
   '/contact-us':     'contact',
   '/privacy-policy': 'privacy',
-  '/terms-of-service': 'terms'
+  '/terms-of-service': 'terms',
+  '/products/digital/promptflowpro': 'promptflowpro'
 };
 
 // Blog slug → blog ID mapping for direct blog article URLs
@@ -28,7 +29,8 @@ const pageToUrl = {
   blogs:    '/blogs',
   contact:  '/contact-us',
   privacy:  '/privacy-policy',
-  terms:    '/terms-of-service'
+  terms:    '/terms-of-service',
+  promptflowpro: '/products/digital/promptflowpro'
 };
 
 // ─── Blog Data ────────────────────────────────────────────────────────────────
@@ -288,7 +290,8 @@ const pageMeta = {
   blogs:    { title: 'Insights & Resources | Reevanti Global – Digital Products & Artisan Crafts Blog', desc: 'Read expert articles on Digital Products, Handcrafted & Artisan goods, Indian artisan communities, sustainable shopping, and eCommerce trends from Reevanti Global.' },
   contact:  { title: 'Contact Us | Reevanti Global – Get in Touch', desc: "Contact Reevanti Global for product enquiries, order issues, returns, or feedback. We're here to help — reach us by email or WhatsApp." },
   privacy:  { title: 'Privacy Policy | Reevanti Global', desc: 'Read the Reevanti Global Privacy Policy to understand how we collect, use, and protect your personal information.' },
-  terms:    { title: 'Terms of Service | Reevanti Global', desc: "Review the Terms of Service governing your use of Reevanti Global's website, products, and eCommerce services." }
+  terms:    { title: 'Terms of Service | Reevanti Global', desc: "Review the Terms of Service governing your use of Reevanti Global's website, products, and eCommerce services." },
+  promptflowpro: { title: 'PromptFlow Pro | The Complete AI Prompt System - Reevanti Global', desc: "Get PromptFlow Pro: 100+ professional AI prompts for Content, Marketing, Coding, and Business Operations. Work smarter with ChatGPT, Claude & Copilot." }
 };
 
 function updateMeta(pageId, customTitle, customDesc) {
@@ -447,4 +450,17 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // ── FAQ Accordion for Landing Pages ─────────────────────────────────────────
+  document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+      button.classList.toggle('active');
+      const answer = button.nextElementSibling;
+      if (button.classList.contains('active')) {
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      } else {
+        answer.style.maxHeight = null;
+      }
+    });
+  });
 });
