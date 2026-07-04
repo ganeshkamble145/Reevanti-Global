@@ -285,12 +285,44 @@ const pageMeta = {
   terms:    { title: 'Terms of Service | Reevanti Global', desc: 'Review the Terms of Service governing your use of Reevanti Global\'s website, products, and eCommerce services.' }
 };
 
-function updateMeta(pageId) {
-  const meta = pageMeta[pageId] || pageMeta.home;
-  document.title = meta.title;
+function updateMeta(pageId, customTitle, customDesc) {
+  const meta   = pageMeta[pageId] || pageMeta.home;
+  const title  = customTitle || meta.title;
+  const desc   = customDesc  || meta.desc;
+  const url    = 'https://www.reevantiglobal.com' + (pageToUrl[pageId] || '/');
+
+  // Title
+  document.title = title;
+
+  // Meta description
   const descTag = document.querySelector('meta[name="description"]');
-  if (descTag) descTag.setAttribute('content', meta.desc);
+  if (descTag) descTag.setAttribute('content', desc);
+
+  // Canonical URL — critical for indexing unique pages
+  let canonical = document.querySelector('link[rel="canonical"]');
+  if (!canonical) {
+    canonical = document.createElement('link');
+    canonical.setAttribute('rel', 'canonical');
+    document.head.appendChild(canonical);
+  }
+  canonical.setAttribute('href', url);
+
+  // Open Graph tags
+  const setMeta = (prop, val, attr = 'property') => {
+    let el = document.querySelector(`meta[${attr}="${prop}"]`);
+    if (!el) { el = document.createElement('meta'); el.setAttribute(attr, prop); document.head.appendChild(el); }
+    el.setAttribute('content', val);
+  };
+  setMeta('og:url',                  url);
+  setMeta('og:title',                title);
+  setMeta('og:description',          desc);
+  setMeta('twitter:title',           title, 'name');
+  setMeta('twitter:description',     desc,  'name');
+
+  // Fire Meta Pixel PageView on SPA navigation
+  if (typeof fbq === 'function') fbq('track', 'PageView');
 }
+
 
 // ─── SPA Navigation ───────────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
