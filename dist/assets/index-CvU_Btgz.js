@@ -1,46 +1,4 @@
-// ─── URL → Section Map ────────────────────────────────────────────────────────
-const urlToPage = {
-  '/':               'home',
-  '/about-us':       'about',
-  '/products':       'products',
-  '/our-services':   'services',
-  '/blogs':          'blogs',
-  '/contact-us':     'contact',
-  '/privacy-policy': 'privacy',
-  '/terms-of-service': 'terms'
-};
-
-// Blog slug → blog ID mapping for direct blog article URLs
-const blogSlugToId = {
-  'why-digital-products-are-the-future-of-online-shopping': 1,
-  'india-handcrafted-heritage-artisans-thriving-online': 2,
-  'eco-friendly-shopping-handcrafted-products-better-for-planet': 3,
-  'top-digital-products-every-professional-needs-2026': 4,
-  'story-behind-every-stitch-supporting-indian-artisans': 5,
-  'digital-vs-physical-products-which-to-buy-online': 6
-};
-
-const pageToUrl = {
-  home:     '/',
-  about:    '/about-us',
-  products: '/products',
-  services: '/our-services',
-  blogs:    '/blogs',
-  contact:  '/contact-us',
-  privacy:  '/privacy-policy',
-  terms:    '/terms-of-service'
-};
-
-// ─── Blog Data ────────────────────────────────────────────────────────────────
-const blogs = [
-  {
-    id: 1,
-    slug: 'why-digital-products-are-the-future-of-online-shopping',
-    title: 'Why Digital Products Are the Future of Online Shopping',
-    category: 'Digital Products',
-    date: 'July 1, 2026',
-    excerpt: 'Exploring the rise of digital products and why they represent the next wave of eCommerce growth in India.',
-    content: `
+(function(){let e=document.createElement(`link`).relList;if(e&&e.supports&&e.supports(`modulepreload`))return;for(let e of document.querySelectorAll(`link[rel="modulepreload"]`))n(e);new MutationObserver(e=>{for(let t of e)if(t.type===`childList`)for(let e of t.addedNodes)e.tagName===`LINK`&&e.rel===`modulepreload`&&n(e)}).observe(document,{childList:!0,subtree:!0});function t(e){let t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin===`use-credentials`?t.credentials=`include`:e.crossOrigin===`anonymous`?t.credentials=`omit`:t.credentials=`same-origin`,t}function n(e){if(e.ep)return;e.ep=!0;let n=t(e);fetch(e.href,n)}})();var e={"/":`home`,"/about-us":`about`,"/products":`products`,"/our-services":`services`,"/blogs":`blogs`,"/contact-us":`contact`,"/privacy-policy":`privacy`,"/terms-of-service":`terms`},t={"why-digital-products-are-the-future-of-online-shopping":1,"india-handcrafted-heritage-artisans-thriving-online":2,"eco-friendly-shopping-handcrafted-products-better-for-planet":3,"top-digital-products-every-professional-needs-2026":4,"story-behind-every-stitch-supporting-indian-artisans":5,"digital-vs-physical-products-which-to-buy-online":6},n={home:`/`,about:`/about-us`,products:`/products`,services:`/our-services`,blogs:`/blogs`,contact:`/contact-us`,privacy:`/privacy-policy`,terms:`/terms-of-service`},r=[{id:1,slug:`why-digital-products-are-the-future-of-online-shopping`,title:`Why Digital Products Are the Future of Online Shopping`,category:`Digital Products`,date:`July 1, 2026`,excerpt:`Exploring the rise of digital products and why they represent the next wave of eCommerce growth in India.`,content:`
       <p>The eCommerce landscape is evolving rapidly, and digital products are leading the charge. Unlike physical goods, digital products — software, templates, e-books, online courses, digital art, and productivity tools — offer instant delivery, zero inventory costs, and unlimited scalability. For both buyers and sellers, this is a game-changer.</p>
 
       <h4>What Are Digital Products?</h4>
@@ -63,16 +21,7 @@ const blogs = [
       <p>Not all digital products are created equal. At Reevanti Global, every digital product in our catalogue is carefully evaluated for quality, relevance, and value. We only offer products that genuinely help our customers — professionals, creators, and students — achieve their goals.</p>
 
       <p>Whether you're a freelancer looking for the perfect invoice template, a student seeking study resources, or a creator searching for design assets, Reevanti Global's digital products collection has something meaningful for you.</p>
-    `
-  },
-  {
-    id: 2,
-    slug: 'india-handcrafted-heritage-artisans-thriving-online',
-    title: "India's Handcrafted Heritage: How Artisans Are Thriving Online",
-    category: 'Handcrafted & Artisan',
-    date: 'June 15, 2026',
-    excerpt: 'How Indian artisans are reaching customers across India through eCommerce, preserving traditional crafts while building sustainable livelihoods.',
-    content: `
+    `},{id:2,slug:`india-handcrafted-heritage-artisans-thriving-online`,title:`India's Handcrafted Heritage: How Artisans Are Thriving Online`,category:`Handcrafted & Artisan`,date:`June 15, 2026`,excerpt:`How Indian artisans are reaching customers across India through eCommerce, preserving traditional crafts while building sustainable livelihoods.`,content:`
       <p>India has one of the richest artisan traditions in the world. From the intricate block prints of Rajasthan to the delicate bamboo weaving of Assam, the handcrafted products of Indian artisans represent centuries of skill, culture, and heritage. Today, eCommerce is giving these artisans a wider platform — and changing their lives in the process.</p>
 
       <h4>The Scale of India's Artisan Economy</h4>
@@ -88,16 +37,7 @@ const blogs = [
       <p>At Reevanti Global, our Handcrafted & Artisan category is built on a simple belief: every purchase should create a positive impact. When you buy a handcrafted product from us, you're not just acquiring something beautiful — you're supporting a skilled artisan, preserving a cultural tradition, and making a sustainable choice for the planet.</p>
 
       <p>We work to bring you authentic, high-quality handcrafted products that tell real stories of India's artisan communities.</p>
-    `
-  },
-  {
-    id: 3,
-    slug: 'eco-friendly-shopping-handcrafted-products-better-for-planet',
-    title: 'Eco-Friendly Shopping: Why Handcrafted Products Are Better for the Planet',
-    category: 'Handcrafted & Artisan',
-    date: 'June 1, 2026',
-    excerpt: 'The environmental case for choosing handcrafted, sustainably made products over mass-produced alternatives.',
-    content: `
+    `},{id:3,slug:`eco-friendly-shopping-handcrafted-products-better-for-planet`,title:`Eco-Friendly Shopping: Why Handcrafted Products Are Better for the Planet`,category:`Handcrafted & Artisan`,date:`June 1, 2026`,excerpt:`The environmental case for choosing handcrafted, sustainably made products over mass-produced alternatives.`,content:`
       <p>Every product you buy has an environmental footprint. Mass-produced goods, made in factories using industrial processes, generate enormous amounts of waste, consume vast quantities of energy, and often involve harmful chemicals. Handcrafted products offer a fundamentally different — and far more sustainable — alternative.</p>
 
       <h4>The Problem with Mass Production</h4>
@@ -119,16 +59,7 @@ const blogs = [
       <p>When you choose a handcrafted product over a mass-produced alternative, you vote with your wallet for a better, more sustainable world. You support local artisan communities, reduce industrial waste, and own something truly unique — made with care, by human hands.</p>
 
       <p>At Reevanti Global, sustainability is at the heart of our Handcrafted & Artisan collection. Every product is vetted for its environmental credentials and authentic artisan origin.</p>
-    `
-  },
-  {
-    id: 4,
-    slug: 'top-digital-products-every-professional-needs-2026',
-    title: 'Top Digital Products Every Professional Needs in 2026',
-    category: 'Digital Products',
-    date: 'May 20, 2026',
-    excerpt: 'A curated guide to the most useful digital products for professionals, creators, and students in 2026.',
-    content: `
+    `},{id:4,slug:`top-digital-products-every-professional-needs-2026`,title:`Top Digital Products Every Professional Needs in 2026`,category:`Digital Products`,date:`May 20, 2026`,excerpt:`A curated guide to the most useful digital products for professionals, creators, and students in 2026.`,content:`
       <p>The modern professional's toolkit has gone almost entirely digital. Whether you're a freelancer, entrepreneur, designer, writer, or corporate professional, the right digital products can dramatically improve your productivity, creativity, and business outcomes. Here are the categories of digital products that every professional should consider in 2026.</p>
 
       <h4>1. Productivity & Project Management Templates</h4>
@@ -147,16 +78,7 @@ const blogs = [
       <p>Social media content calendars, email marketing templates, blog post frameworks, and brand identity kits give marketing professionals and business owners a structured, consistent approach to content creation without starting from a blank page.</p>
 
       <p>At Reevanti Global, our Digital Products category features carefully curated tools and resources across all these categories — selected to provide real, measurable value to professionals, creators, and students across India.</p>
-    `
-  },
-  {
-    id: 5,
-    slug: 'story-behind-every-stitch-supporting-indian-artisans',
-    title: 'The Story Behind Every Stitch: Supporting Indian Artisans',
-    category: 'Handcrafted & Artisan',
-    date: 'May 5, 2026',
-    excerpt: "How buying handcrafted products directly supports the livelihoods of skilled artisans and preserves India's rich cultural heritage.",
-    content: `
+    `},{id:5,slug:`story-behind-every-stitch-supporting-indian-artisans`,title:`The Story Behind Every Stitch: Supporting Indian Artisans`,category:`Handcrafted & Artisan`,date:`May 5, 2026`,excerpt:`How buying handcrafted products directly supports the livelihoods of skilled artisans and preserves India's rich cultural heritage.`,content:`
       <p>Behind every handcrafted product is a person. A weaver who learned her craft from her grandmother. A potter who has worked the same clay for forty years. A block printer whose family has practised the same technique for six generations. When you choose a handcrafted product, you are choosing to see — and support — that person.</p>
 
       <h4>The Artisans of India</h4>
@@ -172,16 +94,7 @@ const blogs = [
       <p>Authenticity matters. Look for products that disclose their origin — which region, which community, which technique. Look for natural materials and hand-finishing. Slight variations in pattern, colour, or dimension are hallmarks of genuine handcrafted work — and what makes each piece truly unique.</p>
 
       <p>At Reevanti Global, we are proud to curate handcrafted products from artisan communities across India. Every Handcrafted & Artisan product in our collection comes with a commitment: it is made by real artisans, using traditional techniques, with care for the environment and the communities that make them.</p>
-    `
-  },
-  {
-    id: 6,
-    slug: 'digital-vs-physical-products-which-to-buy-online',
-    title: 'Digital vs Physical Products: Which Should You Buy Online?',
-    category: 'Digital Products',
-    date: 'April 18, 2026',
-    excerpt: 'A practical comparison of digital and physical products to help you make smarter purchasing decisions online.',
-    content: `
+    `},{id:6,slug:`digital-vs-physical-products-which-to-buy-online`,title:`Digital vs Physical Products: Which Should You Buy Online?`,category:`Digital Products`,date:`April 18, 2026`,excerpt:`A practical comparison of digital and physical products to help you make smarter purchasing decisions online.`,content:`
       <p>When you're shopping online, you're often choosing between two fundamentally different types of products: digital and physical. Both offer distinct advantages, and the best choice depends on your needs, values, and the specific product category. Here's a clear, practical guide to help you decide.</p>
 
       <h4>Digital Products: The Case For</h4>
@@ -208,243 +121,32 @@ const blogs = [
 
       <h4>Reevanti Global's Approach</h4>
       <p>At Reevanti Global, we've built our catalogue around these two complementary categories — Digital Products for those seeking instant, professional digital tools; and Handcrafted & Artisan products for those who value authenticity, sustainability, and the beauty of things made by hand. Together, they represent the best of what thoughtful eCommerce can offer.</p>
-    `
-  }
-];
-
-// ─── Blog Rendering ────────────────────────────────────────────────────────────
-function renderBlogGrid() {
-  const container = document.getElementById('blogs-content');
-  if (!container) return;
-
-  container.innerHTML = `
+    `}];function i(){let e=document.getElementById(`blogs-content`);e&&(e.innerHTML=`
     <div class="container blog-grid">
-      ${blogs.map(blog => `
-        <article class="blog-card clickable-card" data-blog-id="${blog.id}" data-blog-slug="${blog.slug}">
-          <div class="blog-img placeholder-img">${blog.category}</div>
+      ${r.map(e=>`
+        <article class="blog-card clickable-card" data-blog-id="${e.id}" data-blog-slug="${e.slug}">
+          <div class="blog-img placeholder-img">${e.category}</div>
           <div class="blog-content">
-            <span class="blog-date">${blog.date}</span>
-            <h3>${blog.title}</h3>
-            <p>${blog.excerpt}</p>
+            <span class="blog-date">${e.date}</span>
+            <h3>${e.title}</h3>
+            <p>${e.excerpt}</p>
             <span class="read-more">Read More &rarr;</span>
           </div>
         </article>
-      `).join('')}
+      `).join(``)}
     </div>
-  `;
-
-  container.querySelectorAll('.clickable-card').forEach(card => {
-    card.addEventListener('click', () => {
-      const id = parseInt(card.getAttribute('data-blog-id'));
-      const slug = card.getAttribute('data-blog-slug');
-      navigateToBlog(id, slug);
-    });
-  });
-}
-
-function navigateToBlog(id, slug) {
-  history.pushState({ page: 'blogs', blogId: id }, '', `/blogs/${slug}`);
-  renderBlogArticle(id);
-}
-
-function renderBlogArticle(id) {
-  const blog = blogs.find(b => b.id === id);
-  if (!blog) return;
-
-  const container = document.getElementById('blogs-content');
-  container.innerHTML = `
+  `,e.querySelectorAll(`.clickable-card`).forEach(e=>{e.addEventListener(`click`,()=>{a(parseInt(e.getAttribute(`data-blog-id`)),e.getAttribute(`data-blog-slug`))})}))}function a(e,t){history.pushState({page:`blogs`,blogId:e},``,`/blogs/${t}`),o(e)}function o(e){let t=r.find(t=>t.id===e);if(!t)return;let n=document.getElementById(`blogs-content`);n.innerHTML=`
     <div class="container blog-article">
       <button class="btn-back" id="backToBlogs">&larr; Back to Insights</button>
       <div class="article-meta">
-        <span class="blog-date">${blog.date}</span>
-        <span class="article-category">${blog.category}</span>
+        <span class="blog-date">${t.date}</span>
+        <span class="article-category">${t.category}</span>
       </div>
-      <h2 class="article-title">${blog.title}</h2>
-      <div class="article-body">${blog.content}</div>
+      <h2 class="article-title">${t.title}</h2>
+      <div class="article-body">${t.content}</div>
       <div class="article-footer">
         <p>Written by <strong>Reevanti Global</strong> &mdash; Insights on Digital Products, Handcrafted Artisan goods, and thoughtful eCommerce.</p>
         <button class="btn btn-primary" id="backToBlogsBottom">&larr; Back to All Insights</button>
       </div>
     </div>
-  `;
-
-  document.getElementById('backToBlogs').addEventListener('click', () => {
-    history.pushState({ page: 'blogs' }, '', '/blogs');
-    renderBlogGrid();
-  });
-  document.getElementById('backToBlogsBottom').addEventListener('click', () => {
-    history.pushState({ page: 'blogs' }, '', '/blogs');
-    renderBlogGrid();
-  });
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-// ─── SEO: per-page title & description ───────────────────────────────────────
-const pageMeta = {
-  home:     { title: 'Reevanti Global | Digital Products & Handcrafted Artisan Goods Online in India', desc: 'Reevanti Global offers premium Digital Products and authentic Handcrafted & Artisan goods — eco-friendly, sustainably made by Indian artisans. Shop online with fast delivery.' },
-  about:    { title: "About Us | Reevanti Global – India's Trusted Digital & Artisan eCommerce Store", desc: 'Learn about Reevanti Global — our mission to bring premium Digital Products and authentic Handcrafted & Artisan goods to customers across India.' },
-  products: { title: 'Products | Reevanti Global – Digital Products & Handcrafted Artisan Goods', desc: 'Explore Reevanti Global\'s two product categories: premium Digital Products for professionals and creators, and Handcrafted & Artisan goods made by skilled Indian artisans.' },
-  services: { title: 'Our eCommerce Services | Reevanti Global – Digital & Artisan Product Seller', desc: 'Reevanti Global offers direct-to-consumer eCommerce services specialising in Digital Products and Handcrafted & Artisan goods from India.' },
-  blogs:    { title: 'Insights & Resources | Reevanti Global – Digital Products & Artisan Crafts Blog', desc: 'Read expert articles on Digital Products, Handcrafted & Artisan goods, Indian artisan communities, sustainable shopping, and eCommerce trends from Reevanti Global.' },
-  contact:  { title: 'Contact Us | Reevanti Global – Get in Touch', desc: "Contact Reevanti Global for product enquiries, order issues, returns, or feedback. We're here to help — reach us by email or WhatsApp." },
-  privacy:  { title: 'Privacy Policy | Reevanti Global', desc: 'Read the Reevanti Global Privacy Policy to understand how we collect, use, and protect your personal information.' },
-  terms:    { title: 'Terms of Service | Reevanti Global', desc: "Review the Terms of Service governing your use of Reevanti Global's website, products, and eCommerce services." }
-};
-
-function updateMeta(pageId, customTitle, customDesc) {
-  const meta   = pageMeta[pageId] || pageMeta.home;
-  const title  = customTitle || meta.title;
-  const desc   = customDesc  || meta.desc;
-  const url    = 'https://www.reevantiglobal.com' + (pageToUrl[pageId] || '/');
-
-  // Title
-  document.title = title;
-
-  // Meta description
-  const descTag = document.querySelector('meta[name="description"]');
-  if (descTag) descTag.setAttribute('content', desc);
-
-  // Canonical URL — critical for indexing unique pages
-  let canonical = document.querySelector('link[rel="canonical"]');
-  if (!canonical) {
-    canonical = document.createElement('link');
-    canonical.setAttribute('rel', 'canonical');
-    document.head.appendChild(canonical);
-  }
-  canonical.setAttribute('href', url);
-
-  // Open Graph tags
-  const setMeta = (prop, val, attr = 'property') => {
-    let el = document.querySelector(`meta[${attr}="${prop}"]`);
-    if (!el) { el = document.createElement('meta'); el.setAttribute(attr, prop); document.head.appendChild(el); }
-    el.setAttribute('content', val);
-  };
-  setMeta('og:url',              url);
-  setMeta('og:title',            title);
-  setMeta('og:description',      desc);
-  setMeta('twitter:title',       title, 'name');
-  setMeta('twitter:description', desc,  'name');
-
-  // Fire Meta Pixel PageView on SPA navigation
-  if (typeof fbq === 'function') fbq('track', 'PageView');
-}
-
-// ─── SPA Navigation ───────────────────────────────────────────────────────────
-document.addEventListener('DOMContentLoaded', () => {
-  const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-  const navLinksContainer = document.querySelector('.nav-links');
-  const sections = document.querySelectorAll('.page-section');
-
-  mobileMenuToggle.addEventListener('click', () => {
-    navLinksContainer.classList.toggle('active');
-  });
-
-  // ── Show a page by section ID ──────────────────────────────────────────────
-  function showPage(pageId) {
-    sections.forEach(s => s.classList.remove('active-section'));
-    const target = document.getElementById(pageId);
-    if (target) target.classList.add('active-section');
-
-    // Update active nav link
-    document.querySelectorAll('a[data-page]').forEach(link => {
-      link.classList.toggle('active', link.getAttribute('data-page') === pageId);
-    });
-
-    navLinksContainer.classList.remove('active');
-    updateMeta(pageId);
-
-    if (pageId === 'blogs') renderBlogGrid();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-
-  // ── Navigate: push URL + show page ────────────────────────────────────────
-  function navigateTo(pageId) {
-    const url = pageToUrl[pageId] || '/';
-    history.pushState({ page: pageId }, '', url);
-    showPage(pageId);
-  }
-
-  // ── Intercept all internal nav links (a[data-page]) ───────────────────────
-  document.querySelectorAll('a[data-page]').forEach(link => {
-    link.addEventListener('click', e => {
-      e.preventDefault();
-      const pageId = link.getAttribute('data-page');
-      navigateTo(pageId);
-    });
-  });
-
-  // ── Action buttons (data-target) ──────────────────────────────────────────
-  document.querySelectorAll('button[data-target]').forEach(btn => {
-    btn.addEventListener('click', e => {
-      e.preventDefault();
-      navigateTo(btn.getAttribute('data-target'));
-    });
-  });
-
-  // ── Browser back / forward ────────────────────────────────────────────────
-  window.addEventListener('popstate', e => {
-    const pageId = e.state?.page || urlToPage[window.location.pathname] || 'home';
-    if (e.state?.blogId) {
-      showPage('blogs');
-      renderBlogArticle(e.state.blogId);
-    } else {
-      showPage(pageId);
-    }
-  });
-
-  // ── Initial load: resolve URL → page ──────────────────────────────────────
-  const pathParts = window.location.pathname.split('/');
-  const isBlogArticle = pathParts[1] === 'blogs' && pathParts[2];
-  if (isBlogArticle) {
-    const blogId = blogSlugToId[pathParts[2]];
-    showPage('blogs');
-    if (blogId) renderBlogArticle(blogId);
-  } else {
-    const initialPage = urlToPage[window.location.pathname] || 'home';
-    showPage(initialPage);
-    history.replaceState({ page: initialPage }, '', window.location.pathname);
-  }
-
-  // ── Contact Form ──────────────────────────────────────────────────────────
-  const contactForm = document.getElementById('contactForm');
-  const formSuccess = document.getElementById('formSuccess');
-
-  if (contactForm) {
-    contactForm.addEventListener('submit', e => {
-      e.preventDefault();
-
-      const submitBtn = contactForm.querySelector('button[type="submit"]');
-      const originalText = submitBtn.innerText;
-      submitBtn.innerText = 'Sending...';
-      submitBtn.disabled = true;
-
-      const formData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        inquiryType: document.getElementById('inquiryType').value,
-        message: document.getElementById('message').value,
-        _subject: 'New Inquiry from Reevanti Global Website',
-        _template: 'table'
-      };
-
-      fetch('https://formsubmit.co/ajax/contact@reevantiglobal.com', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify(formData)
-      })
-      .then(res => res.json())
-      .then(() => {
-        contactForm.reset();
-        submitBtn.innerText = originalText;
-        submitBtn.disabled = false;
-        formSuccess.classList.remove('hidden');
-        setTimeout(() => formSuccess.classList.add('hidden'), 5000);
-      })
-      .catch(() => {
-        submitBtn.innerText = originalText;
-        submitBtn.disabled = false;
-        alert('There was an error sending your message. Please try again later.');
-      });
-    });
-  }
-});
+  `,document.getElementById(`backToBlogs`).addEventListener(`click`,()=>{history.pushState({page:`blogs`},``,`/blogs`),i()}),document.getElementById(`backToBlogsBottom`).addEventListener(`click`,()=>{history.pushState({page:`blogs`},``,`/blogs`),i()}),window.scrollTo({top:0,behavior:`smooth`})}var s={home:{title:`Reevanti Global | Digital Products & Handcrafted Artisan Goods Online in India`,desc:`Reevanti Global offers premium Digital Products and authentic Handcrafted & Artisan goods — eco-friendly, sustainably made by Indian artisans. Shop online with fast delivery.`},about:{title:`About Us | Reevanti Global – India's Trusted Digital & Artisan eCommerce Store`,desc:`Learn about Reevanti Global — our mission to bring premium Digital Products and authentic Handcrafted & Artisan goods to customers across India.`},products:{title:`Products | Reevanti Global – Digital Products & Handcrafted Artisan Goods`,desc:`Explore Reevanti Global's two product categories: premium Digital Products for professionals and creators, and Handcrafted & Artisan goods made by skilled Indian artisans.`},services:{title:`Our eCommerce Services | Reevanti Global – Digital & Artisan Product Seller`,desc:`Reevanti Global offers direct-to-consumer eCommerce services specialising in Digital Products and Handcrafted & Artisan goods from India.`},blogs:{title:`Insights & Resources | Reevanti Global – Digital Products & Artisan Crafts Blog`,desc:`Read expert articles on Digital Products, Handcrafted & Artisan goods, Indian artisan communities, sustainable shopping, and eCommerce trends from Reevanti Global.`},contact:{title:`Contact Us | Reevanti Global – Get in Touch`,desc:`Contact Reevanti Global for product enquiries, order issues, returns, or feedback. We're here to help — reach us by email or WhatsApp.`},privacy:{title:`Privacy Policy | Reevanti Global`,desc:`Read the Reevanti Global Privacy Policy to understand how we collect, use, and protect your personal information.`},terms:{title:`Terms of Service | Reevanti Global`,desc:`Review the Terms of Service governing your use of Reevanti Global's website, products, and eCommerce services.`}};function c(e,t,r){let i=s[e]||s.home,a=t||i.title,o=r||i.desc,c=`https://www.reevantiglobal.com`+(n[e]||`/`);document.title=a;let l=document.querySelector(`meta[name="description"]`);l&&l.setAttribute(`content`,o);let u=document.querySelector(`link[rel="canonical"]`);u||(u=document.createElement(`link`),u.setAttribute(`rel`,`canonical`),document.head.appendChild(u)),u.setAttribute(`href`,c);let d=(e,t,n=`property`)=>{let r=document.querySelector(`meta[${n}="${e}"]`);r||(r=document.createElement(`meta`),r.setAttribute(n,e),document.head.appendChild(r)),r.setAttribute(`content`,t)};d(`og:url`,c),d(`og:title`,a),d(`og:description`,o),d(`twitter:title`,a,`name`),d(`twitter:description`,o,`name`),typeof fbq==`function`&&fbq(`track`,`PageView`)}document.addEventListener(`DOMContentLoaded`,()=>{let r=document.querySelector(`.mobile-menu-toggle`),a=document.querySelector(`.nav-links`),s=document.querySelectorAll(`.page-section`);r.addEventListener(`click`,()=>{a.classList.toggle(`active`)});function l(e){s.forEach(e=>e.classList.remove(`active-section`));let t=document.getElementById(e);t&&t.classList.add(`active-section`),document.querySelectorAll(`a[data-page]`).forEach(t=>{t.classList.toggle(`active`,t.getAttribute(`data-page`)===e)}),a.classList.remove(`active`),c(e),e===`blogs`&&i(),window.scrollTo({top:0,behavior:`smooth`})}function u(e){let t=n[e]||`/`;history.pushState({page:e},``,t),l(e)}document.querySelectorAll(`a[data-page]`).forEach(e=>{e.addEventListener(`click`,t=>{t.preventDefault(),u(e.getAttribute(`data-page`))})}),document.querySelectorAll(`button[data-target]`).forEach(e=>{e.addEventListener(`click`,t=>{t.preventDefault(),u(e.getAttribute(`data-target`))})}),window.addEventListener(`popstate`,t=>{let n=t.state?.page||e[window.location.pathname]||`home`;t.state?.blogId?(l(`blogs`),o(t.state.blogId)):l(n)});let d=window.location.pathname.split(`/`);if(d[1]===`blogs`&&d[2]){let e=t[d[2]];l(`blogs`),e&&o(e)}else{let t=e[window.location.pathname]||`home`;l(t),history.replaceState({page:t},``,window.location.pathname)}let f=document.getElementById(`contactForm`),p=document.getElementById(`formSuccess`);f&&f.addEventListener(`submit`,e=>{e.preventDefault();let t=f.querySelector(`button[type="submit"]`),n=t.innerText;t.innerText=`Sending...`,t.disabled=!0;let r={name:document.getElementById(`name`).value,email:document.getElementById(`email`).value,inquiryType:document.getElementById(`inquiryType`).value,message:document.getElementById(`message`).value,_subject:`New Inquiry from Reevanti Global Website`,_template:`table`};fetch(`https://formsubmit.co/ajax/contact@reevantiglobal.com`,{method:`POST`,headers:{"Content-Type":`application/json`,Accept:`application/json`},body:JSON.stringify(r)}).then(e=>e.json()).then(()=>{f.reset(),t.innerText=n,t.disabled=!1,p.classList.remove(`hidden`),setTimeout(()=>p.classList.add(`hidden`),5e3)}).catch(()=>{t.innerText=n,t.disabled=!1,alert(`There was an error sending your message. Please try again later.`)})})});
