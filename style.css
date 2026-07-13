@@ -369,6 +369,18 @@ main {
   margin-bottom: 10px;
 }
 
+.product-card-btn {
+  display: inline-block;
+  margin-top: 16px;
+}
+
+.product-card-btn:disabled,
+.product-card-btn[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 .e-commerce-badges {
   text-align: center;
   margin-bottom: 80px;

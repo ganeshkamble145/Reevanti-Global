@@ -7,8 +7,7 @@ const urlToPage = {
   '/blogs':          'blogs',
   '/contact-us':     'contact',
   '/privacy-policy': 'privacy',
-  '/terms-of-service': 'terms',
-  '/products/digital/promptflowpro': 'promptflowpro'
+  '/terms-of-service': 'terms'
 };
 
 // Blog slug → blog ID mapping for direct blog article URLs
@@ -29,8 +28,7 @@ const pageToUrl = {
   blogs:    '/blogs',
   contact:  '/contact-us',
   privacy:  '/privacy-policy',
-  terms:    '/terms-of-service',
-  promptflowpro: '/products/digital/promptflowpro'
+  terms:    '/terms-of-service'
 };
 
 // ─── Blog Data ────────────────────────────────────────────────────────────────
