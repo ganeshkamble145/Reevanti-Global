@@ -381,6 +381,14 @@ main {
   pointer-events: none;
 }
 
+.payhip-notice {
+  margin-top: 10px;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-style: italic;
+  line-height: 1.4;
+}
+
 .e-commerce-badges {
   text-align: center;
   margin-bottom: 80px;
