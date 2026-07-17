@@ -3,7 +3,6 @@ const urlToPage = {
   '/':               'home',
   '/about-us':       'about',
   '/products':       'products',
-  '/our-services':   'services',
   '/blogs':          'blogs',
   '/contact-us':     'contact',
   '/privacy-policy': 'privacy',
@@ -24,7 +23,6 @@ const pageToUrl = {
   home:     '/',
   about:    '/about-us',
   products: '/products',
-  services: '/our-services',
   blogs:    '/blogs',
   contact:  '/contact-us',
   privacy:  '/privacy-policy',
@@ -281,10 +279,9 @@ function renderBlogArticle(id) {
 
 // ─── SEO: per-page title & description ───────────────────────────────────────
 const pageMeta = {
-  home:     { title: 'Reevanti Global | Digital Products & Handcrafted Artisan Goods Online in India', desc: 'Reevanti Global offers premium Digital Products and authentic Handcrafted & Artisan goods — eco-friendly, sustainably made by Indian artisans. Shop online with fast delivery.' },
+  home:     { title: 'Reevanti Global | Digital Products & Handcrafted Artisan Goods Online in India', desc: 'Reevanti Global offers premium Digital Products including eBooks and AI prompt guides, and authentic Handcrafted & Artisan goods — eco-friendly, sustainably made by Indian artisans. Shop online with fast delivery.' },
   about:    { title: "About Us | Reevanti Global – India's Trusted Digital & Artisan eCommerce Store", desc: 'Learn about Reevanti Global — our mission to bring premium Digital Products and authentic Handcrafted & Artisan goods to customers across India.' },
-  products: { title: 'Products | Reevanti Global – Digital Products & Handcrafted Artisan Goods', desc: 'Explore Reevanti Global\'s two product categories: premium Digital Products for professionals and creators, and Handcrafted & Artisan goods made by skilled Indian artisans.' },
-  services: { title: 'Our eCommerce Services | Reevanti Global – Digital & Artisan Product Seller', desc: 'Reevanti Global offers direct-to-consumer eCommerce services specialising in Digital Products and Handcrafted & Artisan goods from India.' },
+  products: { title: 'Products | Reevanti Global – Digital eBooks & Handcrafted Artisan Goods', desc: 'Explore Reevanti Global\'s two product categories: premium Digital Products including eBooks and AI prompt guides for professionals and creators, and Handcrafted & Artisan goods made by skilled Indian artisans.' },
   blogs:    { title: 'Insights & Resources | Reevanti Global – Digital Products & Artisan Crafts Blog', desc: 'Read expert articles on Digital Products, Handcrafted & Artisan goods, Indian artisan communities, sustainable shopping, and eCommerce trends from Reevanti Global.' },
   contact:  { title: 'Contact Us | Reevanti Global – Get in Touch', desc: "Contact Reevanti Global for product enquiries, order issues, returns, or feedback. We're here to help — reach us by email or WhatsApp." },
   privacy:  { title: 'Privacy Policy | Reevanti Global', desc: 'Read the Reevanti Global Privacy Policy to understand how we collect, use, and protect your personal information.' },

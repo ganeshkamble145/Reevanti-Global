@@ -10,8 +10,8 @@ const BASE_URL = 'https://www.reevantiglobal.com';
 const routeMeta = {
   '/': {
     title: 'Reevanti Global | Buy Quality Products Online in India',
-    description: 'Shop quality products online with Reevanti Global. Genuine items across Handcrafted & Artisan, Home, and Electronics with fast delivery in India.',
-    keywords: 'Reevanti Global, eCommerce India, buy products online India, online shopping India, quality products India, handicrafts, traders, artisans, export, digital product, content marketers, AI, prompt engineering, entrepreuner, marketing consultant, freelancer, digital marketing, business owner, developer, content creator, souvenir shop, gift shop, chatgpt, claude, automation, business operation, ebook, facebook ads, instagram ads, linkedin ads'
+    description: 'Shop quality products online with Reevanti Global. Premium eBooks, AI prompt guides, and authentic Handcrafted & Artisan goods with fast delivery in India.',
+    keywords: 'Reevanti Global, eCommerce India, buy products online India, online shopping India, quality products India, handicrafts, traders, artisans, export, digital product, ebooks, AI prompts, content marketers, AI, prompt engineering, entrepreneur, marketing consultant, freelancer, digital marketing, business owner, developer, content creator, souvenir shop, gift shop, chatgpt, claude, automation, business operation, ebook, facebook ads, instagram ads, linkedin ads'
   },
   '/about-us': {
     title: 'About Us | Reevanti Global – India\'s Trusted Online Store',
@@ -19,14 +19,9 @@ const routeMeta = {
     keywords: 'about Reevanti Global, eCommerce company India, trusted online store, online shopping company, D2C brand India'
   },
   '/products': {
-    title: 'Products | Reevanti Global – Home, Electronics & More',
-    description: 'Explore Handcrafted & Artisan, Home, Electronics, Health, and Digital Products. Shop Reevanti Global directly for fast delivery across India.',
-    keywords: 'buy products online, handcrafted artisan goods, sustainable products, eco-friendly goods, handicrafts, traders, artisans, export, digital product, content marketers, AI, prompt engineering, entrepreuner, marketing consultant, freelancer, digital marketing, business owner, developer, content creator, souvenir shop, gift shop, chatgpt, claude, automation, business operation, ebook, facebook ads, instagram ads, linkedin ads'
-  },
-  '/our-services': {
-    title: 'eCommerce Services | Reevanti Global',
-    description: 'Reevanti Global offers end-to-end direct-to-consumer eCommerce services, Global Sourcing Consulting, IT Consulting, and Import Export services in India.',
-    keywords: 'eCommerce services India, direct to consumer brand, D2C retail India, product curation, eCommerce order fulfilment India, global sourcing consulting, IT consulting, import export services'
+    title: 'Products | Reevanti Global – eBooks & Handcrafted Artisan Goods',
+    description: 'Explore Reevanti Global\'s two product categories: premium Digital Products including eBooks and AI prompt guides for professionals and creators, and authentic Handcrafted & Artisan goods made by skilled Indian artisans.',
+    keywords: 'buy products online, ebooks India, AI prompts, digital products India, handcrafted artisan goods, sustainable products, eco-friendly goods, handicrafts, traders, artisans, digital product, content marketers, AI, prompt engineering, entrepreneur, marketing consultant, freelancer, digital marketing, business owner, developer, content creator, souvenir shop, gift shop, chatgpt, claude, automation, business operation, ebook, facebook ads, instagram ads, linkedin ads'
   },
   '/blogs': {
     title: 'Reevanti Global Blog | eCommerce Insights & Tips',
@@ -51,7 +46,7 @@ const routeMeta = {
   '/products/digital/promptflowpro': {
     title: 'PromptFlow Pro | The Complete AI Prompt System - Reevanti Global',
     description: 'Get PromptFlow Pro: 100+ professional AI prompts for Content, Marketing, Coding, and Business Operations. Work smarter with ChatGPT, Claude & Copilot.',
-    keywords: 'AI prompts, PromptFlow Pro, ChatGPT prompts, Claude prompts, marketing prompts, coding prompts, digital products India, digital product, content marketers, AI, prompt engineering, entrepreuner, marketing consultant, freelancer, digital marketing, business owner, developer, content creator, chatgpt, claude, automation, business operation, ebook, facebook ads, instagram ads, linkedin ads'
+    keywords: 'AI prompts, PromptFlow Pro, ChatGPT prompts, Claude prompts, marketing prompts, coding prompts, digital products India, digital product, content marketers, AI, prompt engineering, entrepreneur, marketing consultant, freelancer, digital marketing, business owner, developer, content creator, chatgpt, claude, automation, business operation, ebook, facebook ads, instagram ads, linkedin ads'
   }
 };
 
