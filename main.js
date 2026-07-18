@@ -6,7 +6,8 @@ const urlToPage = {
   '/blogs':          'blogs',
   '/contact-us':     'contact',
   '/privacy-policy': 'privacy',
-  '/terms-of-service': 'terms'
+  '/terms-of-service': 'terms',
+  '/digitalproducts/landing': 'digitalproductslanding'
 };
 
 // Blog slug → blog ID mapping for direct blog article URLs
@@ -26,7 +27,8 @@ const pageToUrl = {
   blogs:    '/blogs',
   contact:  '/contact-us',
   privacy:  '/privacy-policy',
-  terms:    '/terms-of-service'
+  terms:    '/terms-of-service',
+  digitalproductslanding: '/digitalproducts/landing'
 };
 
 // ─── Blog Data ────────────────────────────────────────────────────────────────
@@ -286,7 +288,7 @@ const pageMeta = {
   contact:  { title: 'Contact Reevanti Global | AI Digital Products & Indian Artisan Goods Enquiries', desc: 'Contact Reevanti Global for AI eBook enquiries, Indian Handcrafted Artisan product orders, export trade partnerships, or MSME collaboration. Reach us by email or WhatsApp.' },
   privacy:  { title: 'Privacy Policy | Reevanti Global', desc: 'Read the Reevanti Global Privacy Policy to understand how we collect, use, and protect your personal information.' },
   terms:    { title: 'Terms of Service | Reevanti Global', desc: "Review the Terms of Service governing your use of Reevanti Global's website, products, and eCommerce services." },
-  promptflowpro: { title: 'PromptFlow Pro | The Complete AI Prompt System - Reevanti Global', desc: "Get PromptFlow Pro: 100+ professional AI prompts for Content, Marketing, Coding, and Business Operations. Work smarter with ChatGPT, Claude & Copilot." }
+  digitalproductslanding: { title: 'AI eBooks & Digital Products | PromptFlow Pro - Reevanti Global', desc: 'Shop 100+ professional AI prompt eBooks for Content, Marketing, Coding & Business. Works with ChatGPT, Claude & Gemini. Instant download from Reevanti Global.' }
 };
 
 function updateMeta(pageId, customTitle, customDesc) {
