@@ -28,7 +28,7 @@ const pageToUrl = {
   contact:  '/contact-us',
   privacy:  '/privacy-policy',
   terms:    '/terms-of-use',
-  digitalproductslanding: '/digitalproducts/landing'
+  digitalproductslanding: '/products/AIeBooks'
 };
 
 // ─── Blog Data ────────────────────────────────────────────────────────────────
