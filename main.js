@@ -460,4 +460,38 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // ── Animated Stat Counters (IntersectionObserver) ────────────────────────────
+  function animateCounter(el) {
+    const target = parseInt(el.getAttribute('data-target'), 10);
+    const duration = 1500;
+    const step = Math.ceil(target / (duration / 16));
+    let current = 0;
+    const timer = setInterval(() => {
+      current += step;
+      if (current >= target) { current = target; clearInterval(timer); }
+      el.textContent = current;
+    }, 16);
+  }
+
+  const statObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.querySelectorAll('.lp-stat-num').forEach(animateCounter);
+        statObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  document.querySelectorAll('.lp-stats-bar').forEach(el => statObserver.observe(el));
+
+  // ── Smooth scroll for "View AI Collection" anchor ────────────────────────────
+  document.querySelectorAll('.lp-scroll-btn').forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.getElementById('lp-collection');
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
 });
