@@ -38,9 +38,9 @@ const routeMeta = {
     description: 'Read the Reevanti Global Privacy Policy to understand how we collect, use, and protect your personal information.',
     keywords: 'privacy policy, data protection, Reevanti Global privacy, MSME data policy India'
   },
-  '/terms-of-service': {
-    title: 'Terms of Service | Reevanti Global',
-    description: 'Review the Terms of Service governing your use of Reevanti Global\'s website, products, and eCommerce services.',
+  '/terms-of-use': {
+    title: 'Terms of Use | Reevanti Global',
+    description: 'Review the Terms of Use governing your use of Reevanti Global\'s website, products, and eCommerce platform.',
     keywords: 'terms of service, terms and conditions, Reevanti Global terms, eCommerce terms India'
   },
   '/products/AIeBooks': {
