@@ -7,7 +7,7 @@ const urlToPage = {
   '/contact-us':     'contact',
   '/privacy-policy': 'privacy',
   '/terms-of-service': 'terms',
-  '/digitalproducts/landing': 'digitalproductslanding'
+  '/products/AIeBooks': 'digitalproductslanding'
 };
 
 // Blog slug → blog ID mapping for direct blog article URLs

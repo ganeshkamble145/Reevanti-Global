@@ -43,7 +43,7 @@ const routeMeta = {
     description: 'Review the Terms of Service governing your use of Reevanti Global\'s website, products, and eCommerce services.',
     keywords: 'terms of service, terms and conditions, Reevanti Global terms, eCommerce terms India'
   },
-  '/digitalproducts/landing': {
+  '/products/AIeBooks': {
     title: 'AI eBooks & Digital Products | PromptFlow Pro - Reevanti Global',
     description: 'Shop 100+ professional AI prompt eBooks for Content, Marketing, Coding & Business. Works with ChatGPT, Claude & Gemini. Instant download from Reevanti Global.',
     keywords: 'PromptFlow Pro, AI prompt ebook, ChatGPT prompt guide, Claude AI prompts, Gemini prompts, AI tools ebook India, artificial intelligence ebook, content marketing prompts, coding prompts AI, business automation prompts, prompt engineering ebook, buy AI ebook India, digital product India, AI productivity ebook, entrepreneur AI tools, freelancer AI guide, developer AI prompts, marketing AI ebook, Reevanti Global digital products'
