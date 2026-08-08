@@ -14,19 +14,19 @@ const routeMeta = {
     keywords: 'Reevanti Global, reevantiglobal, reevanti, digital products India, eBooks India, AI ebooks, artificial intelligence ebooks, AI prompt guides, ChatGPT prompts, Claude AI prompts, Gemini prompts, AI tools India, handcrafted products India, Indian artisan products, handicraft India, Indian handicrafts online, artisan crafts India, handmade products India, eco-friendly products India, sustainable products India, MSME India, MSME certified, MSME registered, small business India, Indian exporter, handicraft exporter India, international trade India, global trade India, craft export India, artisan export, Indian craft marketplace, buy handmade online India, eCommerce India, online shopping India, D2C brand India, digital download India, ebook download India, prompt engineering, AI automation, artificial intelligence tools, business productivity tools, content creation tools, marketing ebooks, entrepreneur resources, freelancer tools, developer resources, souvenir shop India, gift shop India, Navi Mumbai MSME, Maharashtra exporter, buy AI ebook India, online craft store India'
   },
   '/about-us': {
-    title: 'About Reevanti Global | MSME-Registered Indian Exporter – AI eBooks & Artisan Crafts',
-    description: 'Reevanti Global is an MSME-registered eCommerce company from Navi Mumbai, India — delivering AI-powered Digital Products and authentic Indian Handcrafted Artisan goods for domestic buyers and international traders.',
-    keywords: 'about Reevanti Global, MSME company India, MSME registered business India, Indian exporter company, artisan product company India, handicraft company India, AI ebook company India, digital product company India, eCommerce company Navi Mumbai, small business India, international trade company India, craft exporter Maharashtra, trusted online store India, D2C brand India, Reevanti Global about'
+    title: 'About Reevanti Global | Global eCommerce Brand – AI eBooks & Artisan Crafts',
+    description: 'Reevanti Global is a trusted global eCommerce company delivering AI-powered Digital Products and authentic Indian Handcrafted Artisan goods to buyers worldwide.',
+    keywords: 'about Reevanti Global, global eCommerce company, international trader, artisan product export, AI ebook publisher, digital product company, trusted online store, Reevanti Global about'
   },
   '/products': {
     title: 'Products | AI eBooks, Digital Tools & Indian Handcrafted Artisan Goods – Reevanti Global',
-    description: 'Shop Reevanti Global\'s two categories: AI-powered eBooks & Digital Products for professionals, creators & entrepreneurs; and authentic Indian Handcrafted Artisan goods for domestic buyers and global traders.',
-    keywords: 'buy AI ebooks India, AI prompt guides online, artificial intelligence ebook India, digital products buy online, buy handcrafted products India, buy Indian artisan goods, Indian handicrafts buy online, buy handmade products India, eco-friendly Indian products, sustainable Indian crafts, buy craft export India, international artisan goods, ebooks for marketers, ebooks for entrepreneurs, ebooks for developers, ChatGPT prompt book, Claude AI guide, Gemini prompt ebook, buy digital download India, handcrafted gifts India, artisan souvenirs India, MSME products India, Reevanti Global products, payhip ebooks India'
+    description: 'Shop Reevanti Global\'s two categories: AI-powered eBooks & Digital Products for professionals, creators & entrepreneurs; and authentic Indian Handcrafted Artisan goods exported worldwide.',
+    keywords: 'buy AI ebooks, AI prompt guides online, artificial intelligence ebooks, digital products buy online, buy handcrafted products, buy Indian artisan goods, Indian handicrafts export, buy handmade products, eco-friendly crafts, sustainable Indian crafts, ebooks for marketers, ebooks for entrepreneurs, ChatGPT prompt book, buy digital download, Reevanti Global products'
   },
   '/blogs': {
-    title: 'Insights & Resources | AI, eBooks, Indian Handicrafts & eCommerce – Reevanti Global',
-    description: 'Expert articles on AI, Artificial Intelligence, eBooks, Digital Products, Indian Handicrafts, Artisan Crafts, MSME, export trade, and eCommerce trends from Reevanti Global.',
-    keywords: 'AI blog India, artificial intelligence blog, ebook tips India, digital products blog, Indian handicraft blog, artisan craft articles, MSME blog India, export trade India blog, eCommerce blog India, online shopping tips India, handmade products guide, AI tools guide, prompt engineering tips, Indian craft heritage, artisan community India, sustainable shopping India, eCommerce trends 2026, Reevanti Global blog'
+    title: 'Insights & Resources | AI, eBooks, Indian Handicrafts & Global eCommerce – Reevanti Global',
+    description: 'Expert articles on AI, Artificial Intelligence, eBooks, Digital Products, Indian Handicrafts, Artisan Crafts, export trade, and global eCommerce trends from Reevanti Global.',
+    keywords: 'AI blog, artificial intelligence blog, ebook tips, digital products blog, Indian handicraft blog, artisan craft articles, export trade blog, global eCommerce blog, online shopping tips, handmade products guide, AI tools guide, prompt engineering tips, Indian craft heritage, eCommerce trends 2026, Reevanti Global blog'
   },
   '/contact-us': {
     title: 'Contact Reevanti Global | AI Digital Products & Indian Artisan Goods Enquiries',
@@ -35,18 +35,18 @@ const routeMeta = {
   },
   '/privacy-policy': {
     title: 'Privacy Policy | Reevanti Global',
-    description: 'Read the Reevanti Global Privacy Policy to understand how we collect, use, and protect your personal information.',
-    keywords: 'privacy policy, data protection, Reevanti Global privacy, MSME data policy India'
+    description: 'Read the Reevanti Global Privacy Policy to understand how we collect, use, and protect your personal information globally.',
+    keywords: 'privacy policy, data protection, Reevanti Global privacy, global data policy'
   },
   '/terms-of-use': {
     title: 'Terms of Use | Reevanti Global',
     description: 'Review the Terms of Use governing your use of Reevanti Global\'s website, products, and eCommerce platform.',
-    keywords: 'terms of service, terms and conditions, Reevanti Global terms, eCommerce terms India'
+    keywords: 'terms of service, terms and conditions, Reevanti Global terms, global eCommerce terms'
   },
   '/products/AIeBooks': {
-    title: 'AI eBooks & Digital Products | PromptFlow Pro - Reevanti Global',
-    description: 'Shop 100+ professional AI prompt eBooks for Content, Marketing, Coding & Business. Works with ChatGPT, Claude & Gemini. Instant download from Reevanti Global.',
-    keywords: 'PromptFlow Pro, AI prompt ebook, ChatGPT prompt guide, Claude AI prompts, Gemini prompts, AI tools ebook India, artificial intelligence ebook, content marketing prompts, coding prompts AI, business automation prompts, prompt engineering ebook, buy AI ebook India, digital product India, AI productivity ebook, entrepreneur AI tools, freelancer AI guide, developer AI prompts, marketing AI ebook, Reevanti Global digital products'
+    title: 'AI eBooks Collection | Learn AI, Work Smarter, Grow Faster - Reevanti Global',
+    description: 'Practical AI eBooks with step-by-step guides, ready-to-use prompts, and proven workflows. No coding required. Instant download. Start your AI journey with Reevanti Global.',
+    keywords: 'PromptFlow Pro, AI prompt ebook, ChatGPT prompt guide, Claude AI prompts, Gemini prompts, AI tools ebook, artificial intelligence ebook, content marketing prompts, coding prompts AI, business automation prompts, prompt engineering ebook, buy AI ebook, digital products, AI productivity ebook, entrepreneur AI tools, marketing AI ebook, Reevanti Global digital products'
   }
 };
 
