@@ -494,4 +494,71 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ── Ebook Hero Carousel ───────────────────────────────────────────────────────
+  (function initEbookCarousel() {
+    const track  = document.getElementById('ebookCarouselTrack');
+    if (!track) return;
+
+    const slides   = Array.from(track.querySelectorAll('.ebook-carousel-slide'));
+    const dots     = Array.from(document.querySelectorAll('#ebookDots .ebook-dot'));
+    const prevBtn  = document.getElementById('ebookPrev');
+    const nextBtn  = document.getElementById('ebookNext');
+    let current    = 0;
+    let autoTimer  = null;
+    const INTERVAL = 3500;
+
+    function goTo(idx) {
+      slides[current].classList.remove('active');
+      dots[current].classList.remove('active');
+      dots[current].setAttribute('aria-selected', 'false');
+      current = (idx + slides.length) % slides.length;
+      slides[current].classList.add('active');
+      dots[current].classList.add('active');
+      dots[current].setAttribute('aria-selected', 'true');
+    }
+
+    function startAuto() {
+      stopAuto();
+      autoTimer = setInterval(() => goTo(current + 1), INTERVAL);
+    }
+    function stopAuto() {
+      if (autoTimer) { clearInterval(autoTimer); autoTimer = null; }
+    }
+
+    // Controls
+    if (prevBtn) prevBtn.addEventListener('click', () => { goTo(current - 1); startAuto(); });
+    if (nextBtn) nextBtn.addEventListener('click', () => { goTo(current + 1); startAuto(); });
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => { goTo(parseInt(dot.dataset.slide, 10)); startAuto(); });
+    });
+
+    // Pause on hover
+    const carousel = document.getElementById('ebookCarousel');
+    if (carousel) {
+      carousel.addEventListener('mouseenter', stopAuto);
+      carousel.addEventListener('mouseleave', startAuto);
+    }
+
+    // Keyboard navigation
+    if (carousel) {
+      carousel.addEventListener('keydown', e => {
+        if (e.key === 'ArrowLeft')  { goTo(current - 1); startAuto(); }
+        if (e.key === 'ArrowRight') { goTo(current + 1); startAuto(); }
+      });
+    }
+
+    // Touch / swipe support
+    let touchStartX = 0;
+    if (track) {
+      track.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].clientX; }, { passive: true });
+      track.addEventListener('touchend', e => {
+        const diff = touchStartX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 40) { goTo(diff > 0 ? current + 1 : current - 1); startAuto(); }
+      }, { passive: true });
+    }
+
+    startAuto();
+  })();
+
 });
+
