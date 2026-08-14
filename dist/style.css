@@ -1399,41 +1399,51 @@ html {
   flex-wrap: wrap;
   margin-top: 28px;
 }
-.lp-hero-image { position: relative; display: flex; justify-content: center; align-items: center; }
+.lp-hero-image { position: relative; display: flex; justify-content: center; align-items: center; max-width: 320px; margin: 0 auto; }
 
 /* ── EBOOK CAROUSEL ──────────────────────────────────────────────────────────── */
 .ebook-carousel {
   position: relative;
-  width: 340px;
+  width: 260px;
   max-width: 100%;
   user-select: none;
+  flex-shrink: 0;
 }
 .ebook-carousel-track {
   position: relative;
-  width: 100%;
+  width: 260px;
+  max-width: 100%;
+  height: 360px;
   overflow: hidden;
-  border-radius: 18px;
-  box-shadow: 0 30px 80px rgba(0,0,0,0.55);
+  border-radius: 14px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.55);
 }
 .ebook-carousel-slide {
   display: none;
+  width: 100%;
+  height: 100%;
   animation: ebookFadeIn 0.45s ease;
 }
 .ebook-carousel-slide.active {
   display: block;
+  width: 100%;
+  height: 100%;
 }
 @keyframes ebookFadeIn {
   from { opacity: 0; transform: scale(0.97); }
   to   { opacity: 1; transform: scale(1); }
 }
 .ebook-carousel .hero-product-img {
-  width: 100%;
-  height: auto;
+  width: 260px;
+  height: 360px;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: top center;
   display: block;
-  border-radius: 18px;
+  border-radius: 14px;
   animation: lpFloat 4s ease-in-out infinite;
 }
-@keyframes lpFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+@keyframes lpFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
 
 /* Prev / Next Buttons */
 .ebook-carousel-btn {
