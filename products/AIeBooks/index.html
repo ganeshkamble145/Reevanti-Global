@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI eBooks Collection | Learn AI, Work Smarter, Grow Faster — Reevanti Global</title>
+  <meta name="description" content="Practical AI eBooks for business owners, professionals and entrepreneurs. Step-by-step guides, ready-to-use prompts. Instant download. Start your AI journey with Reevanti Global." />
+  <link rel="canonical" href="https://www.reevantiglobal.com/products/AIeBooks" />
+  <link rel="icon" href="/Images/reevanti-global-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── RESET ── */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #ffffff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    img { max-width: 100%; height: auto; display: block; }
+
+    /* ── TOKENS ── */
+    :root {
+      --yellow: #FFD600;
+      --yellow-dark: #E8C200;
+      --navy:  #001B40;
+      --red:   #E84824;
+      --white: #FFFFFF;
+      --gray1: #111111;
+      --gray2: #1a1a1a;
+      --gray3: #222222;
+      --gray4: #2a2a2a;
+      --muted: #888888;
+      --border: rgba(255,255,255,0.08);
+    }
+
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+
+    /* ── BUTTONS ── */
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 13px 28px; border-radius: 6px; font-weight: 700;
+      font-size: 0.95rem; cursor: pointer; border: none; transition: all 0.25s;
+      font-family: 'Inter', sans-serif;
+    }
+    .btn-yellow { background: var(--yellow); color: #000; }
+    .btn-yellow:hover { background: var(--yellow-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(255,214,0,0.3); }
+    .btn-outline-white { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,0.3); }
+    .btn-outline-white:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.6); }
+
+    /* ── NAVBAR ── */
+    .navbar {
+      position: fixed; top: 0; left: 0; width: 100%;
+      background: rgba(10,10,10,0.95); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border); z-index: 1000;
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 12px 24px; max-width: 1160px; margin: 0 auto;
+    }
+    .nav-logo img { height: 58px; width: auto; border-radius: 6px; background: #fff; padding: 4px 8px; object-fit: contain; }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { font-size: 0.9rem; font-weight: 500; color: rgba(255,255,255,0.75); transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: #fff; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; }
+    .hamburger span { width: 22px; height: 2px; background: #fff; border-radius: 2px; display: block; transition: all 0.3s; }
+
+    /* ── HERO ── */
+    .hero { padding: 140px 0 80px; background: #0a0a0a; position: relative; overflow: hidden; }
+    .hero::before {
+      content: ''; position: absolute; top: -200px; right: -200px;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(255,214,0,0.06) 0%, transparent 70%);
+      border-radius: 50%; pointer-events: none;
+    }
+    .hero-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; position: relative; }
+    .hero-eyebrow {
+      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--yellow); margin-bottom: 20px;
+    }
+    .hero-h1 {
+      font-size: clamp(2.8rem, 5.5vw, 4.5rem); font-weight: 900; line-height: 1.05;
+      color: #fff; margin-bottom: 24px; letter-spacing: -0.02em;
+    }
+    .hero-h1 .yellow { color: var(--yellow); }
+    .hero-sub { font-size: 1rem; color: rgba(255,255,255,0.6); line-height: 1.75; margin-bottom: 32px; max-width: 480px; }
+    .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    /* Stats row */
+    .stats-row {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 1px; background: var(--border); margin-top: 60px;
+      border-top: 1px solid var(--border);
+    }
+    .stat-cell {
+      background: #0a0a0a; padding: 20px 24px; text-align: center;
+    }
+    .stat-num { font-size: 1.8rem; font-weight: 800; color: var(--yellow); line-height: 1; }
+    .stat-label { font-size: 0.78rem; color: rgba(255,255,255,0.5); margin-top: 4px; text-transform: uppercase; letter-spacing: 0.08em; }
+
+    /* Hero right — book grid */
+    .hero-books {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; position: relative;
+    }
+    .hero-book {
+      border-radius: 10px; overflow: hidden;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+      transition: transform 0.3s; cursor: pointer;
+    }
+    .hero-book:hover { transform: translateY(-6px) scale(1.02); }
+    .hero-book img { width: 100%; height: 180px; object-fit: cover; object-position: top; }
+    .hero-book-label {
+      background: var(--gray2); padding: 8px 10px;
+      font-size: 0.7rem; font-weight: 600; color: rgba(255,255,255,0.8);
+      line-height: 1.3;
+    }
+    .hero-book-price {
+      padding: 4px 10px 8px; font-size: 0.75rem; font-weight: 700;
+      color: var(--yellow); background: var(--gray2);
+    }
+    .book-featured-badge {
+      position: absolute; top: -10px; left: 50%; transform: translateX(-50%);
+      background: var(--yellow); color: #000; font-size: 0.65rem; font-weight: 800;
+      padding: 3px 12px; border-radius: 50px; white-space: nowrap; z-index: 2;
+    }
+    .book-wrap { position: relative; }
+
+    /* ── MARQUEE ── */
+    .marquee-wrapper {
+      background: var(--yellow);
+      color: #000;
+      padding: 12px 0;
+      overflow: hidden;
+      white-space: nowrap;
+      display: flex;
+      font-weight: 800;
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border-top: 1px solid rgba(0,0,0,0.1);
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    .marquee-content {
+      display: flex;
+      animation: marquee 25s linear infinite;
+    }
+    .marquee-content span {
+      padding-right: 30px;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-33.3333%); }
+    }
+
+    /* ── SECTION BASE ── */
+    .section { padding: 90px 0; }
+    .section-label {
+      font-size: 0.72rem; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--yellow); margin-bottom: 14px;
+    }
+    .section-h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; line-height: 1.15; margin-bottom: 16px;
+    }
+    .section-h2 .hl { color: var(--yellow); font-style: italic; }
+    .section-intro { font-size: 1rem; color: rgba(255,255,255,0.55); line-height: 1.75; max-width: 600px; }
+
+    /* ── LIBRARY SECTION ── */
+    .library-section { background: #0a0a0a; }
+    .library-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 48px; }
+    .library-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .book-card {
+      background: var(--gray2); border: 1px solid var(--border); border-radius: 14px;
+      overflow: hidden; transition: all 0.3s; cursor: pointer;
+    }
+    .book-card:hover { transform: translateY(-6px); border-color: rgba(255,214,0,0.25); box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+    .book-card-img { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: top; }
+    .book-card-body { padding: 16px; }
+    .book-card-title { font-size: 0.9rem; font-weight: 700; color: #fff; margin-bottom: 6px; line-height: 1.4; }
+    .book-card-desc { font-size: 0.78rem; color: rgba(255,255,255,0.5); line-height: 1.6; margin-bottom: 12px; }
+    .book-card-footer { display: flex; align-items: center; justify-content: space-between; }
+    .book-card-price { font-size: 0.95rem; font-weight: 800; color: var(--yellow); }
+    .book-card-btn {
+      background: var(--yellow); color: #000; font-size: 0.75rem; font-weight: 700;
+      padding: 6px 14px; border-radius: 4px; transition: all 0.2s; border: none; cursor: pointer;
+    }
+    .book-card-btn:hover { background: var(--yellow-dark); }
+
+    /* ── WHY DIFFERENT (numbered) ── */
+    .why-section { background: var(--gray1); }
+    .why-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+    .why-left .section-h2 { margin-bottom: 24px; }
+    .why-left p { color: rgba(255,255,255,0.55); line-height: 1.8; }
+    .why-list { display: flex; flex-direction: column; gap: 28px; }
+    .why-item { display: flex; gap: 20px; align-items: flex-start; }
+    .why-num {
+      font-size: 0.65rem; font-weight: 800; color: var(--yellow); letter-spacing: 0.08em;
+      padding: 4px 10px; border: 1px solid rgba(255,214,0,0.3); border-radius: 50px;
+      white-space: nowrap; flex-shrink: 0; margin-top: 2px;
+    }
+    .why-item h4 { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 6px; }
+    .why-item p { font-size: 0.875rem; color: rgba(255,255,255,0.5); line-height: 1.7; }
+
+    /* ── WHAT YOU'LL BE ABLE TO DO ── */
+    .todo-section { background: #0a0a0a; }
+    .todo-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .todo-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+    }
+    .todo-item {
+      background: var(--gray2); border: 1px solid var(--border); border-radius: 10px;
+      padding: 14px 16px; font-size: 0.875rem; font-weight: 600;
+      color: rgba(255,255,255,0.85); display: flex; align-items: center; gap: 10px;
+      transition: all 0.25s;
+    }
+    .todo-item:hover { background: var(--gray3); border-color: rgba(255,214,0,0.2); transform: translateY(-2px); }
+    .todo-check { color: var(--yellow); font-size: 1rem; flex-shrink: 0; }
+
+    /* ── TRUSTED ACROSS (personas) ── */
+    .trust-section { background: var(--gray1); }
+    .trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 48px; }
+    .trust-card {
+      background: var(--gray2); border: 1px solid var(--border); border-radius: 14px;
+      padding: 24px 18px; text-align: center; transition: all 0.3s;
+    }
+    .trust-card:hover { background: var(--gray3); border-color: rgba(255,214,0,0.2); transform: translateY(-4px); }
+    .trust-icon { font-size: 2rem; display: block; margin-bottom: 12px; }
+    .trust-card h4 { font-size: 0.9rem; font-weight: 700; color: #fff; margin-bottom: 6px; }
+    .trust-card p { font-size: 0.78rem; color: rgba(255,255,255,0.45); line-height: 1.6; }
+
+    /* ── TESTIMONIALS ── */
+    .reviews-section { background: #0a0a0a; }
+    .reviews-header { margin-bottom: 48px; }
+    .reviews-header .section-h2 span { color: var(--yellow); font-style: italic; }
+    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .review-card {
+      background: var(--gray2); border: 1px solid var(--border); border-radius: 14px;
+      padding: 24px; transition: all 0.3s;
+    }
+    .review-card:hover { border-color: rgba(255,214,0,0.2); transform: translateY(-3px); }
+    .stars { color: var(--yellow); font-size: 0.9rem; letter-spacing: 1px; margin-bottom: 14px; }
+    .review-text { font-size: 0.875rem; color: rgba(255,255,255,0.75); line-height: 1.75; margin-bottom: 16px; font-style: italic; }
+    .reviewer { display: flex; align-items: center; gap: 10px; }
+    .reviewer-avatar {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--yellow), #E8C200);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.85rem; font-weight: 800; color: #000; flex-shrink: 0;
+    }
+    .reviewer-name { font-size: 0.85rem; font-weight: 700; color: #fff; }
+    .reviewer-role { font-size: 0.75rem; color: rgba(255,255,255,0.4); }
+
+    /* ── FAQ ── */
+    .faq-section { background: var(--gray1); }
+    .faq-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
+    .faq-left .section-h2 { margin-bottom: 20px; }
+    .faq-left p { color: rgba(255,255,255,0.5); line-height: 1.8; margin-bottom: 28px; }
+    .faq-list { display: flex; flex-direction: column; gap: 0; }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-q {
+      width: 100%; background: none; border: none; text-align: left; padding: 18px 0;
+      font-size: 0.925rem; font-weight: 600; color: #fff; cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center; gap: 12px;
+      font-family: 'Inter', sans-serif; transition: color 0.2s;
+    }
+    .faq-q:hover { color: var(--yellow); }
+    .faq-icon { font-size: 1.2rem; color: var(--yellow); flex-shrink: 0; transition: transform 0.3s; }
+    .faq-q.open .faq-icon { transform: rotate(45deg); }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+    .faq-a p { padding: 0 0 18px; font-size: 0.875rem; color: rgba(255,255,255,0.55); line-height: 1.75; }
+
+    /* ── FINAL CTA ── */
+    .cta-section {
+      background: linear-gradient(135deg, #0a0a14, #001B40, #0a0a14);
+      padding: 90px 0; text-align: center; position: relative; overflow: hidden;
+    }
+    .cta-section::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at center, rgba(255,214,0,0.06) 0%, transparent 70%);
+    }
+    .cta-section .container { position: relative; }
+    .cta-eyebrow { font-size: 0.72rem; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase; color: var(--yellow); margin-bottom: 16px; }
+    .cta-h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 4.5vw, 3.5rem); font-weight: 700;
+      color: #fff; margin-bottom: 16px; line-height: 1.15;
+    }
+    .cta-sub { font-size: 1rem; color: rgba(255,255,255,0.55); margin-bottom: 40px; }
+    .countdown {
+      display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 40px;
+    }
+    .countdown-unit { text-align: center; }
+    .countdown-num {
+      display: block; font-size: 3rem; font-weight: 900; color: var(--yellow);
+      background: var(--gray2); border: 1px solid rgba(255,214,0,0.2); border-radius: 10px;
+      padding: 12px 20px; min-width: 90px; line-height: 1;
+    }
+    .countdown-label { font-size: 0.68rem; color: rgba(255,255,255,0.45); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 6px; }
+    .countdown-sep { font-size: 2.5rem; font-weight: 900; color: var(--yellow); margin-bottom: 24px; }
+    .cta-badges { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 24px; }
+    .cta-badge {
+      font-size: 0.78rem; font-weight: 600; color: rgba(255,255,255,0.5);
+      background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+      padding: 6px 14px; border-radius: 50px;
+    }
+
+    /* ── FOOTER ── */
+    .footer { background: #050505; border-top: 1px solid var(--border); padding: 48px 0 24px; }
+    .footer-inner { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 40px; }
+    .footer-logo img { height: 52px; width: auto; background: #fff; padding: 4px 8px; border-radius: 6px; object-fit: contain; margin-bottom: 14px; }
+    .footer-brand p { font-size: 0.85rem; color: rgba(255,255,255,0.4); line-height: 1.75; }
+    .footer-col h4 { font-size: 0.78rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 16px; }
+    .footer-col a { display: block; font-size: 0.875rem; color: rgba(255,255,255,0.55); margin-bottom: 8px; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--yellow); }
+    .footer-bottom { border-top: 1px solid var(--border); padding-top: 20px; display: flex; align-items: center; justify-content: space-between; font-size: 0.8rem; color: rgba(255,255,255,0.3); flex-wrap: wrap; gap: 12px; }
+    .footer-social { display: flex; gap: 12px; }
+    .soc { width: 34px; height: 34px; border-radius: 50%; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.5); transition: all 0.2s; font-size: 0.8rem; }
+    .soc:hover { background: var(--yellow); color: #000; border-color: var(--yellow); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .trust-grid { grid-template-columns: repeat(4, 1fr); }
+      .library-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-books { display: none; }
+      .stats-row { grid-template-columns: repeat(2, 1fr); }
+      .why-inner, .todo-inner, .faq-inner { grid-template-columns: 1fr; gap: 40px; }
+      .trust-grid { grid-template-columns: repeat(2, 1fr); }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .library-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+    }
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #111; padding: 16px 24px; gap: 14px; border-bottom: 1px solid var(--border); }
+      .stats-row { grid-template-columns: repeat(2, 1fr); }
+      .trust-grid { grid-template-columns: 1fr 1fr; }
+      .library-grid { grid-template-columns: 1fr 1fr; }
+      .todo-grid { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 2.6rem; }
+      .countdown-num { font-size: 2.2rem; min-width: 64px; padding: 10px 14px; }
+    }
+    @media (max-width: 420px) {
+      .library-grid { grid-template-columns: 1fr; }
+      .trust-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════ NAVBAR ══════ -->
+<nav class="navbar">
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <a href="https://www.reevantiglobal.com/" aria-label="Reevanti Global">
+        <img src="/Images/reevanti-global-logo.png" alt="Reevanti Global Logo" />
+      </a>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="https://www.reevantiglobal.com/">Home</a></li>
+      <li><a href="https://www.reevantiglobal.com/about-us">About</a></li>
+      <li><a href="https://www.reevantiglobal.com/products" class="active">Products</a></li>
+      <li><a href="https://payhip.com/reevantiglobal" target="_blank" rel="noopener">Payhip Store</a></li>
+      <li><a href="https://www.reevantiglobal.com/blogs">Blogs</a></li>
+      <li><a href="https://www.reevantiglobal.com/contact-us">Contact</a></li>
+    </ul>
+    <a href="https://payhip.com/reevantiglobal" class="btn btn-yellow" target="_blank" rel="noopener" style="font-size:0.85rem;padding:9px 18px;">Shop Now →</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ══════ HERO ══════ -->
+<section class="hero" id="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <!-- Left Text -->
+      <div>
+        <div class="hero-eyebrow">Reevanti Global · AI eBook Collection</div>
+        <h1 class="hero-h1">
+          Learn AI.<br>Work Smarter.<br><span class="yellow">Grow Faster.</span>
+        </h1>
+        <p class="hero-sub">
+          Practical, jargon-free eBooks that show you exactly how to use AI in your business and career — no coding, no tech background needed.
+        </p>
+        <div class="hero-btns">
+          <a href="https://payhip.com/reevantiglobal" class="btn btn-yellow" target="_blank" rel="noopener">Shop All eBooks →</a>
+          <a href="#library" class="btn btn-outline-white">Browse Collection</a>
+        </div>
+        <!-- Stats Row -->
+        <div class="stats-row">
+          <div class="stat-cell">
+            <div class="stat-num" data-target="500">0</div>
+            <div class="stat-label">AI Prompts</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num" data-target="30">0</div>
+            <div class="stat-label">Topic Areas</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num" data-target="10">0</div>
+            <div class="stat-label">Saved Per Week</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num" data-target="6">0</div>
+            <div class="stat-label">eBooks Available</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Book Grid Preview -->
+      <div class="hero-books">
+        <div class="book-wrap">
+          <div class="book-featured-badge">⭐ BESTSELLER</div>
+          <a href="https://payhip.com/b/2RAjZ" class="hero-book" target="_blank" rel="noopener">
+            <img src="/assets/ebook-promptflow-pro.jpg" alt="AI PromptFlow Pro" />
+            <div class="hero-book-label">AI PromptFlow Pro</div>
+            
+          </a>
+        </div>
+        <a href="https://payhip.com/b/JLSo6" class="hero-book" target="_blank" rel="noopener">
+          <img src="/assets/ebook-ai-small-business.jpg" alt="AI for Small Business Owners" />
+          <div class="hero-book-label">AI for Small Business Owners</div>
+          
+        </a>
+        <a href="https://payhip.com/b/mJzP2" class="hero-book" target="_blank" rel="noopener">
+          <img src="/assets/ebook-passive-income.jpg" alt="Passive Income with AI" />
+          <div class="hero-book-label">Passive Income with AI</div>
+          
+        </a>
+        <a href="https://payhip.com/b/NqWOD" class="hero-book" target="_blank" rel="noopener">
+          <img src="/assets/ebook-ai-manufacturing.jpg" alt="AI for Manufacturing SMEs" />
+          <div class="hero-book-label">AI for Manufacturing SMEs</div>
+          
+        </a>
+        <a href="https://payhip.com/b/6I2lW" class="hero-book" target="_blank" rel="noopener">
+          <img src="/assets/ebook-ai-exporters.jpg" alt="AI for Import & Export" />
+          <div class="hero-book-label">AI for Import &amp; Export</div>
+          
+        </a>
+        <a href="https://payhip.com/b/e12Mf" class="hero-book" target="_blank" rel="noopener">
+          <img src="/assets/ebook-home-business.jpg" alt="AI for Home Business & Trade Pros" />
+          <div class="hero-book-label">AI for Home Business &amp; Trade</div>
+          
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ MOVING BANNER ══════ -->
+<div class="marquee-wrapper">
+  <div class="marquee-content">
+    <span>Beginner Friendly ✦ Ready-to-Use ✦ Real Results ✦ No Coding Required ✦ Instant Download ✦ Lifetime Access ✦ Practical First ✦ </span>
+    <span>Beginner Friendly ✦ Ready-to-Use ✦ Real Results ✦ No Coding Required ✦ Instant Download ✦ Lifetime Access ✦ Practical First ✦ </span>
+    <span>Beginner Friendly ✦ Ready-to-Use ✦ Real Results ✦ No Coding Required ✦ Instant Download ✦ Lifetime Access ✦ Practical First ✦ </span>
+  </div>
+</div>
+
+<!-- ══════ LIBRARY ══════ -->
+<section class="section library-section" id="library">
+  <div class="container">
+    <div class="library-header">
+      <div>
+        <div class="section-label">One library.</div>
+        <h2 class="section-h2">Unlimited <span class="hl">possibilities.</span></h2>
+      </div>
+      <a href="https://payhip.com/reevantiglobal" class="btn btn-yellow" target="_blank" rel="noopener">View All →</a>
+    </div>
+    <div class="library-grid">
+
+      <!-- Book 1 -->
+      <div class="book-card" onclick="window.open('https://payhip.com/b/2RAjZ','_blank')">
+        <img src="/assets/ebook-promptflow-pro.jpg" alt="AI PromptFlow Pro" class="book-card-img" loading="lazy" />
+        <div class="book-card-body">
+          <div class="book-card-title">AI PromptFlow Pro</div>
+          <div class="book-card-desc">500+ ready-to-use AI prompts for professionals, marketers, and entrepreneurs.</div>
+          <div class="book-card-footer">
+            
+            <a href="https://payhip.com/b/2RAjZ" class="book-card-btn" target="_blank" rel="noopener" onclick="event.stopPropagation()">Buy Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Book 2 -->
+      <div class="book-card" onclick="window.open('https://payhip.com/b/JLSo6','_blank')">
+        <img src="/assets/ebook-ai-small-business.jpg" alt="AI for Small Business Owners" class="book-card-img" loading="lazy" />
+        <div class="book-card-body">
+          <div class="book-card-title">AI for Small Business Owners</div>
+          <div class="book-card-desc">Automate operations, attract more customers and grow your business with AI.</div>
+          <div class="book-card-footer">
+            
+            <a href="https://payhip.com/b/JLSo6" class="book-card-btn" target="_blank" rel="noopener" onclick="event.stopPropagation()">Buy Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Book 3 -->
+      <div class="book-card" onclick="window.open('https://payhip.com/b/mJzP2','_blank')">
+        <img src="/assets/ebook-passive-income.jpg" alt="Passive Income with AI" class="book-card-img" loading="lazy" />
+        <div class="book-card-body">
+          <div class="book-card-title">Passive Income with AI</div>
+          <div class="book-card-desc">Practical strategies to build income streams using AI tools and automation.</div>
+          <div class="book-card-footer">
+            
+            <a href="https://payhip.com/b/mJzP2" class="book-card-btn" target="_blank" rel="noopener" onclick="event.stopPropagation()">Buy Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Book 4 -->
+      <div class="book-card" onclick="window.open('https://payhip.com/b/NqWOD','_blank')">
+        <img src="/assets/ebook-ai-manufacturing.jpg" alt="AI for Manufacturing SMEs" class="book-card-img" loading="lazy" />
+        <div class="book-card-body">
+          <div class="book-card-title">AI for Manufacturing SMEs</div>
+          <div class="book-card-desc">Use AI to streamline production, reduce waste and improve quality control.</div>
+          <div class="book-card-footer">
+            
+            <a href="https://payhip.com/b/NqWOD" class="book-card-btn" target="_blank" rel="noopener" onclick="event.stopPropagation()">Buy Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Book 5 -->
+      <div class="book-card" onclick="window.open('https://payhip.com/b/6I2lW','_blank')">
+        <img src="/assets/ebook-ai-exporters.jpg" alt="AI for Import and Export Businesses" class="book-card-img" loading="lazy" />
+        <div class="book-card-body">
+          <div class="book-card-title">AI for Import &amp; Export Businesses</div>
+          <div class="book-card-desc">Navigate global trade smarter with AI-powered tools and strategies.</div>
+          <div class="book-card-footer">
+            
+            <a href="https://payhip.com/b/6I2lW" class="book-card-btn" target="_blank" rel="noopener" onclick="event.stopPropagation()">Buy Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Book 6 -->
+      <div class="book-card" onclick="window.open('https://payhip.com/b/e12Mf','_blank')">
+        <img src="/assets/ebook-home-business.jpg" alt="AI for Home Business and Trade Pros" class="book-card-img" loading="lazy" />
+        <div class="book-card-body">
+          <div class="book-card-title">AI for Home Business &amp; Trade Pros</div>
+          <div class="book-card-desc">Build and grow a home-based business using AI tools anyone can learn.</div>
+          <div class="book-card-footer">
+            
+            <a href="https://payhip.com/b/e12Mf" class="book-card-btn" target="_blank" rel="noopener" onclick="event.stopPropagation()">Buy Now</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════ NOT JUST READING ══════ -->
+<section class="section why-section" id="why">
+  <div class="container">
+    <div class="why-inner">
+      <div class="why-left">
+        <div class="section-label">Not just reading.</div>
+        <h2 class="section-h2">Put it to <span class="hl">work.</span></h2>
+        <p>Every eBook is designed for one purpose — to give you practical, ready-to-apply knowledge from the very first page. No fluff, no filler. Just results.</p>
+      </div>
+      <div class="why-list">
+        <div class="why-item">
+          <span class="why-num">01</span>
+          <div>
+            <h4>Practical First</h4>
+            <p>Every concept is paired with a real-world example you can use the same day. Not theory — action.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <span class="why-num">02</span>
+          <div>
+            <h4>Beginner Friendly</h4>
+            <p>Written in plain English. No coding, no technical background required. If you can send an email, you can apply this.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <span class="why-num">03</span>
+          <div>
+            <h4>Ready-to-Use Resources</h4>
+            <p>Prompts, templates and checklists included in every guide so you can get started immediately.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <span class="why-num">04</span>
+          <div>
+            <h4>Focused on Real Results</h4>
+            <p>Save time, work smarter and grow faster. Each book is focused on a specific, measurable outcome.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ WHAT YOU'LL ACTUALLY BE ABLE TO DO ══════ -->
+<section class="section todo-section" id="todo">
+  <div class="container">
+    <div class="todo-inner">
+      <div>
+        <div class="section-label">Real skills. Real results.</div>
+        <h2 class="section-h2">What you'll actually<br>be able <span class="hl">to do.</span></h2>
+        <p style="color:rgba(255,255,255,0.5);line-height:1.8;margin-bottom:28px;">After reading our eBooks, you'll have concrete skills and tools you can apply immediately — in your business, your career or your daily work.</p>
+        <a href="https://payhip.com/reevantiglobal" class="btn btn-yellow" target="_blank" rel="noopener">Get Started →</a>
+      </div>
+      <div class="todo-grid">
+        <div class="todo-item"><span class="todo-check">✦</span> Write faster with AI</div>
+        <div class="todo-item"><span class="todo-check">✦</span> Automate repetitive tasks</div>
+        <div class="todo-item"><span class="todo-check">✦</span> Create better content</div>
+        <div class="todo-item"><span class="todo-check">✦</span> Save 5+ hours per week</div>
+        <div class="todo-item"><span class="todo-check">✦</span> Generate new business ideas</div>
+        <div class="todo-item"><span class="todo-check">✦</span> Improve customer communication</div>
+        <div class="todo-item"><span class="todo-check">✦</span> Make smarter decisions</div>
+        <div class="todo-item"><span class="todo-check">✦</span> Build passive income streams</div>
+        <div class="todo-item"><span class="todo-check">✦</span> Scale your business faster</div>
+        <div class="todo-item"><span class="todo-check">✦</span> Master prompt engineering</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ TRUSTED ACROSS EVERY INDUSTRY ══════ -->
+<section class="section trust-section" id="trust">
+  <div class="container">
+    <div style="text-align:center; margin-bottom: 0;">
+      <div class="section-label" style="text-align:center;">Trusted across</div>
+      <h2 class="section-h2" style="text-align:center;">every <span class="hl">industry.</span></h2>
+    </div>
+    <div class="trust-grid">
+      <div class="trust-card">
+        <span class="trust-icon">🚀</span>
+        <h4>Entrepreneurs</h4>
+        <p>Build smarter businesses with AI-powered strategies.</p>
+      </div>
+      <div class="trust-card">
+        <span class="trust-icon">🏢</span>
+        <h4>Business Owners</h4>
+        <p>Automate operations and scale faster.</p>
+      </div>
+      <div class="trust-card">
+        <span class="trust-icon">💼</span>
+        <h4>Professionals</h4>
+        <p>Boost productivity and stand out in your career.</p>
+      </div>
+      <div class="trust-card">
+        <span class="trust-icon">✏️</span>
+        <h4>Freelancers</h4>
+        <p>Deliver better work, faster, and serve more clients.</p>
+      </div>
+      <div class="trust-card">
+        <span class="trust-icon">📣</span>
+        <h4>Marketers</h4>
+        <p>Create campaigns, ads and content in minutes.</p>
+      </div>
+      <div class="trust-card">
+        <span class="trust-icon">🎓</span>
+        <h4>Students</h4>
+        <p>Build AI skills that prepare you for the future.</p>
+      </div>
+      <div class="trust-card">
+        <span class="trust-icon">✍️</span>
+        <h4>Content Creators</h4>
+        <p>Generate ideas, write faster and publish consistently.</p>
+      </div>
+      <div class="trust-card">
+        <span class="trust-icon">🏭</span>
+        <h4>Manufacturers</h4>
+        <p>Streamline production and reduce operational costs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ TESTIMONIALS ══════ -->
+<section class="section reviews-section" id="reviews">
+  <div class="container">
+    <div class="reviews-header">
+      <div class="section-label">Real people.</div>
+      <h2 class="section-h2">Real <span style="color:var(--yellow);font-style:italic;">results.</span></h2>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"I used the PromptFlow Pro guide on a Monday morning and by Tuesday I had saved three hours on my content calendar. The prompts just work. Highly recommended for any business owner."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">R</div>
+          <div>
+            <div class="reviewer-name">Rahul M.</div>
+            <div class="reviewer-role">Digital Marketing Consultant</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"The AI for Small Business Owners guide changed how I run my shop. I set up automated follow-ups and it feels like I have a team working while I sleep. Brilliant, practical, and simple."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">P</div>
+          <div>
+            <div class="reviewer-name">Priya S.</div>
+            <div class="reviewer-role">Small Business Owner</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"I was skeptical — I'm not a tech person at all. But the writing is so clear and the examples are so real that I applied the strategies on day one. Worth every penny and more."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">A</div>
+          <div>
+            <div class="reviewer-name">Amara K.</div>
+            <div class="reviewer-role">Freelance Writer &amp; Creator</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ FAQ ══════ -->
+<section class="section faq-section" id="faq">
+  <div class="container">
+    <div class="faq-inner">
+      <div class="faq-left">
+        <div class="section-label">We have</div>
+        <h2 class="section-h2">answers.</h2>
+        <p>Everything you need to know before you start your AI journey with Reevanti Global.</p>
+        <a href="https://payhip.com/reevantiglobal" class="btn btn-yellow" target="_blank" rel="noopener">Browse All eBooks →</a>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q">Are these eBooks suitable for beginners?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Absolutely. Every guide is written in clear, simple language and walks you through each concept step by step.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Do I need coding or technical experience?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Not at all. Our eBooks are designed for everyday users — professionals, business owners, students and creators.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Can I apply what I learn immediately?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Yes. Each book includes practical examples, prompts, workflows and templates you can start using right away.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Can I read it on my phone?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Yes. The PDF works perfectly on phones, tablets and computers. Download once and access forever.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Will I receive it immediately?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Yes. You get instant download access as soon as your payment is confirmed through our secure partner, Payhip.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Will new AI books be added?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Yes. Our collection keeps growing as new tools, techniques and business applications emerge.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ FINAL CTA ══════ -->
+<section class="cta-section" id="cta">
+  <div class="container">
+    <div class="cta-eyebrow">Limited Time Offer</div>
+    <h2 class="cta-h2">Start your AI journey<br><span style="color:var(--yellow);">now.</span></h2>
+    <p class="cta-sub">Join thousands of professionals already using AI to work smarter and grow faster.</p>
+    <div class="countdown" id="countdown">
+      <div class="countdown-unit">
+        <span class="countdown-num" id="cd-h">00</span>
+        <div class="countdown-label">Hours</div>
+      </div>
+      <span class="countdown-sep">:</span>
+      <div class="countdown-unit">
+        <span class="countdown-num" id="cd-m">00</span>
+        <div class="countdown-label">Minutes</div>
+      </div>
+      <span class="countdown-sep">:</span>
+      <div class="countdown-unit">
+        <span class="countdown-num" id="cd-s">00</span>
+        <div class="countdown-label">Seconds</div>
+      </div>
+    </div>
+    <a href="https://payhip.com/reevantiglobal" class="btn btn-yellow" target="_blank" rel="noopener" style="font-size:1.1rem;padding:16px 40px;border-radius:50px;">Shop All eBooks →</a>
+    <div class="cta-badges">
+      <span class="cta-badge">📥 Instant Download</span>
+      <span class="cta-badge">♾️ Lifetime Access</span>
+      <span class="cta-badge">🔒 Secure Checkout via Payhip</span>
+      <span class="cta-badge">✅ No Coding Required</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ FOOTER ══════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="/Images/reevanti-global-logo.png" alt="Reevanti Global" />
+        </div>
+        <p>Reevanti Global — MSME-registered digital products brand delivering practical AI eBooks and resources to professionals worldwide.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <a href="https://www.reevantiglobal.com/">Home</a>
+        <a href="https://www.reevantiglobal.com/about-us">About Us</a>
+        <a href="https://www.reevantiglobal.com/products">Products</a>
+        <a href="https://www.reevantiglobal.com/blogs">Blogs</a>
+        <a href="https://www.reevantiglobal.com/contact-us">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="https://www.reevantiglobal.com/privacy-policy">Privacy Policy</a>
+        <a href="https://www.reevantiglobal.com/terms-of-use">Terms of Use</a>
+        <a href="https://payhip.com/reevantiglobal" target="_blank" rel="noopener">Payhip Store</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Reevanti Global. All rights reserved.</span>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/reevantiglobal" class="soc" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/company/reevanti-global" class="soc" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg>
+        </a>
+        <a href="https://www.youtube.com/@reevanti_global" class="soc" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/ReevantiGlobalpage" class="soc" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  'use strict';
+
+  /* Hamburger */
+  document.getElementById('hamburger').addEventListener('click', () => {
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+
+  /* Stats counter */
+  const SUFFIX_MAP = { 500: '+', 30: '+', 10: 'hrs+', 6: '' };
+  document.querySelectorAll('.stat-num[data-target]').forEach(el => {
+    const target = +el.dataset.target;
+    const suffix = SUFFIX_MAP[target] ?? '';
+    const io = new IntersectionObserver(entries => {
+      if (!entries[0].isIntersecting) return;
+      let cur = 0;
+      const step = Math.max(1, Math.ceil(target / 40));
+      const t = setInterval(() => {
+        cur = Math.min(cur + step, target);
+        el.textContent = cur + suffix;
+        if (cur >= target) clearInterval(t);
+      }, 40);
+      io.disconnect();
+    }, { threshold: 0.5 });
+    io.observe(el);
+  });
+
+  /* FAQ */
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const ans  = btn.nextElementSibling;
+      const icon = btn.querySelector('.faq-icon');
+      const open = btn.classList.contains('open');
+      document.querySelectorAll('.faq-q.open').forEach(b => {
+        b.classList.remove('open');
+        b.nextElementSibling.style.maxHeight = '0';
+        b.querySelector('.faq-icon').textContent = '+';
+      });
+      if (!open) {
+        btn.classList.add('open');
+        ans.style.maxHeight = ans.scrollHeight + 'px';
+        icon.textContent = '−';
+      }
+    });
+  });
+
+  /* Countdown — resets every 24h from page load */
+  (function() {
+    const end = Date.now() + (22 * 3600 + 31 * 60 + 8) * 1000;
+    function tick() {
+      const diff = Math.max(0, end - Date.now());
+      const h = Math.floor(diff / 3600000);
+      const m = Math.floor((diff % 3600000) / 60000);
+      const s = Math.floor((diff % 60000) / 1000);
+      document.getElementById('cd-h').textContent = String(h).padStart(2,'0');
+      document.getElementById('cd-m').textContent = String(m).padStart(2,'0');
+      document.getElementById('cd-s').textContent = String(s).padStart(2,'0');
+    }
+    tick();
+    setInterval(tick, 1000);
+  })();
+</script>
+
+</body>
+</html>

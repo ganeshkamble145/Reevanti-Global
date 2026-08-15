@@ -141,6 +141,12 @@ app.use('/assets', express.static(path.join(__dirname, 'dist', 'assets'), {
   }
 }));
 
+// ── Serve products/ directory static files ─────────────────────────────────────
+app.use('/products', express.static(path.join(__dirname, 'products'), {
+  maxAge: '1h',
+  index: false
+}));
+
 // ── Serve remaining static files (short cache) ─────────────────────────────────
 app.use(express.static(path.join(__dirname, 'dist'), {
   maxAge: '1h',
@@ -164,8 +170,25 @@ app.get('/robots.txt', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist', 'robots.txt'));
 });
 
+// ── Standalone AI eBooks landing page — served directly ─────────────────────────
+app.get('/products/AIeBooks', (req, res) => {
+  const standalonePath = path.join(__dirname, 'products', 'AIeBooks', 'index.html');
+  if (fs.existsSync(standalonePath)) {
+    res.setHeader('Content-Type', 'text/html');
+    res.setHeader('Cache-Control', 'no-cache');
+    res.sendFile(standalonePath);
+  } else {
+    // fallback to SPA with SEO meta
+    const html = renderWithMeta('/products/AIeBooks');
+    res.setHeader('Content-Type', 'text/html');
+    res.setHeader('Cache-Control', 'no-cache');
+    res.send(html);
+  }
+});
+
 // ── SPA routes with per-route SEO injection ─────────────────────────────────────
 Object.keys(routeMeta).forEach(route => {
+  if (route === '/products/AIeBooks') return; // already handled above
   app.get(route, (req, res) => {
     const html = renderWithMeta(route);
     res.setHeader('Content-Type', 'text/html');
