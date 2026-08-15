@@ -6,8 +6,7 @@ const urlToPage = {
   '/blogs':          'blogs',
   '/contact-us':     'contact',
   '/privacy-policy': 'privacy',
-  '/terms-of-use': 'terms',
-  '/products/AIeBooks': 'digitalproductslanding'
+  '/terms-of-use': 'terms',
 };
 
 // Blog slug → blog ID mapping for direct blog article URLs
@@ -27,8 +26,7 @@ const pageToUrl = {
   blogs:    '/blogs',
   contact:  '/contact-us',
   privacy:  '/privacy-policy',
-  terms:    '/terms-of-use',
-  digitalproductslanding: '/products/AIeBooks'
+  terms:    '/terms-of-use',
 };
 
 // ─── Blog Data ────────────────────────────────────────────────────────────────
@@ -287,8 +285,7 @@ const pageMeta = {
   blogs:    { title: 'Insights & Resources | AI, eBooks, Indian Handicrafts & eCommerce – Reevanti Global', desc: 'Expert articles on AI, Artificial Intelligence, eBooks, Digital Products, Indian Handicrafts, Artisan Crafts, MSME, export trade, and eCommerce trends from Reevanti Global.' },
   contact:  { title: 'Contact Reevanti Global | AI Digital Products & Indian Artisan Goods Enquiries', desc: 'Contact Reevanti Global for AI eBook enquiries, Indian Handcrafted Artisan product orders, export trade partnerships, or MSME collaboration. Reach us by email or WhatsApp.' },
   privacy:  { title: 'Privacy Policy | Reevanti Global', desc: 'Read the Reevanti Global Privacy Policy to understand how we collect, use, and protect your personal information.' },
-  terms:    { title: 'Terms of Use | Reevanti Global', desc: "Review the Terms of Use governing your use of Reevanti Global's website, products, and eCommerce platform." },
-  digitalproductslanding: { title: 'AI eBooks Collection | Learn AI, Work Smarter, Grow Faster - Reevanti Global', desc: 'Practical AI eBooks with step-by-step guides, ready-to-use prompts, and proven workflows. No coding required. Instant download. Start your AI journey with Reevanti Global.' }
+  terms:    { title: 'Terms of Use | Reevanti Global', desc: "Review the Terms of Use governing your use of Reevanti Global's website, products, and eCommerce platform." },
 };
 
 function updateMeta(pageId, customTitle, customDesc) {
