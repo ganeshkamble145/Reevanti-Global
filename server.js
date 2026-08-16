@@ -175,13 +175,17 @@ app.get('/products/AIeBooks', (req, res) => {
   const standalonePath = path.join(__dirname, 'products', 'AIeBooks', 'index.html');
   if (fs.existsSync(standalonePath)) {
     res.setHeader('Content-Type', 'text/html');
-    res.setHeader('Cache-Control', 'no-cache');
+    res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, private');
+    res.setHeader('Pragma', 'no-cache');
+    res.setHeader('Expires', '0');
     res.sendFile(standalonePath);
   } else {
     // fallback to SPA with SEO meta
     const html = renderWithMeta('/products/AIeBooks');
     res.setHeader('Content-Type', 'text/html');
-    res.setHeader('Cache-Control', 'no-cache');
+    res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, private');
+    res.setHeader('Pragma', 'no-cache');
+    res.setHeader('Expires', '0');
     res.send(html);
   }
 });
