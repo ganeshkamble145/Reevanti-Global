@@ -105,6 +105,39 @@
     .stat-num { font-size: 1.8rem; font-weight: 800; color: var(--yellow); line-height: 1; }
     .stat-label { font-size: 0.78rem; color: rgba(255,255,255,0.5); margin-top: 4px; text-transform: uppercase; letter-spacing: 0.08em; }
 
+    /* ── TRUST BLOCK ── */
+    .trust-block { display: flex; flex-direction: column; gap: 24px; }
+
+    .trust-brand {
+      display: flex; align-items: center; gap: 14px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px; padding: 12px 16px;
+      width: fit-content;
+    }
+    .trust-logo {
+      height: 42px; width: auto; border-radius: 6px;
+      background: #fff; padding: 3px 6px; object-fit: contain; flex-shrink: 0;
+    }
+    .trust-brand-text { display: flex; flex-direction: column; gap: 2px; }
+    .trust-brand-name { font-size: 1rem; font-weight: 800; color: #fff; line-height: 1.2; }
+    .trust-brand-tag { font-size: 0.72rem; font-weight: 600; color: rgba(255,255,255,0.45); letter-spacing: 0.04em; }
+
+    .trust-checks {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 10px 24px;
+      list-style: none; padding: 0; margin: 0;
+    }
+    .trust-checks li {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 0.9rem; font-weight: 600; color: rgba(255,255,255,0.88);
+    }
+    .tc-icon {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 22px; height: 22px; border-radius: 50%;
+      background: rgba(255,214,0,0.15); border: 1.5px solid var(--yellow);
+      color: var(--yellow); font-size: 0.75rem; font-weight: 900; flex-shrink: 0;
+    }
+
     /* Hero right — book grid */
     .hero-books {
       display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; position: relative;
@@ -387,16 +420,32 @@
     <div class="hero-inner">
       <!-- Left Text -->
       <div>
-        <div class="hero-eyebrow">Reevanti Global · AI eBook Collection</div>
-        <h1 class="hero-h1">
-          Learn AI.<br>Work Smarter.<br><span class="yellow">Grow Faster.</span>
-        </h1>
-        <p class="hero-sub">
-          Practical, jargon-free eBooks that show you exactly how to use AI in your business and career — no coding, no tech background needed.
-        </p>
-        <div class="hero-btns">
-          <a href="https://payhip.com/reevantiglobal" class="btn btn-yellow" target="_blank" rel="noopener">Shop All eBooks →</a>
-          <a href="#library" class="btn btn-outline-white">Browse Collection</a>
+
+        <!-- TRUST BLOCK -->
+        <div class="trust-block">
+          <div class="trust-brand">
+            <img src="/Images/reevanti-global-logo.png" alt="Reevanti Global" class="trust-logo" />
+            <div class="trust-brand-text">
+              <span class="trust-brand-name">Reevanti Global</span>
+              <span class="trust-brand-tag">MSME Registered · Trusted Worldwide</span>
+            </div>
+          </div>
+          <h1 class="hero-h1">
+            Practical AI Guides for<br>
+            <span class="yellow">Entrepreneurs, Professionals<br>&amp; Businesses Worldwide</span>
+          </h1>
+          <ul class="trust-checks">
+            <li><span class="tc-icon">✓</span> Instant PDF Download</li>
+            <li><span class="tc-icon">✓</span> Lifetime Access</li>
+            <li><span class="tc-icon">✓</span> Beginner Friendly</li>
+            <li><span class="tc-icon">✓</span> Practical Business Examples</li>
+            <li><span class="tc-icon">✓</span> Ready-to-Use Prompts</li>
+            <li><span class="tc-icon">✓</span> Secure Checkout via Payhip</li>
+          </ul>
+          <div class="hero-btns">
+            <a href="https://payhip.com/reevantiglobal" class="btn btn-yellow" target="_blank" rel="noopener">Shop All eBooks →</a>
+            <a href="#library" class="btn btn-outline-white">Browse Collection</a>
+          </div>
         </div>
 
       </div>
