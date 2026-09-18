@@ -140,7 +140,7 @@
 
     /* Hero right — book grid */
     .hero-books {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; position: relative;
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; position: relative;
     }
     .hero-book {
       border-radius: 10px; overflow: hidden;
@@ -148,11 +148,11 @@
       transition: transform 0.3s; cursor: pointer;
     }
     .hero-book:hover { transform: translateY(-6px) scale(1.02); }
-    .hero-book img { width: 100%; height: 180px; object-fit: cover; object-position: top; }
+    .hero-book img { width: 100%; height: 160px; object-fit: cover; object-position: top; }
     .hero-book-label {
-      background: var(--gray2); padding: 8px 10px;
-      font-size: 0.7rem; font-weight: 600; color: rgba(255,255,255,0.8);
-      line-height: 1.3;
+      background: var(--gray2); padding: 6px 8px;
+      font-size: 0.68rem; font-weight: 600; color: rgba(255,255,255,0.8);
+      line-height: 1.25;
     }
     .hero-book-price {
       padding: 4px 10px 8px; font-size: 0.75rem; font-weight: 700;
@@ -212,7 +212,7 @@
     /* ── LIBRARY SECTION ── */
     .library-section { background: #0a0a0a; }
     .library-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 48px; }
-    .library-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .library-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
     .book-card {
       background: var(--gray2); border: 1px solid var(--border); border-radius: 14px;
       overflow: hidden; transition: all 0.3s; cursor: pointer;
@@ -364,7 +364,7 @@
     /* ── RESPONSIVE ── */
     @media (max-width: 1024px) {
       .trust-grid { grid-template-columns: repeat(4, 1fr); }
-      .library-grid { grid-template-columns: repeat(3, 1fr); }
+      .library-grid { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 900px) {
       .hero-inner { grid-template-columns: 1fr; }
@@ -486,6 +486,14 @@
           <img src="/assets/ebook-home-business.jpg" alt="AI for Home Business &amp; Trade Pros" />
           <div class="hero-book-label">AI for Home Business &amp; Trade</div>
         </a>
+        <a href="https://payhip.com/b/8fWEk" class="hero-book" target="_blank" rel="noopener">
+          <img src="/assets/ebook-ai-solopreneur.jpg" alt="The AI-Powered Solopreneur" />
+          <div class="hero-book-label">The AI-Powered Solopreneur</div>
+        </a>
+        <a href="https://payhip.com/b/8TkSC" class="hero-book" target="_blank" rel="noopener">
+          <img src="/assets/ebook-ai-content-creators.jpg" alt="AI for Content Creators" />
+          <div class="hero-book-label">AI for Content Creators</div>
+        </a>
       </div>
 
     </div>
@@ -579,6 +587,30 @@
           <div class="book-card-footer">
             
             <a href="https://payhip.com/b/e12Mf" class="book-card-btn" target="_blank" rel="noopener" onclick="event.stopPropagation()">Buy Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Book 7 -->
+      <div class="book-card" onclick="window.open('https://payhip.com/b/8fWEk','_blank')">
+        <img src="/assets/ebook-ai-solopreneur.jpg" alt="The AI-Powered Solopreneur" class="book-card-img" loading="lazy" />
+        <div class="book-card-body">
+          <div class="book-card-title">The AI-Powered Solopreneur</div>
+          <div class="book-card-desc">Build, automate, market, and grow a one-person business with ChatGPT, AI agents &amp; automation.</div>
+          <div class="book-card-footer">
+            <a href="https://payhip.com/b/8fWEk" class="book-card-btn" target="_blank" rel="noopener" onclick="event.stopPropagation()">Buy Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Book 8 -->
+      <div class="book-card" onclick="window.open('https://payhip.com/b/8TkSC','_blank')">
+        <img src="/assets/ebook-ai-content-creators.jpg" alt="AI for Content Creators" class="book-card-img" loading="lazy" />
+        <div class="book-card-body">
+          <div class="book-card-title">AI for Content Creators</div>
+          <div class="book-card-desc">10x your output, beat the algorithm, and reclaim your time across YouTube, Instagram, blogs, and podcasts.</div>
+          <div class="book-card-footer">
+            <a href="https://payhip.com/b/8TkSC" class="book-card-btn" target="_blank" rel="noopener" onclick="event.stopPropagation()">Buy Now</a>
           </div>
         </div>
       </div>
