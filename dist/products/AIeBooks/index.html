@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI eBooks Collection | Learn AI, Work Smarter, Grow Faster — Reevanti Global</title>
-  <meta name="description" content="Practical AI eBooks for business owners, professionals and entrepreneurs. Step-by-step guides, ready-to-use prompts. Instant download. Start your AI journey with Reevanti Global." />
+  <title>AI Playbooks Built for Your Profession | Reevanti Global</title>
+  <meta name="description" content="Generic AI advice won’t grow your business. This will. Plain-English AI guides written for the way you actually work — whether you run a shop floor, a trade desk, a one-person brand or a job hunt. No jargon. No coding." />
   <link rel="canonical" href="https://www.reevantiglobal.com/products/AIeBooks" />
   <link rel="icon" href="/Images/reevanti-global-logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet" />
 
   <style>
     /* ── RESET ── */
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
-      font-family: 'Inter', sans-serif;
-      background: #0a0a0a;
-      color: #ffffff;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f8fafc;
+      color: #0f172a;
       line-height: 1.6;
       overflow-x: hidden;
     }
@@ -26,370 +26,472 @@
     ul { list-style: none; }
     img { max-width: 100%; height: auto; display: block; }
 
-    /* ── TOKENS ── */
+    /* ── DESIGN TOKENS ── */
     :root {
-      --yellow: #FFD600;
-      --yellow-dark: #E8C200;
-      --navy:  #001B40;
-      --red:   #E84824;
-      --white: #FFFFFF;
-      --gray1: #111111;
-      --gray2: #1a1a1a;
-      --gray3: #222222;
-      --gray4: #2a2a2a;
-      --muted: #888888;
-      --border: rgba(255,255,255,0.08);
+      --primary: #4f46e5;
+      --primary-hover: #4338ca;
+      --primary-light: #eef2ff;
+      --accent: #0284c7;
+      --teal: #0d9488;
+      --dark: #0f172a;
+      --text: #334155;
+      --text-muted: #64748b;
+      --bg: #ffffff;
+      --bg-alt: #f8fafc;
+      --card-bg: #ffffff;
+      --border: #e2e8f0;
+      --border-subtle: #edf2f7;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.06);
+      --shadow-lg: 0 12px 32px rgba(0,0,0,0.08);
     }
 
-    .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
 
     /* ── BUTTONS ── */
     .btn {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 13px 28px; border-radius: 6px; font-weight: 700;
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 13px 28px; border-radius: 8px; font-weight: 700;
       font-size: 0.95rem; cursor: pointer; border: none; transition: all 0.25s;
       font-family: 'Inter', sans-serif;
     }
-    .btn-yellow { background: var(--yellow); color: #000; }
-    .btn-yellow:hover { background: var(--yellow-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(255,214,0,0.3); }
-    .btn-outline-white { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,0.3); }
-    .btn-outline-white:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.6); }
+    .btn-primary {
+      background: var(--primary); color: #ffffff;
+      box-shadow: 0 4px 14px rgba(79, 70, 229, 0.3);
+    }
+    .btn-primary:hover {
+      background: var(--primary-hover); transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(79, 70, 229, 0.4);
+      color: #ffffff;
+    }
+    .btn-outline {
+      background: #ffffff; color: var(--dark); border: 1.5px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+    .btn-outline:hover {
+      background: #f1f5f9; border-color: #cbd5e1; transform: translateY(-2px);
+    }
 
     /* ── NAVBAR ── */
     .navbar {
       position: fixed; top: 0; left: 0; width: 100%;
-      background: rgba(10,10,10,0.95); backdrop-filter: blur(12px);
+      background: rgba(255, 255, 255, 0.94); backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border); z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.03);
     }
     .nav-inner {
       display: flex; align-items: center; justify-content: space-between;
-      padding: 12px 24px; max-width: 1160px; margin: 0 auto;
+      padding: 14px 24px; max-width: 1180px; margin: 0 auto;
     }
-    .nav-logo img { height: 58px; width: auto; border-radius: 6px; background: #fff; padding: 4px 8px; object-fit: contain; }
-    .nav-links { display: flex; gap: 28px; }
-    .nav-links a { font-size: 0.9rem; font-weight: 500; color: rgba(255,255,255,0.75); transition: color 0.2s; }
-    .nav-links a:hover, .nav-links a.active { color: #fff; }
-    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; }
-    .hamburger span { width: 22px; height: 2px; background: #fff; border-radius: 2px; display: block; transition: all 0.3s; }
+    .nav-brand {
+      display: flex; align-items: center; gap: 12px; font-size: 1.25rem; font-weight: 400; color: var(--dark);
+    }
+    .nav-brand-logo {
+      height: 42px; width: auto; object-fit: contain;
+    }
+    .nav-brand strong { font-weight: 800; color: var(--dark); }
+    .nav-actions { display: flex; align-items: center; gap: 18px; }
+    .nav-btn {
+      background: var(--primary); color: #ffffff; font-weight: 700; font-size: 0.88rem;
+      padding: 9px 20px; border-radius: 8px; transition: all 0.2s;
+      box-shadow: 0 2px 8px rgba(79, 70, 229, 0.25);
+    }
+    .nav-btn:hover {
+      background: var(--primary-hover); transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(79, 70, 229, 0.35);
+      color: #ffffff;
+    }
 
     /* ── HERO ── */
-    .hero { padding: 160px 0 80px; background: #0a0a0a; position: relative; overflow: hidden; }
-    .hero::before {
-      content: ''; position: absolute; top: -200px; right: -200px;
-      width: 600px; height: 600px;
-      background: radial-gradient(circle, rgba(255,214,0,0.06) 0%, transparent 70%);
-      border-radius: 50%; pointer-events: none;
+    .hero {
+      padding: 150px 0 75px;
+      position: relative;
+      background: radial-gradient(circle at 50% 0%, rgba(79, 70, 229, 0.08) 0%, rgba(248, 250, 252, 1) 75%);
+      text-align: center;
     }
-    .hero-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; position: relative; }
     .hero-eyebrow {
-      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
-      color: var(--yellow); margin-bottom: 20px;
+      display: inline-block;
+      font-size: 0.82rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--primary); margin-bottom: 20px; background: var(--primary-light);
+      padding: 6px 16px; border-radius: 50px; border: 1px solid #c7d2fe;
     }
     .hero-h1 {
-      font-size: clamp(2.8rem, 5.5vw, 4.5rem); font-weight: 900; line-height: 1.05;
-      color: #fff; margin-bottom: 24px; letter-spacing: -0.02em;
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(2.4rem, 5.2vw, 4rem); font-weight: 800; line-height: 1.15;
+      color: var(--dark); margin-bottom: 22px; max-width: 900px; margin-left: auto; margin-right: auto;
+      letter-spacing: -0.03em;
     }
-    .hero-h1 .yellow { color: var(--yellow); }
-    .hero-sub { font-size: 1rem; color: rgba(255,255,255,0.6); line-height: 1.75; margin-bottom: 32px; max-width: 480px; }
-    .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
-
-    /* Stats row */
-    .stats-row {
-      display: grid; grid-template-columns: repeat(4, 1fr);
-      gap: 1px; background: var(--border); margin-top: 60px;
-      border-top: 1px solid var(--border);
+    .hero-h1 .hl {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
     }
-    .stat-cell {
-      background: #0a0a0a; padding: 20px 24px; text-align: center;
+    .hero-desc {
+      font-size: 1.15rem; color: var(--text-muted); line-height: 1.8;
+      max-width: 760px; margin: 0 auto 36px;
     }
-    .stat-num { font-size: 1.8rem; font-weight: 800; color: var(--yellow); line-height: 1; }
-    .stat-label { font-size: 0.78rem; color: rgba(255,255,255,0.5); margin-top: 4px; text-transform: uppercase; letter-spacing: 0.08em; }
-
-    /* ── TRUST BLOCK ── */
-    .trust-block { display: flex; flex-direction: column; gap: 24px; }
-
-    .trust-brand {
-      display: flex; align-items: center; gap: 14px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 12px; padding: 12px 16px;
-      width: fit-content;
+    .hero-btns {
+      display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-bottom: 42px;
     }
-    .trust-logo {
-      height: 42px; width: auto; border-radius: 6px;
-      background: #fff; padding: 3px 6px; object-fit: contain; flex-shrink: 0;
+    .hero-badges {
+      display: flex; justify-content: center; align-items: center; gap: 24px;
+      flex-wrap: wrap; color: #475569; font-size: 0.9rem; font-weight: 500;
+      padding-top: 24px; border-top: 1px solid var(--border); max-width: 820px; margin: 0 auto;
     }
-    .trust-brand-text { display: flex; flex-direction: column; gap: 2px; }
-    .trust-brand-name { font-size: 1rem; font-weight: 800; color: #fff; line-height: 1.2; }
-    .trust-brand-tag { font-size: 0.72rem; font-weight: 600; color: rgba(255,255,255,0.45); letter-spacing: 0.04em; }
-
-    .trust-checks {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 10px 24px;
-      list-style: none; padding: 0; margin: 0;
-    }
-    .trust-checks li {
-      display: flex; align-items: center; gap: 10px;
-      font-size: 0.9rem; font-weight: 600; color: rgba(255,255,255,0.88);
-    }
-    .tc-icon {
-      display: inline-flex; align-items: center; justify-content: center;
-      width: 22px; height: 22px; border-radius: 50%;
-      background: rgba(255,214,0,0.15); border: 1.5px solid var(--yellow);
-      color: var(--yellow); font-size: 0.75rem; font-weight: 900; flex-shrink: 0;
-    }
-
-    /* Hero right — book grid */
-    .hero-books {
-      display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; position: relative;
-    }
-    .hero-book {
-      border-radius: 10px; overflow: hidden;
-      box-shadow: 0 12px 40px rgba(0,0,0,0.6);
-      transition: transform 0.3s; cursor: pointer;
-    }
-    .hero-book:hover { transform: translateY(-6px) scale(1.02); }
-    .hero-book img { width: 100%; height: 160px; object-fit: cover; object-position: top; }
-    .hero-book-label {
-      background: var(--gray2); padding: 6px 8px;
-      font-size: 0.68rem; font-weight: 600; color: rgba(255,255,255,0.8);
-      line-height: 1.25;
-    }
-    .hero-book-price {
-      padding: 4px 10px 8px; font-size: 0.75rem; font-weight: 700;
-      color: var(--yellow); background: var(--gray2);
-    }
-    .book-featured-badge {
-      position: absolute; top: -10px; left: 50%; transform: translateX(-50%);
-      background: var(--yellow); color: #000; font-size: 0.65rem; font-weight: 800;
-      padding: 3px 12px; border-radius: 50px; white-space: nowrap; z-index: 2;
-    }
-    .book-wrap { position: relative; }
-
-    /* ── MARQUEE ── */
-    .marquee-wrapper {
-      position: fixed;
-      top: 83px;
-      left: 0;
-      width: 100%;
-      z-index: 999;
-      background: var(--yellow);
-      color: #000;
-      padding: 10px 0;
-      overflow: hidden;
-      white-space: nowrap;
-      display: flex;
-      font-weight: 800;
-      font-size: 0.85rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      border-bottom: 1px solid rgba(0,0,0,0.15);
-    }
-    .marquee-content {
-      display: flex;
-      animation: marquee 25s linear infinite;
-    }
-    .marquee-content span {
-      padding-right: 30px;
-    }
-    @keyframes marquee {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-33.3333%); }
-    }
+    .hero-badge-item { display: inline-flex; align-items: center; gap: 8px; }
 
     /* ── SECTION BASE ── */
     .section { padding: 90px 0; }
     .section-label {
-      font-size: 0.72rem; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase;
-      color: var(--yellow); margin-bottom: 14px;
+      font-size: 0.78rem; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--primary); margin-bottom: 10px;
     }
     .section-h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; line-height: 1.15; margin-bottom: 16px;
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(2rem, 3.8vw, 2.9rem); font-weight: 800; line-height: 1.2;
+      color: var(--dark); margin-bottom: 12px; letter-spacing: -0.025em;
     }
-    .section-h2 .hl { color: var(--yellow); font-style: italic; }
-    .section-intro { font-size: 1rem; color: rgba(255,255,255,0.55); line-height: 1.75; max-width: 600px; }
+    .section-sub {
+      font-size: 1.05rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 44px;
+    }
 
-    /* ── LIBRARY SECTION ── */
-    .library-section { background: #0a0a0a; }
-    .library-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 48px; }
-    .library-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+    /* ── SECTION: WHICH DESCRIBES YOU? ── */
+    .you-section { background: #ffffff; color: var(--dark); border-top: 1px solid var(--border); }
+    .you-section .section-h2 {
+      color: var(--dark); font-size: clamp(2.2rem, 4vw, 3rem);
+      font-weight: 800; letter-spacing: -0.03em; margin-bottom: 8px;
+    }
+    .you-section .section-sub {
+      color: var(--text-muted); font-size: 1.05rem; margin-bottom: 32px;
+    }
+
+    /* Tabs pill container */
+    .you-tabs {
+      display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 36px;
+    }
+    .you-tab-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 18px; border-radius: 9999px;
+      background: #ffffff; border: 1.5px solid var(--border);
+      color: #334155; font-size: 0.9rem; font-weight: 600;
+      cursor: pointer; transition: all 0.2s ease;
+      font-family: 'Inter', sans-serif;
+    }
+    .you-tab-btn:hover {
+      border-color: #cbd5e1; background: #f8fafc; color: var(--dark);
+    }
+    .you-tab-btn.active {
+      background: var(--primary); border-color: var(--primary); color: #ffffff;
+      box-shadow: 0 4px 14px rgba(79, 70, 229, 0.35);
+    }
+    .you-tab-btn .tab-icon { font-size: 1.1rem; }
+
+    /* Showcase Card Container */
+    .you-panel {
+      display: none;
+      background: #ffffff;
+      border: 1.5px solid var(--border);
+      border-radius: 24px;
+      padding: 44px;
+      box-shadow: var(--shadow-sm);
+      animation: fadeIn 0.3s ease;
+    }
+    .you-panel.active {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 48px;
+      align-items: center;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Left Details */
+    .you-content-eyebrow {
+      font-size: 0.8rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--teal); margin-bottom: 12px;
+    }
+    .you-content-title {
+      font-size: clamp(1.6rem, 2.8vw, 2.1rem); font-weight: 800; color: var(--dark);
+      line-height: 1.25; margin-bottom: 12px; letter-spacing: -0.02em;
+    }
+    .you-content-subtitle {
+      font-size: 1rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 24px;
+    }
+    .you-check-list {
+      display: flex; flex-direction: column; gap: 14px; margin-bottom: 28px;
+    }
+    .you-check-item {
+      display: flex; align-items: flex-start; gap: 12px;
+      font-size: 0.95rem; color: #334155; line-height: 1.55;
+    }
+    .you-check-icon {
+      color: var(--teal); font-weight: 900; font-size: 1.1rem; line-height: 1.3; flex-shrink: 0;
+    }
+    .you-inside-label {
+      font-size: 0.75rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--text-muted); margin-bottom: 12px;
+    }
+    .you-tags {
+      display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px;
+    }
+    .you-tag {
+      background: #eff6ff; color: #4338ca; border: 1px solid #dbeafe;
+      font-size: 0.8rem; font-weight: 600; padding: 6px 12px; border-radius: 8px;
+    }
+    .you-cta-btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      background: var(--primary); color: #ffffff; font-weight: 700; font-size: 0.95rem;
+      padding: 14px 30px; border-radius: 10px; transition: all 0.25s; text-decoration: none;
+      box-shadow: 0 4px 16px rgba(79, 70, 229, 0.3);
+    }
+    .you-cta-btn:hover {
+      background: var(--primary-hover); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(79, 70, 229, 0.4);
+      color: #ffffff;
+    }
+
+    /* Right Visual Card with Cover Image */
+    .you-visual-card {
+      background: linear-gradient(135deg, #4f46e5 0%, #0284c7 100%);
+      border-radius: 20px;
+      min-height: 440px;
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: #ffffff;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 16px 36px rgba(2, 132, 199, 0.22);
+    }
+    .you-visual-top {
+      display: flex; justify-content: space-between; align-items: flex-start; gap: 16px;
+    }
+    .you-visual-emoji {
+      font-size: 3.2rem; filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15));
+    }
+    .you-visual-cover-wrap {
+      width: 140px; border-radius: 10px; overflow: hidden;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+      border: 2px solid rgba(255,255,255,0.25);
+      transition: transform 0.3s;
+      flex-shrink: 0;
+    }
+    .you-visual-card:hover .you-visual-cover-wrap {
+      transform: translateY(-4px) scale(1.03);
+    }
+    .you-visual-cover-wrap img {
+      width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: top;
+    }
+    .you-visual-bottom {
+      margin-top: auto; padding-top: 24px;
+    }
+    .you-visual-brand {
+      font-size: 0.78rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase;
+      color: rgba(255,255,255,0.8); margin-bottom: 6px;
+    }
+    .you-visual-booktitle {
+      font-size: 1.55rem; font-weight: 800; color: #ffffff; line-height: 1.25;
+      letter-spacing: -0.01em;
+    }
+
+    /* ── SECTION: EVERY GUIDE AT A GLANCE ── */
+    .guides-section { background: var(--bg-alt); border-top: 1px solid var(--border); }
+    .guides-header {
+      display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px;
+      flex-wrap: wrap; gap: 20px;
+    }
+    .guides-header-text { max-width: 650px; }
+    .library-grid {
+      display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px;
+    }
     .book-card {
-      background: var(--gray2); border: 1px solid var(--border); border-radius: 14px;
-      overflow: hidden; transition: all 0.3s; cursor: pointer;
+      background: #ffffff; border: 1.5px solid var(--border); border-radius: 16px;
+      overflow: hidden; transition: all 0.3s; cursor: pointer; display: flex; flex-direction: column;
+      box-shadow: var(--shadow-sm);
     }
-    .book-card:hover { transform: translateY(-6px); border-color: rgba(255,214,0,0.25); box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
-    .book-card-img { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: top; }
-    .book-card-body { padding: 16px; }
-    .book-card-title { font-size: 0.9rem; font-weight: 700; color: #fff; margin-bottom: 6px; line-height: 1.4; }
-    .book-card-desc { font-size: 0.78rem; color: rgba(255,255,255,0.5); line-height: 1.6; margin-bottom: 12px; }
-    .book-card-footer { display: flex; align-items: center; justify-content: space-between; }
-    .book-card-price { font-size: 0.95rem; font-weight: 800; color: var(--yellow); }
+    .book-card:hover {
+      transform: translateY(-6px); border-color: #cbd5e1;
+      box-shadow: var(--shadow-lg);
+    }
+    .book-card-img-wrap {
+      width: 100%; aspect-ratio: 3/4; overflow: hidden; background: #f1f5f9; position: relative;
+    }
+    .book-card-img {
+      width: 100%; height: 100%; object-fit: cover; object-position: top;
+      transition: transform 0.35s ease;
+    }
+    .book-card:hover .book-card-img { transform: scale(1.04); }
+    .book-card-body {
+      padding: 20px 18px; display: flex; flex-direction: column; flex-grow: 1;
+      background: #ffffff;
+    }
+    .book-card-title {
+      font-size: 0.98rem; font-weight: 700; color: var(--dark); margin-bottom: 8px; line-height: 1.35;
+    }
+    .book-card-desc {
+      font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 18px; flex-grow: 1;
+    }
+    .book-card-footer {
+      display: flex; align-items: center; justify-content: space-between; padding-top: 8px;
+    }
     .book-card-btn {
-      background: var(--yellow); color: #000; font-size: 0.75rem; font-weight: 700;
-      padding: 6px 14px; border-radius: 4px; transition: all 0.2s; border: none; cursor: pointer;
+      background: var(--primary); color: #ffffff; font-size: 0.82rem; font-weight: 700;
+      padding: 9px 18px; border-radius: 6px; transition: all 0.2s; border: none; cursor: pointer;
+      display: inline-flex; align-items: center; justify-content: center; width: 100%; text-align: center;
+      box-shadow: 0 2px 8px rgba(79, 70, 229, 0.2);
     }
-    .book-card-btn:hover { background: var(--yellow-dark); }
+    .book-card-btn:hover { background: var(--primary-hover); color: #ffffff; }
 
-    /* ── WHY DIFFERENT (numbered) ── */
-    .why-section { background: var(--gray1); }
-    .why-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
-    .why-left .section-h2 { margin-bottom: 24px; }
-    .why-left p { color: rgba(255,255,255,0.55); line-height: 1.8; }
-    .why-list { display: flex; flex-direction: column; gap: 28px; }
-    .why-item { display: flex; gap: 20px; align-items: flex-start; }
-    .why-num {
-      font-size: 0.65rem; font-weight: 800; color: var(--yellow); letter-spacing: 0.08em;
-      padding: 4px 10px; border: 1px solid rgba(255,214,0,0.3); border-radius: 50px;
-      white-space: nowrap; flex-shrink: 0; margin-top: 2px;
+    /* ── SECTION: WORKING TOOLKIT ── */
+    .toolkit-section { background: #ffffff; border-top: 1px solid var(--border); }
+    .toolkit-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
     }
-    .why-item h4 { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 6px; }
-    .why-item p { font-size: 0.875rem; color: rgba(255,255,255,0.5); line-height: 1.7; }
+    .toolkit-card {
+      background: var(--bg-alt); border: 1.5px solid var(--border); border-radius: 16px;
+      padding: 32px 24px; transition: all 0.3s;
+    }
+    .toolkit-card:hover {
+      background: #ffffff; border-color: #cbd5e1; transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+    .toolkit-card h3 {
+      font-size: 1.15rem; font-weight: 700; color: var(--dark); margin-bottom: 12px; display: flex; align-items: center; gap: 8px;
+    }
+    .toolkit-card p {
+      font-size: 0.92rem; color: var(--text); line-height: 1.7;
+    }
 
-    /* ── WHAT YOU'LL BE ABLE TO DO ── */
-    .todo-section { background: #0a0a0a; }
-    .todo-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-    .todo-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+    /* ── SECTION: 3 STEPS ── */
+    .steps-section { background: var(--bg-alt); border-top: 1px solid var(--border); }
+    .steps-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; position: relative;
     }
-    .todo-item {
-      background: var(--gray2); border: 1px solid var(--border); border-radius: 10px;
-      padding: 14px 16px; font-size: 0.875rem; font-weight: 600;
-      color: rgba(255,255,255,0.85); display: flex; align-items: center; gap: 10px;
-      transition: all 0.25s;
+    .step-card {
+      background: #ffffff; border: 1.5px solid var(--border); border-radius: 16px;
+      padding: 38px 30px; position: relative; transition: all 0.3s;
+      box-shadow: var(--shadow-sm);
     }
-    .todo-item:hover { background: var(--gray3); border-color: rgba(255,214,0,0.2); transform: translateY(-2px); }
-    .todo-check { color: var(--yellow); font-size: 1rem; flex-shrink: 0; }
+    .step-card:hover {
+      border-color: #cbd5e1; transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+    .step-number {
+      font-size: 2.4rem; font-weight: 900; color: var(--primary); line-height: 1; margin-bottom: 18px;
+      font-family: 'Inter', sans-serif; letter-spacing: -0.03em;
+    }
+    .step-card h3 {
+      font-size: 1.25rem; font-weight: 800; color: var(--dark); margin-bottom: 12px;
+    }
+    .step-card p {
+      font-size: 0.95rem; color: var(--text-muted); line-height: 1.7;
+    }
 
-    /* ── TRUSTED ACROSS (personas) ── */
-    .trust-section { background: var(--gray1); }
-    .trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 48px; }
-    .trust-card {
-      background: var(--gray2); border: 1px solid var(--border); border-radius: 14px;
-      padding: 24px 18px; text-align: center; transition: all 0.3s;
+    /* ── SECTION: FINAL CTA BANNER ── */
+    .final-cta {
+      background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #0369a1 100%);
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      padding: 95px 0; text-align: center; position: relative; overflow: hidden;
+      color: #ffffff;
     }
-    .trust-card:hover { background: var(--gray3); border-color: rgba(255,214,0,0.2); transform: translateY(-4px); }
-    .trust-icon { font-size: 2rem; display: block; margin-bottom: 12px; }
-    .trust-card h4 { font-size: 0.9rem; font-weight: 700; color: #fff; margin-bottom: 6px; }
-    .trust-card p { font-size: 0.78rem; color: rgba(255,255,255,0.45); line-height: 1.6; }
+    .final-cta-h2 {
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(2.2rem, 4.5vw, 3.4rem); font-weight: 800; color: #ffffff;
+      margin-bottom: 18px; line-height: 1.2; max-width: 840px; margin-left: auto; margin-right: auto;
+      letter-spacing: -0.03em;
+    }
+    .final-cta-desc {
+      font-size: 1.15rem; color: rgba(255,255,255,0.85); max-width: 680px;
+      margin: 0 auto 36px; line-height: 1.8;
+    }
+    .final-cta-btn {
+      padding: 16px 44px; font-size: 1.05rem; border-radius: 50px;
+      background: #ffffff; color: var(--primary); font-weight: 800;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.25);
+    }
+    .final-cta-btn:hover {
+      background: #f8fafc; color: var(--primary-hover); transform: translateY(-2px);
+      box-shadow: 0 14px 34px rgba(0,0,0,0.3);
+    }
 
-    /* ── TESTIMONIALS ── */
-    .reviews-section { background: #0a0a0a; }
-    .reviews-header { margin-bottom: 48px; }
-    .reviews-header .section-h2 span { color: var(--yellow); font-style: italic; }
-    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-    .review-card {
-      background: var(--gray2); border: 1px solid var(--border); border-radius: 14px;
-      padding: 24px; transition: all 0.3s;
+    /* ── SECTION: AUTHOR BIO ── */
+    .author-section { background: #ffffff; padding: 75px 0; border-bottom: 1px solid var(--border); }
+    .author-box {
+      max-width: 780px; margin: 0 auto; display: flex; align-items: center; gap: 32px;
+      background: var(--bg-alt); border: 1.5px solid var(--border); border-radius: 20px; padding: 38px 34px;
+      box-shadow: var(--shadow-sm);
     }
-    .review-card:hover { border-color: rgba(255,214,0,0.2); transform: translateY(-3px); }
-    .stars { color: var(--yellow); font-size: 0.9rem; letter-spacing: 1px; margin-bottom: 14px; }
-    .review-text { font-size: 0.875rem; color: rgba(255,255,255,0.75); line-height: 1.75; margin-bottom: 16px; font-style: italic; }
-    .reviewer { display: flex; align-items: center; gap: 10px; }
-    .reviewer-avatar {
-      width: 36px; height: 36px; border-radius: 50%;
-      background: linear-gradient(135deg, var(--yellow), #E8C200);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 0.85rem; font-weight: 800; color: #000; flex-shrink: 0;
+    .author-avatar {
+      width: 76px; height: 76px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      color: #ffffff; display: flex; align-items: center; justify-content: center;
+      font-size: 1.6rem; font-weight: 900; flex-shrink: 0; box-shadow: 0 8px 24px rgba(79, 70, 229, 0.25);
     }
-    .reviewer-name { font-size: 0.85rem; font-weight: 700; color: #fff; }
-    .reviewer-role { font-size: 0.75rem; color: rgba(255,255,255,0.4); }
-
-    /* ── FAQ ── */
-    .faq-section { background: var(--gray1); }
-    .faq-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
-    .faq-left .section-h2 { margin-bottom: 20px; }
-    .faq-left p { color: rgba(255,255,255,0.5); line-height: 1.8; margin-bottom: 28px; }
-    .faq-list { display: flex; flex-direction: column; gap: 0; }
-    .faq-item { border-bottom: 1px solid var(--border); }
-    .faq-q {
-      width: 100%; background: none; border: none; text-align: left; padding: 18px 0;
-      font-size: 0.925rem; font-weight: 600; color: #fff; cursor: pointer;
-      display: flex; justify-content: space-between; align-items: center; gap: 12px;
-      font-family: 'Inter', sans-serif; transition: color 0.2s;
+    .author-content h3 {
+      font-size: 1.3rem; font-weight: 800; color: var(--dark); margin-bottom: 8px; letter-spacing: -0.01em;
     }
-    .faq-q:hover { color: var(--yellow); }
-    .faq-icon { font-size: 1.2rem; color: var(--yellow); flex-shrink: 0; transition: transform 0.3s; }
-    .faq-q.open .faq-icon { transform: rotate(45deg); }
-    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
-    .faq-a p { padding: 0 0 18px; font-size: 0.875rem; color: rgba(255,255,255,0.55); line-height: 1.75; }
-
-    /* ── FINAL CTA ── */
-    .cta-section {
-      background: linear-gradient(135deg, #0a0a14, #001B40, #0a0a14);
-      padding: 90px 0; text-align: center; position: relative; overflow: hidden;
-    }
-    .cta-section::before {
-      content: ''; position: absolute; inset: 0;
-      background: radial-gradient(ellipse at center, rgba(255,214,0,0.06) 0%, transparent 70%);
-    }
-    .cta-section .container { position: relative; }
-    .cta-eyebrow { font-size: 0.72rem; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase; color: var(--yellow); margin-bottom: 16px; }
-    .cta-h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2.2rem, 4.5vw, 3.5rem); font-weight: 700;
-      color: #fff; margin-bottom: 16px; line-height: 1.15;
-    }
-    .cta-sub { font-size: 1rem; color: rgba(255,255,255,0.55); margin-bottom: 40px; }
-    .countdown {
-      display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 40px;
-    }
-    .countdown-unit { text-align: center; }
-    .countdown-num {
-      display: block; font-size: 3rem; font-weight: 900; color: var(--yellow);
-      background: var(--gray2); border: 1px solid rgba(255,214,0,0.2); border-radius: 10px;
-      padding: 12px 20px; min-width: 90px; line-height: 1;
-    }
-    .countdown-label { font-size: 0.68rem; color: rgba(255,255,255,0.45); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 6px; }
-    .countdown-sep { font-size: 2.5rem; font-weight: 900; color: var(--yellow); margin-bottom: 24px; }
-    .cta-badges { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 24px; }
-    .cta-badge {
-      font-size: 0.78rem; font-weight: 600; color: rgba(255,255,255,0.5);
-      background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
-      padding: 6px 14px; border-radius: 50px;
+    .author-content p {
+      font-size: 0.95rem; color: var(--text); line-height: 1.75;
     }
 
     /* ── FOOTER ── */
-    .footer { background: #050505; border-top: 1px solid var(--border); padding: 48px 0 24px; }
-    .footer-inner { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 40px; }
-    .footer-logo img { height: 52px; width: auto; background: #fff; padding: 4px 8px; border-radius: 6px; object-fit: contain; margin-bottom: 14px; }
-    .footer-brand p { font-size: 0.85rem; color: rgba(255,255,255,0.4); line-height: 1.75; }
-    .footer-col h4 { font-size: 0.78rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 16px; }
-    .footer-col a { display: block; font-size: 0.875rem; color: rgba(255,255,255,0.55); margin-bottom: 8px; transition: color 0.2s; }
-    .footer-col a:hover { color: var(--yellow); }
-    .footer-bottom { border-top: 1px solid var(--border); padding-top: 20px; display: flex; align-items: center; justify-content: space-between; font-size: 0.8rem; color: rgba(255,255,255,0.3); flex-wrap: wrap; gap: 12px; }
-    .footer-social { display: flex; gap: 12px; }
-    .soc { width: 34px; height: 34px; border-radius: 50%; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.5); transition: all 0.2s; font-size: 0.8rem; }
-    .soc:hover { background: var(--yellow); color: #000; border-color: var(--yellow); }
+    .footer { background: #f8fafc; padding: 55px 0 32px; border-top: 1px solid var(--border); }
+    .footer-links-row {
+      display: flex; justify-content: center; align-items: center; gap: 28px;
+      flex-wrap: wrap; margin-bottom: 24px;
+    }
+    .footer-links-row a {
+      font-size: 0.9rem; font-weight: 600; color: var(--text-muted); transition: color 0.2s;
+    }
+    .footer-links-row a:hover { color: var(--primary); }
+    .footer-social-row {
+      display: flex; justify-content: center; align-items: center; gap: 16px;
+      flex-wrap: wrap; margin-bottom: 30px;
+    }
+    .footer-social-row a {
+      display: inline-flex; align-items: center; gap: 8px; font-size: 0.88rem; font-weight: 600;
+      color: var(--text); transition: all 0.2s; padding: 8px 16px;
+      border-radius: 50px; background: #ffffff; border: 1.5px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+    .footer-social-row a:hover {
+      color: #ffffff; background: var(--primary); border-color: var(--primary);
+      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25); transform: translateY(-1px);
+    }
+    .footer-bottom {
+      text-align: center; font-size: 0.84rem; color: var(--text-muted);
+      padding-top: 24px; border-top: 1px solid var(--border);
+    }
 
     /* ── RESPONSIVE ── */
     @media (max-width: 1024px) {
-      .trust-grid { grid-template-columns: repeat(4, 1fr); }
+      .library-grid { grid-template-columns: repeat(3, 1fr); }
+      .toolkit-grid { grid-template-columns: repeat(2, 1fr); }
+      .you-panel.active { grid-template-columns: 1fr; gap: 32px; }
+      .you-visual-card { min-height: 380px; }
+    }
+    @media (max-width: 768px) {
+      .hero { padding: 130px 0 50px; }
+      .section { padding: 65px 0; }
       .library-grid { grid-template-columns: repeat(2, 1fr); }
+      .steps-grid { grid-template-columns: 1fr; }
+      .author-box { flex-direction: column; text-align: center; }
+      .you-panel { padding: 28px 20px; }
+      .you-visual-card { min-height: 320px; padding: 24px; }
+      .you-visual-cover-wrap { width: 110px; }
     }
-    @media (max-width: 900px) {
-      .hero-inner { grid-template-columns: 1fr; }
-      .hero-books { display: none; }
-      .stats-row { grid-template-columns: repeat(2, 1fr); }
-      .why-inner, .todo-inner, .faq-inner { grid-template-columns: 1fr; gap: 40px; }
-      .trust-grid { grid-template-columns: repeat(2, 1fr); }
-      .reviews-grid { grid-template-columns: 1fr; }
-      .library-grid { grid-template-columns: repeat(2, 1fr); }
-      .footer-inner { grid-template-columns: 1fr; gap: 32px; }
-    }
-    @media (max-width: 600px) {
-      .nav-links { display: none; }
-      .hamburger { display: flex; }
-      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #111; padding: 16px 24px; gap: 14px; border-bottom: 1px solid var(--border); }
-      .stats-row { grid-template-columns: repeat(2, 1fr); }
-      .trust-grid { grid-template-columns: 1fr 1fr; }
-      .library-grid { grid-template-columns: 1fr 1fr; }
-      .todo-grid { grid-template-columns: 1fr; }
-      .hero h1 { font-size: 2.6rem; }
-      .countdown-num { font-size: 2.2rem; min-width: 64px; padding: 10px 14px; }
-    }
-    @media (max-width: 420px) {
+    @media (max-width: 520px) {
       .library-grid { grid-template-columns: 1fr; }
-      .trust-grid { grid-template-columns: 1fr 1fr; }
+      .toolkit-grid { grid-template-columns: 1fr; }
+      .hero-badges { flex-direction: column; gap: 10px; }
+      .hero-btns { flex-direction: column; width: 100%; }
+      .hero-btns .btn { width: 100%; }
+      .you-tab-btn { font-size: 0.82rem; padding: 8px 14px; }
+      .you-cta-btn { width: 100%; }
+      .you-visual-top { flex-direction: column-reverse; align-items: flex-start; }
     }
   </style>
 </head>
@@ -398,295 +500,703 @@
 <!-- ══════ NAVBAR ══════ -->
 <nav class="navbar">
   <div class="nav-inner">
-    <div class="nav-logo">
-      <a href="https://www.reevantiglobal.com/" aria-label="Reevanti Global">
-        <img src="/Images/reevanti-global-logo.png" alt="Reevanti Global Logo" />
-      </a>
+    <a href="/" class="nav-brand" aria-label="Reevanti Global">
+      <img src="/Images/reevanti-global-logo.png" alt="Reevanti Global Logo" class="nav-brand-logo" />
+      <span>Reevanti<strong>Global</strong></span>
+    </a>
+    <div class="nav-actions">
+      <a href="https://payhip.com/ReevantiGlobal/collection/aibook" class="nav-btn" target="_blank" rel="noopener">Browse E-Books</a>
     </div>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="https://www.reevantiglobal.com/">Home</a></li>
-      <li><a href="https://www.reevantiglobal.com/about-us">About</a></li>
-      <li><a href="https://www.reevantiglobal.com/products" class="active">Products</a></li>
-      <li><a href="https://payhip.com/reevantiglobal" target="_blank" rel="noopener">Payhip Store</a></li>
-      <li><a href="https://www.reevantiglobal.com/blogs">Blogs</a></li>
-      <li><a href="https://www.reevantiglobal.com/contact-us">Contact</a></li>
-    </ul>
-    <a href="https://payhip.com/reevantiglobal" class="btn btn-yellow" target="_blank" rel="noopener" style="font-size:0.85rem;padding:9px 18px;">Shop Now →</a>
-    <button class="hamburger" id="hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
   </div>
 </nav>
-
-<!-- ══════ MOVING BANNER ══════ -->
-<div class="marquee-wrapper">
-  <div class="marquee-content">
-    <span>Beginner Friendly ✦ Ready-to-Use ✦ Real Results ✦ No Coding Required ✦ Instant Download ✦ Lifetime Access ✦ Practical First ✦ </span>
-    <span>Beginner Friendly ✦ Ready-to-Use ✦ Real Results ✦ No Coding Required ✦ Instant Download ✦ Lifetime Access ✦ Practical First ✦ </span>
-    <span>Beginner Friendly ✦ Ready-to-Use ✦ Real Results ✦ No Coding Required ✦ Instant Download ✦ Lifetime Access ✦ Practical First ✦ </span>
-  </div>
-</div>
 
 <!-- ══════ HERO ══════ -->
 <section class="hero" id="hero">
   <div class="container">
-    <div class="hero-inner">
-      <!-- Left Text -->
-      <div>
-
-        <!-- TRUST BLOCK -->
-        <div class="trust-block">
-
-          <h1 class="hero-h1">
-            Practical AI Guides for<br>
-            <span class="yellow">Entrepreneurs, Professionals<br>&amp; Businesses Worldwide</span>
-          </h1>
-          <ul class="trust-checks">
-            <li><span class="tc-icon">✓</span> Instant PDF Download</li>
-            <li><span class="tc-icon">✓</span> Lifetime Access</li>
-            <li><span class="tc-icon">✓</span> Beginner Friendly</li>
-            <li><span class="tc-icon">✓</span> Practical Business Examples</li>
-            <li><span class="tc-icon">✓</span> Ready-to-Use Prompts</li>
-            <li><span class="tc-icon">✓</span> Secure Checkout via Payhip</li>
-          </ul>
-          <div class="hero-btns">
-            <a href="https://payhip.com/reevantiglobal" class="btn btn-yellow" target="_blank" rel="noopener">Shop All eBooks →</a>
-            <a href="#library" class="btn btn-outline-white">Browse Collection</a>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Right: Book Grid Preview -->
-      <div class="hero-books">
-        <div class="book-wrap">
-          <div class="book-featured-badge">⭐ BESTSELLER</div>
-          <a href="https://payhip.com/b/2RAjZ" class="hero-book" target="_blank" rel="noopener">
-            <img src="/assets/ebook-promptflow-pro.jpg" alt="AI PromptFlow Pro" />
-            <div class="hero-book-label">AI PromptFlow Pro</div>
-          </a>
-        </div>
-        <a href="https://payhip.com/b/JLSo6" class="hero-book" target="_blank" rel="noopener">
-          <img src="/assets/ebook-ai-small-business.jpg" alt="AI for Small Business Owners" />
-          <div class="hero-book-label">AI for Small Business Owners</div>
-        </a>
-        <a href="https://payhip.com/b/mJzP2" class="hero-book" target="_blank" rel="noopener">
-          <img src="/assets/ebook-passive-income.jpg" alt="Passive Income with AI" />
-          <div class="hero-book-label">Passive Income with AI</div>
-        </a>
-        <a href="https://payhip.com/b/NqWOD" class="hero-book" target="_blank" rel="noopener">
-          <img src="/assets/ebook-ai-manufacturing.jpg" alt="AI for Manufacturing SMEs" />
-          <div class="hero-book-label">AI for Manufacturing SMEs</div>
-        </a>
-        <a href="https://payhip.com/b/6I2lW" class="hero-book" target="_blank" rel="noopener">
-          <img src="/assets/ebook-ai-exporters.jpg" alt="AI for Import &amp; Export" />
-          <div class="hero-book-label">AI for Import &amp; Export</div>
-        </a>
-        <a href="https://payhip.com/b/e12Mf" class="hero-book" target="_blank" rel="noopener">
-          <img src="/assets/ebook-home-business.jpg" alt="AI for Home Business &amp; Trade Pros" />
-          <div class="hero-book-label">AI for Home Business &amp; Trade</div>
-        </a>
-        <a href="https://payhip.com/b/8fWEk" class="hero-book" target="_blank" rel="noopener">
-          <img src="/assets/ebook-ai-solopreneur.jpg" alt="The AI-Powered Solopreneur" />
-          <div class="hero-book-label">The AI-Powered Solopreneur</div>
-        </a>
-        <a href="https://payhip.com/b/8TkSC" class="hero-book" target="_blank" rel="noopener">
-          <img src="/assets/ebook-ai-content-creators.jpg" alt="AI for Content Creators" />
-          <div class="hero-book-label">AI for Content Creators</div>
-        </a>
-        <a href="https://payhip.com/b/V1Z2t" class="hero-book" target="_blank" rel="noopener">
-          <img src="/assets/ebook-ai-side-hustle.jpg" alt="AI Side Hustle Playbook" />
-          <div class="hero-book-label">AI Side Hustle Playbook</div>
-        </a>
-        <a href="https://payhip.com/b/8WLPp" class="hero-book" target="_blank" rel="noopener">
-          <img src="/assets/ebook-ai-job-search.jpg" alt="The AI-Powered Job Search" />
-          <div class="hero-book-label">The AI-Powered Job Search</div>
-        </a>
-      </div>
-
+    <div class="hero-eyebrow">AI playbooks built for your profession</div>
+    <h1 class="hero-h1">Generic AI advice won’t grow your business. <span class="hl">This will.</span></h1>
+    <p class="hero-desc">
+      Plain-English guides written for the way you actually work — whether you run a shop floor, a trade desk, a one-person brand or a job hunt. No jargon. No coding.
+    </p>
+    <div class="hero-btns">
+      <a href="#you" class="btn btn-primary">Find Your Guide</a>
+      <a href="https://payhip.com/ReevantiGlobal/collection/aibook" class="btn btn-outline" target="_blank" rel="noopener">Visit the Store</a>
+    </div>
+    <div class="hero-badges">
+      <span class="hero-badge-item">⚡ Instant digital download</span>
+      <span class="hero-badge-item">🔒 Secure checkout (Visa, Mastercard, PayPal)</span>
+      <span class="hero-badge-item">🧰 Practical, ready-to-use workflows</span>
     </div>
   </div>
 </section>
 
-
-<!-- ══════ LIBRARY ══════ -->
-<section class="section library-section" id="library">
+<!-- ══════ WHICH DESCRIBES YOU? ══════ -->
+<section class="section you-section" id="you">
   <div class="container">
-    <div class="library-header">
-      <div>
-        <div class="section-label">One library.</div>
-        <h2 class="section-h2">Unlimited <span class="hl">possibilities.</span></h2>
-      </div>
-      <a href="https://payhip.com/reevantiglobal" class="btn btn-yellow" target="_blank" rel="noopener">View All →</a>
-    </div>
-    <div class="library-grid">
+    <h2 class="section-h2">Which describes you?</h2>
+    <p class="section-sub">Choose your profession and see exactly how AI can work for you.</p>
 
+    <!-- TAB BUTTONS -->
+    <div class="you-tabs" id="youTabs">
+      <button class="you-tab-btn active" data-tab="solopreneurs">
+        <span class="tab-icon">🧑‍💻</span> Solopreneurs
+      </button>
+      <button class="you-tab-btn" data-tab="small-business">
+        <span class="tab-icon">🏪</span> Small Business Owners
+      </button>
+      <button class="you-tab-btn" data-tab="manufacturers">
+        <span class="tab-icon">🏭</span> Manufacturers
+      </button>
+      <button class="you-tab-btn" data-tab="import-export">
+        <span class="tab-icon">🚢</span> Import / Export
+      </button>
+      <button class="you-tab-btn" data-tab="home-business">
+        <span class="tab-icon">🔧</span> Home Business &amp; Trades
+      </button>
+      <button class="you-tab-btn" data-tab="content-creators">
+        <span class="tab-icon">🎬</span> Content Creators
+      </button>
+      <button class="you-tab-btn" data-tab="job-seekers">
+        <span class="tab-icon">💼</span> Job Seekers
+      </button>
+      <button class="you-tab-btn" data-tab="marketers">
+        <span class="tab-icon">📈</span> Marketers &amp; Ops Teams
+      </button>
+      <button class="you-tab-btn" data-tab="side-hustlers">
+        <span class="tab-icon">🚀</span> Side-Hustlers
+      </button>
+      <button class="you-tab-btn" data-tab="passive-income">
+        <span class="tab-icon">💡</span> Passive Income Seekers
+      </button>
+    </div>
+
+    <!-- TAB 1: SOLOPRENEURS -->
+    <div class="you-panel active" id="tab-solopreneurs">
+      <div class="you-content-col">
+        <div class="you-content-eyebrow">FOR SOLOPRENEURS</div>
+        <h3 class="you-content-title">The AI-Powered Solopreneur</h3>
+        <p class="you-content-subtitle">You’re the CEO, marketer and support team — all at once.</p>
+        <div class="you-check-list">
+          <div class="you-check-item">
+            <span class="you-check-icon">✓</span>
+            <div>Find a profitable niche, validate your idea and create your offer</div>
+          </div>
+          <div class="you-check-item">
+            <span class="you-check-icon">✓</span>
+            <div>Market, sell and operate with AI: content, SEO, proposals, CRM, SOPs</div>
+          </div>
+          <div class="you-check-item">
+            <span class="you-check-icon">✓</span>
+            <div>Includes 100 AI prompts, 20 workflows and ready-made templates</div>
+          </div>
+        </div>
+        <div class="you-inside-label">WHAT’S INSIDE</div>
+        <div class="you-tags">
+          <span class="you-tag">Find a niche</span>
+          <span class="you-tag">Create your offer</span>
+          <span class="you-tag">Content &amp; SEO</span>
+          <span class="you-tag">Sales emails &amp; proposals</span>
+          <span class="you-tag">Customer service</span>
+          <span class="you-tag">30-day transformation</span>
+        </div>
+        <a href="https://payhip.com/b/8fWEk" class="you-cta-btn" target="_blank" rel="noopener">Get This Guide →</a>
+      </div>
+      <div class="you-visual-col">
+        <div class="you-visual-card">
+          <div class="you-visual-top">
+            <div class="you-visual-emoji">🧑‍💻 💻</div>
+            <div class="you-visual-cover-wrap">
+              <img src="/assets/ebook-ai-solopreneur.jpg" alt="The AI-Powered Solopreneur" />
+            </div>
+          </div>
+          <div class="you-visual-bottom">
+            <div class="you-visual-brand">REEVANTI GLOBAL</div>
+            <div class="you-visual-booktitle">The AI-Powered Solopreneur</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 2: SMALL BUSINESS OWNERS -->
+    <div class="you-panel" id="tab-small-business">
+      <div class="you-content-col">
+        <div class="you-content-eyebrow">FOR SMALL BUSINESS OWNERS</div>
+        <h3 class="you-content-title">AI for Small Business Owners — No-Code Playbook</h3>
+        <p class="you-content-subtitle">You wear every hat, and there are never enough hours in the day.</p>
+        <div class="you-check-list">
+          <div class="you-check-item">
+            <span class="you-check-icon">✓</span>
+            <div>Use AI for marketing, customer replies, admin and financial paperwork</div>
+          </div>
+          <div class="you-check-item">
+            <span class="you-check-icon">✓</span>
+            <div>Industry playbooks for local services, e-commerce and professional services</div>
+          </div>
+          <div class="you-check-item">
+            <span class="you-check-icon">✓</span>
+            <div>Learn what an AI scheduling agent can safely do — and what not to automate</div>
+          </div>
+        </div>
+        <div class="you-inside-label">WHAT’S INSIDE</div>
+        <div class="you-tags">
+          <span class="you-tag">Marketing &amp; customer communication</span>
+          <span class="you-tag">Admin &amp; documents</span>
+          <span class="you-tag">Customer service &amp; sales support</span>
+          <span class="you-tag">Simple daily workflows</span>
+          <span class="you-tag">30-day plan</span>
+          <span class="you-tag">Bonus toolkit</span>
+        </div>
+        <a href="https://payhip.com/b/JLSo6" class="you-cta-btn" target="_blank" rel="noopener">Get This Guide →</a>
+      </div>
+      <div class="you-visual-col">
+        <div class="you-visual-card">
+          <div class="you-visual-top">
+            <div class="you-visual-emoji">🏪</div>
+            <div class="you-visual-cover-wrap">
+              <img src="/assets/ebook-ai-small-business.jpg" alt="AI for Small Business Owners" />
+            </div>
+          </div>
+          <div class="you-visual-bottom">
+            <div class="you-visual-brand">REEVANTI GLOBAL</div>
+            <div class="you-visual-booktitle">AI for Small Business Owners</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 3: MANUFACTURERS -->
+    <div class="you-panel" id="tab-manufacturers">
+      <div class="you-content-col">
+        <div class="you-content-eyebrow">FOR MANUFACTURERS</div>
+        <h3 class="you-content-title">AI for Manufacturing SMEs — Shop-Floor-Tested Playbook</h3>
+        <p class="you-content-subtitle">Paperwork, reporting and coordination eat into production time.</p>
+        <div class="you-check-list">
+          <div class="you-check-item">
+            <span class="you-check-icon">✓</span>
+            <div>Speed up quality, safety and compliance documentation</div>
+          </div>
+          <div class="you-check-item">
+            <span class="you-check-icon">✓</span>
+            <div>Streamline maintenance, production, procurement and supplier communication</div>
+          </div>
+          <div class="you-check-item">
+            <span class="you-check-icon">✓</span>
+            <div>Function playbooks for machine shops, batch processors and contract manufacturers</div>
+          </div>
+        </div>
+        <div class="you-inside-label">WHAT’S INSIDE</div>
+        <div class="you-tags">
+          <span class="you-tag">Quality &amp; safety docs</span>
+          <span class="you-tag">Maintenance &amp; production</span>
+          <span class="you-tag">Supply chain &amp; procurement</span>
+          <span class="you-tag">Fabrication &amp; machine shops</span>
+          <span class="you-tag">Maintenance-ticket agent</span>
+          <span class="you-tag">Bonus toolkit</span>
+        </div>
+        <a href="https://payhip.com/b/NqWOD" class="you-cta-btn" target="_blank" rel="noopener">Get This Guide →</a>
+      </div>
+      <div class="you-visual-col">
+        <div class="you-visual-card">
+          <div class="you-visual-top">
+            <div class="you-visual-emoji">🏭</div>
+            <div class="you-visual-cover-wrap">
+              <img src="/assets/ebook-ai-manufacturing.jpg" alt="AI for Manufacturing SMEs" />
+            </div>
+          </div>
+          <div class="you-visual-bottom">
+            <div class="you-visual-brand">REEVANTI GLOBAL</div>
+            <div class="you-visual-booktitle">AI for Manufacturing SMEs</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 4: IMPORT / EXPORT -->
+    <div class="you-panel" id="tab-import-export">
+      <div class="you-content-col">
+        <div class="you-content-eyebrow">FOR IMPORT / EXPORT</div>
+        <h3 class="you-content-title">AI for Import Export Businesses — Trade-Floor-Tested Playbook</h3>
+        <p class="you-content-subtitle">Emails, documents, buyers and follow-ups pile up across time zones.</p>
+        <div class="you-check-list">
+          <div class="you-check-item">
+            <span class="you-check-icon">✓</span>
+            <div>Handle trade documentation and compliance paperwork faster</div>
+          </div>
+          <div class="you-check-item">
+            <span class="you-check-icon">✓</span>
+            <div>Improve freight, logistics, supplier, buyer and trade-finance communication</div>
+          </div>
+          <div class="you-check-item">
+            <span class="you-check-icon">✓</span>
+            <div>Playbooks for exporters, merchant traders and freight-forwarder workflows</div>
+          </div>
+        </div>
+        <div class="you-inside-label">WHAT’S INSIDE</div>
+        <div class="you-tags">
+          <span class="you-tag">Trade documentation</span>
+          <span class="you-tag">Logistics &amp; freight</span>
+          <span class="you-tag">Supplier &amp; buyer relations</span>
+          <span class="you-tag">Document-check agent</span>
+          <span class="you-tag">Exporters &amp; traders</span>
+          <span class="you-tag">Bonus toolkit</span>
+        </div>
+        <a href="https://payhip.com/b/6I2lW" class="you-cta-btn" target="_blank" rel="noopener">Get This Guide →</a>
+      </div>
+      <div class="you-visual-col">
+        <div class="you-visual-card">
+          <div class="you-visual-top">
+            <div class="you-visual-emoji">🚢</div>
+            <div class="you-visual-cover-wrap">
+              <img src="/assets/ebook-ai-exporters.jpg" alt="AI for Import Export Businesses" />
+            </div>
+          </div>
+          <div class="you-visual-bottom">
+            <div class="you-visual-brand">REEVANTI GLOBAL</div>
+            <div class="you-visual-booktitle">AI for Import Export Businesses</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 5: HOME BUSINESS & TRADES -->
+    <div class="you-panel" id="tab-home-business">
+      <div class="you-content-col">
+        <div class="you-content-eyebrow">FOR HOME BUSINESS &amp; TRADES</div>
+        <h3 class="you-content-title">AI for Home Business &amp; Trade Professionals</h3>
+        <p class="you-content-subtitle">You’re great at the work — but missed calls, slow quotes and scheduling cost you jobs.</p>
+        <div class="you-check-list">
+          <div class="you-check-item">
+            <span class="you-check-icon">✓</span>
+            <div>Set up an AI phone/text assistant so you stop missing leads</div>
+          </div>
+          <div class="you-check-item">
+            <span class="you-check-icon">✓</span>
+            <div>Send quotes in minutes, not days</div>
+          </div>
+          <div class="you-check-item">
+            <span class="you-check-icon">✓</span>
+            <div>Get reviews automatically and put marketing on autopilot</div>
+          </div>
+        </div>
+        <div class="you-inside-label">WHAT’S INSIDE</div>
+        <div class="you-tags">
+          <span class="you-tag">Find your biggest leak</span>
+          <span class="you-tag">AI phone/text assistant</span>
+          <span class="you-tag">Quotes in minutes</span>
+          <span class="you-tag">Scheduling &amp; dispatch</span>
+          <span class="you-tag">Reviews</span>
+          <span class="you-tag">20-prompt library</span>
+          <span class="you-tag">7-day setup plan</span>
+        </div>
+        <a href="https://payhip.com/b/e12Mf" class="you-cta-btn" target="_blank" rel="noopener">Get This Guide →</a>
+      </div>
+      <div class="you-visual-col">
+        <div class="you-visual-card">
+          <div class="you-visual-top">
+            <div class="you-visual-emoji">🔧</div>
+            <div class="you-visual-cover-wrap">
+              <img src="/assets/ebook-home-business.jpg" alt="AI for Home Business &amp; Trade Professionals" />
+            </div>
+          </div>
+          <div class="you-visual-bottom">
+            <div class="you-visual-brand">REEVANTI GLOBAL</div>
+            <div class="you-visual-booktitle">AI for Home Business &amp; Trade Professionals</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 6: CONTENT CREATORS -->
+    <div class="you-panel" id="tab-content-creators">
+      <div class="you-content-col">
+        <div class="you-content-eyebrow">FOR CONTENT CREATORS</div>
+        <h3 class="you-content-title">AI for Content Creators — 10x Your Output</h3>
+        <p class="you-content-subtitle">The content treadmill never stops, and burnout is real.</p>
+        <div class="you-check-list">
+          <div class="you-check-item">
+            <span class="you-check-icon">✓</span>
+            <div>Ideate and script faster, then repurpose across platforms</div>
+          </div>
+          <div class="you-check-item">
+            <span class="you-check-icon">✓</span>
+            <div>Handle audience, community and business communication</div>
+          </div>
+          <div class="you-check-item">
+            <span class="you-check-icon">✓</span>
+            <div>Format playbooks for video creators, podcasters and writers/newsletters</div>
+          </div>
+        </div>
+        <div class="you-inside-label">WHAT’S INSIDE</div>
+        <div class="you-tags">
+          <span class="you-tag">Ideation &amp; scripting</span>
+          <span class="you-tag">Repurposing</span>
+          <span class="you-tag">Audience &amp; community</span>
+          <span class="you-tag">Video creators</span>
+          <span class="you-tag">Podcasters</span>
+          <span class="you-tag">Newsletter writers</span>
+          <span class="you-tag">30-day plan</span>
+        </div>
+        <a href="https://payhip.com/b/8TkSC" class="you-cta-btn" target="_blank" rel="noopener">Get This Guide →</a>
+      </div>
+      <div class="you-visual-col">
+        <div class="you-visual-card">
+          <div class="you-visual-top">
+            <div class="you-visual-emoji">🎬</div>
+            <div class="you-visual-cover-wrap">
+              <img src="/assets/ebook-ai-content-creators.jpg" alt="AI for Content Creators" />
+            </div>
+          </div>
+          <div class="you-visual-bottom">
+            <div class="you-visual-brand">REEVANTI GLOBAL</div>
+            <div class="you-visual-booktitle">AI for Content Creators</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 7: JOB SEEKERS -->
+    <div class="you-panel" id="tab-job-seekers">
+      <div class="you-content-col">
+        <div class="you-content-eyebrow">FOR JOB SEEKERS</div>
+        <h3 class="you-content-title">The AI-Powered Job Search</h3>
+        <p class="you-content-subtitle">Hundreds of applications, little response — and no clear edge.</p>
+        <div class="you-check-list">
+          <div class="you-check-item">
+            <span class="you-check-icon">✓</span>
+            <div>Optimise your résumé and LinkedIn profile with AI — in your own voice</div>
+          </div>
+          <div class="you-check-item">
+            <span class="you-check-icon">✓</span>
+            <div>Analyse job descriptions, write cover letters and networking messages</div>
+          </div>
+          <div class="you-check-item">
+            <span class="you-check-icon">✓</span>
+            <div>Prepare for recruiters and interviews with a system, not guesswork</div>
+          </div>
+        </div>
+        <div class="you-inside-label">WHAT’S INSIDE</div>
+        <div class="you-tags">
+          <span class="you-tag">Find the right jobs</span>
+          <span class="you-tag">Résumé</span>
+          <span class="you-tag">LinkedIn</span>
+          <span class="you-tag">Job-description analysis</span>
+          <span class="you-tag">Cover letters</span>
+          <span class="you-tag">Networking</span>
+          <span class="you-tag">Recruiter outreach</span>
+        </div>
+        <a href="https://payhip.com/b/8WLPp" class="you-cta-btn" target="_blank" rel="noopener">Get This Guide →</a>
+      </div>
+      <div class="you-visual-col">
+        <div class="you-visual-card">
+          <div class="you-visual-top">
+            <div class="you-visual-emoji">💼</div>
+            <div class="you-visual-cover-wrap">
+              <img src="/assets/ebook-ai-job-search.jpg" alt="The AI-Powered Job Search" />
+            </div>
+          </div>
+          <div class="you-visual-bottom">
+            <div class="you-visual-brand">REEVANTI GLOBAL</div>
+            <div class="you-visual-booktitle">The AI-Powered Job Search</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 8: MARKETERS & OPS TEAMS -->
+    <div class="you-panel" id="tab-marketers">
+      <div class="you-content-col">
+        <div class="you-content-eyebrow">FOR MARKETERS &amp; OPS TEAMS</div>
+        <h3 class="you-content-title">PromptFlow Pro — AI Prompt Pack for Digital Marketing, Automation &amp; Operations</h3>
+        <p class="you-content-subtitle">You know AI can help, but writing good prompts takes trial and error.</p>
+        <div class="you-check-list">
+          <div class="you-check-item">
+            <span class="you-check-icon">✓</span>
+            <div>Prompts for blogs, social, email, ads, landing pages and sales copy</div>
+          </div>
+          <div class="you-check-item">
+            <span class="you-check-icon">✓</span>
+            <div>Automation with Zapier, Make, Google Sheets, Python and APIs</div>
+          </div>
+          <div class="you-check-item">
+            <span class="you-check-icon">✓</span>
+            <div>Build mini AI apps and an automation library that compounds over time</div>
+          </div>
+        </div>
+        <div class="you-inside-label">WHAT’S INSIDE</div>
+        <div class="you-tags">
+          <span class="you-tag">Blog &amp; social content</span>
+          <span class="you-tag">Email sequences</span>
+          <span class="you-tag">Ad &amp; landing-page copy</span>
+          <span class="you-tag">AIDA sales copy</span>
+          <span class="you-tag">Zapier &amp; Make</span>
+          <span class="you-tag">Google Sheets automation</span>
+          <span class="you-tag">Mini AI apps</span>
+        </div>
+        <a href="https://payhip.com/b/2RAjZ" class="you-cta-btn" target="_blank" rel="noopener">Get This Guide →</a>
+      </div>
+      <div class="you-visual-col">
+        <div class="you-visual-card">
+          <div class="you-visual-top">
+            <div class="you-visual-emoji">📈</div>
+            <div class="you-visual-cover-wrap">
+              <img src="/assets/ebook-promptflow-pro.jpg" alt="PromptFlow Pro" />
+            </div>
+          </div>
+          <div class="you-visual-bottom">
+            <div class="you-visual-brand">REEVANTI GLOBAL</div>
+            <div class="you-visual-booktitle">PromptFlow Pro</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 9: SIDE-HUSTLERS -->
+    <div class="you-panel" id="tab-side-hustlers">
+      <div class="you-content-col">
+        <div class="you-content-eyebrow">FOR SIDE-HUSTLERS</div>
+        <h3 class="you-content-title">AI Side Hustle Playbook</h3>
+        <p class="you-content-subtitle">Most AI side-hustle advice fails. You want something realistic.</p>
+        <div class="you-check-list">
+          <div class="you-check-item">
+            <span class="you-check-icon">✓</span>
+            <div>25 side-hustle models: freelance services, digital products and more</div>
+          </div>
+          <div class="you-check-item">
+            <span class="you-check-icon">✓</span>
+            <div>Check the real economics: hourly rate, break-even, churn</div>
+          </div>
+          <div class="you-check-item">
+            <span class="you-check-icon">✓</span>
+            <div>Cover money, tax, legal and ethics basics before you earn</div>
+          </div>
+        </div>
+        <div class="you-inside-label">WHAT’S INSIDE</div>
+        <div class="you-tags">
+          <span class="you-tag">Choose your model</span>
+          <span class="you-tag">Economics</span>
+          <span class="you-tag">Money, tax &amp; legal</span>
+          <span class="you-tag">AI toolkit &amp; costs</span>
+          <span class="you-tag">Quality &amp; reputation</span>
+          <span class="you-tag">25 models</span>
+        </div>
+        <a href="https://payhip.com/b/V1Z2t" class="you-cta-btn" target="_blank" rel="noopener">Get This Guide →</a>
+      </div>
+      <div class="you-visual-col">
+        <div class="you-visual-card">
+          <div class="you-visual-top">
+            <div class="you-visual-emoji">🚀</div>
+            <div class="you-visual-cover-wrap">
+              <img src="/assets/ebook-ai-side-hustle.jpg" alt="AI Side Hustle Playbook" />
+            </div>
+          </div>
+          <div class="you-visual-bottom">
+            <div class="you-visual-brand">REEVANTI GLOBAL</div>
+            <div class="you-visual-booktitle">AI Side Hustle Playbook</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 10: PASSIVE INCOME SEEKERS -->
+    <div class="you-panel" id="tab-passive-income">
+      <div class="you-content-col">
+        <div class="you-content-eyebrow">FOR PASSIVE INCOME SEEKERS</div>
+        <h3 class="you-content-title">Earn Passive Income with AI</h3>
+        <p class="you-content-subtitle">You want income that works while you don’t — without the hype.</p>
+        <div class="you-check-list">
+          <div class="you-check-item">
+            <span class="you-check-icon">✓</span>
+            <div>Understand what AI-powered passive income really means</div>
+          </div>
+          <div class="you-check-item">
+            <span class="you-check-icon">✓</span>
+            <div>Explore content, digital product, service/micro-SaaS and e-commerce models</div>
+          </div>
+          <div class="you-check-item">
+            <span class="you-check-icon">✓</span>
+            <div>Automate with workflows and agents, with a 30-day implementation plan</div>
+          </div>
+        </div>
+        <div class="you-inside-label">WHAT’S INSIDE</div>
+        <div class="you-tags">
+          <span class="you-tag">Choose your income model</span>
+          <span class="you-tag">Content &amp; media</span>
+          <span class="you-tag">Digital products</span>
+          <span class="you-tag">Micro-SaaS</span>
+          <span class="you-tag">E-commerce &amp; affiliate</span>
+          <span class="you-tag">Risk &amp; governance</span>
+          <span class="you-tag">30-day plan</span>
+        </div>
+        <a href="https://payhip.com/b/mJzP2" class="you-cta-btn" target="_blank" rel="noopener">Get This Guide →</a>
+      </div>
+      <div class="you-visual-col">
+        <div class="you-visual-card">
+          <div class="you-visual-top">
+            <div class="you-visual-emoji">💡</div>
+            <div class="you-visual-cover-wrap">
+              <img src="/assets/ebook-passive-income.jpg" alt="Earn Passive Income with AI" />
+            </div>
+          </div>
+          <div class="you-visual-bottom">
+            <div class="you-visual-brand">REEVANTI GLOBAL</div>
+            <div class="you-visual-booktitle">Earn Passive Income with AI</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════ EVERY GUIDE, AT A GLANCE ══════ -->
+<section class="section guides-section" id="library">
+  <div class="container">
+    <div class="guides-header">
+      <div class="guides-header-text">
+        <div class="section-label">Complete Collection</div>
+        <h2 class="section-h2">Every guide, at a glance</h2>
+        <p style="color:rgba(255,255,255,0.6);margin-top:6px;">Tap any card to read more and download instantly on Payhip.</p>
+      </div>
+      <a href="https://payhip.com/ReevantiGlobal/collection/aibook" class="btn btn-primary" target="_blank" rel="noopener">Browse Store Collection →</a>
+    </div>
+
+    <div class="library-grid">
       <!-- Book 1 -->
       <div class="book-card" onclick="window.open('https://payhip.com/b/2RAjZ','_blank')">
-        <img src="/assets/ebook-promptflow-pro.jpg" alt="AI PromptFlow Pro" class="book-card-img" loading="lazy" />
+        <div class="book-card-img-wrap">
+          <img src="/assets/ebook-promptflow-pro.jpg" alt="AI PromptFlow Pro" class="book-card-img" loading="lazy" />
+        </div>
         <div class="book-card-body">
           <div class="book-card-title">AI PromptFlow Pro</div>
           <div class="book-card-desc">500+ ready-to-use AI prompts for professionals, marketers, and entrepreneurs.</div>
           <div class="book-card-footer">
-            
-            <a href="https://payhip.com/b/2RAjZ" class="book-card-btn" target="_blank" rel="noopener" onclick="event.stopPropagation()">Buy Now</a>
+            <a href="https://payhip.com/b/2RAjZ" class="book-card-btn" target="_blank" rel="noopener" onclick="event.stopPropagation()">Get this guide</a>
           </div>
         </div>
       </div>
 
       <!-- Book 2 -->
       <div class="book-card" onclick="window.open('https://payhip.com/b/JLSo6','_blank')">
-        <img src="/assets/ebook-ai-small-business.jpg" alt="AI for Small Business Owners" class="book-card-img" loading="lazy" />
+        <div class="book-card-img-wrap">
+          <img src="/assets/ebook-ai-small-business.jpg" alt="AI for Small Business Owners" class="book-card-img" loading="lazy" />
+        </div>
         <div class="book-card-body">
           <div class="book-card-title">AI for Small Business Owners</div>
           <div class="book-card-desc">Automate operations, attract more customers and grow your business with AI.</div>
           <div class="book-card-footer">
-            
-            <a href="https://payhip.com/b/JLSo6" class="book-card-btn" target="_blank" rel="noopener" onclick="event.stopPropagation()">Buy Now</a>
+            <a href="https://payhip.com/b/JLSo6" class="book-card-btn" target="_blank" rel="noopener" onclick="event.stopPropagation()">Get this guide</a>
           </div>
         </div>
       </div>
 
       <!-- Book 3 -->
       <div class="book-card" onclick="window.open('https://payhip.com/b/mJzP2','_blank')">
-        <img src="/assets/ebook-passive-income.jpg" alt="Passive Income with AI" class="book-card-img" loading="lazy" />
+        <div class="book-card-img-wrap">
+          <img src="/assets/ebook-passive-income.jpg" alt="Passive Income with AI" class="book-card-img" loading="lazy" />
+        </div>
         <div class="book-card-body">
           <div class="book-card-title">Passive Income with AI</div>
           <div class="book-card-desc">Practical strategies to build income streams using AI tools and automation.</div>
           <div class="book-card-footer">
-            
-            <a href="https://payhip.com/b/mJzP2" class="book-card-btn" target="_blank" rel="noopener" onclick="event.stopPropagation()">Buy Now</a>
+            <a href="https://payhip.com/b/mJzP2" class="book-card-btn" target="_blank" rel="noopener" onclick="event.stopPropagation()">Get this guide</a>
           </div>
         </div>
       </div>
 
       <!-- Book 4 -->
       <div class="book-card" onclick="window.open('https://payhip.com/b/NqWOD','_blank')">
-        <img src="/assets/ebook-ai-manufacturing.jpg" alt="AI for Manufacturing SMEs" class="book-card-img" loading="lazy" />
+        <div class="book-card-img-wrap">
+          <img src="/assets/ebook-ai-manufacturing.jpg" alt="AI for Manufacturing SMEs" class="book-card-img" loading="lazy" />
+        </div>
         <div class="book-card-body">
           <div class="book-card-title">AI for Manufacturing SMEs</div>
           <div class="book-card-desc">Use AI to streamline production, reduce waste and improve quality control.</div>
           <div class="book-card-footer">
-            
-            <a href="https://payhip.com/b/NqWOD" class="book-card-btn" target="_blank" rel="noopener" onclick="event.stopPropagation()">Buy Now</a>
+            <a href="https://payhip.com/b/NqWOD" class="book-card-btn" target="_blank" rel="noopener" onclick="event.stopPropagation()">Get this guide</a>
           </div>
         </div>
       </div>
 
       <!-- Book 5 -->
       <div class="book-card" onclick="window.open('https://payhip.com/b/6I2lW','_blank')">
-        <img src="/assets/ebook-ai-exporters.jpg" alt="AI for Import and Export Businesses" class="book-card-img" loading="lazy" />
+        <div class="book-card-img-wrap">
+          <img src="/assets/ebook-ai-exporters.jpg" alt="AI for Import and Export Businesses" class="book-card-img" loading="lazy" />
+        </div>
         <div class="book-card-body">
           <div class="book-card-title">AI for Import &amp; Export Businesses</div>
           <div class="book-card-desc">Navigate global trade smarter with AI-powered tools and strategies.</div>
           <div class="book-card-footer">
-            
-            <a href="https://payhip.com/b/6I2lW" class="book-card-btn" target="_blank" rel="noopener" onclick="event.stopPropagation()">Buy Now</a>
+            <a href="https://payhip.com/b/6I2lW" class="book-card-btn" target="_blank" rel="noopener" onclick="event.stopPropagation()">Get this guide</a>
           </div>
         </div>
       </div>
 
       <!-- Book 6 -->
       <div class="book-card" onclick="window.open('https://payhip.com/b/e12Mf','_blank')">
-        <img src="/assets/ebook-home-business.jpg" alt="AI for Home Business and Trade Pros" class="book-card-img" loading="lazy" />
+        <div class="book-card-img-wrap">
+          <img src="/assets/ebook-home-business.jpg" alt="AI for Home Business and Trade Pros" class="book-card-img" loading="lazy" />
+        </div>
         <div class="book-card-body">
           <div class="book-card-title">AI for Home Business &amp; Trade Pros</div>
           <div class="book-card-desc">Build and grow a home-based business using AI tools anyone can learn.</div>
           <div class="book-card-footer">
-            
-            <a href="https://payhip.com/b/e12Mf" class="book-card-btn" target="_blank" rel="noopener" onclick="event.stopPropagation()">Buy Now</a>
+            <a href="https://payhip.com/b/e12Mf" class="book-card-btn" target="_blank" rel="noopener" onclick="event.stopPropagation()">Get this guide</a>
           </div>
         </div>
       </div>
 
       <!-- Book 7 -->
       <div class="book-card" onclick="window.open('https://payhip.com/b/8fWEk','_blank')">
-        <img src="/assets/ebook-ai-solopreneur.jpg" alt="The AI-Powered Solopreneur" class="book-card-img" loading="lazy" />
+        <div class="book-card-img-wrap">
+          <img src="/assets/ebook-ai-solopreneur.jpg" alt="The AI-Powered Solopreneur" class="book-card-img" loading="lazy" />
+        </div>
         <div class="book-card-body">
           <div class="book-card-title">The AI-Powered Solopreneur</div>
           <div class="book-card-desc">Build, automate, market, and grow a one-person business with ChatGPT, AI agents &amp; automation.</div>
           <div class="book-card-footer">
-            <a href="https://payhip.com/b/8fWEk" class="book-card-btn" target="_blank" rel="noopener" onclick="event.stopPropagation()">Buy Now</a>
+            <a href="https://payhip.com/b/8fWEk" class="book-card-btn" target="_blank" rel="noopener" onclick="event.stopPropagation()">Get this guide</a>
           </div>
         </div>
       </div>
 
       <!-- Book 8 -->
       <div class="book-card" onclick="window.open('https://payhip.com/b/8TkSC','_blank')">
-        <img src="/assets/ebook-ai-content-creators.jpg" alt="AI for Content Creators" class="book-card-img" loading="lazy" />
+        <div class="book-card-img-wrap">
+          <img src="/assets/ebook-ai-content-creators.jpg" alt="AI for Content Creators" class="book-card-img" loading="lazy" />
+        </div>
         <div class="book-card-body">
           <div class="book-card-title">AI for Content Creators</div>
           <div class="book-card-desc">10x your output, beat the algorithm, and reclaim your time across YouTube, Instagram, blogs, and podcasts.</div>
           <div class="book-card-footer">
-            <a href="https://payhip.com/b/8TkSC" class="book-card-btn" target="_blank" rel="noopener" onclick="event.stopPropagation()">Buy Now</a>
+            <a href="https://payhip.com/b/8TkSC" class="book-card-btn" target="_blank" rel="noopener" onclick="event.stopPropagation()">Get this guide</a>
           </div>
         </div>
       </div>
 
       <!-- Book 9 -->
       <div class="book-card" onclick="window.open('https://payhip.com/b/V1Z2t','_blank')">
-        <img src="/assets/ebook-ai-side-hustle.jpg" alt="AI Side Hustle Playbook" class="book-card-img" loading="lazy" />
+        <div class="book-card-img-wrap">
+          <img src="/assets/ebook-ai-side-hustle.jpg" alt="AI Side Hustle Playbook" class="book-card-img" loading="lazy" />
+        </div>
         <div class="book-card-body">
           <div class="book-card-title">AI Side Hustle Playbook</div>
           <div class="book-card-desc">Practical strategies to turn AI, your skills, and your ideas into new income streams.</div>
           <div class="book-card-footer">
-            <a href="https://payhip.com/b/V1Z2t" class="book-card-btn" target="_blank" rel="noopener" onclick="event.stopPropagation()">Buy Now</a>
+            <a href="https://payhip.com/b/V1Z2t" class="book-card-btn" target="_blank" rel="noopener" onclick="event.stopPropagation()">Get this guide</a>
           </div>
         </div>
       </div>
 
       <!-- Book 10 -->
       <div class="book-card" onclick="window.open('https://payhip.com/b/8WLPp','_blank')">
-        <img src="/assets/ebook-ai-job-search.jpg" alt="The AI-Powered Job Search" class="book-card-img" loading="lazy" />
+        <div class="book-card-img-wrap">
+          <img src="/assets/ebook-ai-job-search.jpg" alt="The AI-Powered Job Search" class="book-card-img" loading="lazy" />
+        </div>
         <div class="book-card-body">
           <div class="book-card-title">The AI-Powered Job Search</div>
           <div class="book-card-desc">Use ChatGPT and AI to find jobs, build your resume, network, and prepare for interviews.</div>
           <div class="book-card-footer">
-            <a href="https://payhip.com/b/8WLPp" class="book-card-btn" target="_blank" rel="noopener" onclick="event.stopPropagation()">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ══════ NOT JUST READING ══════ -->
-<section class="section why-section" id="why">
-  <div class="container">
-    <div class="why-inner">
-      <div class="why-left">
-        <div class="section-label">Not just reading.</div>
-        <h2 class="section-h2">Put it to <span class="hl">work.</span></h2>
-        <p>Every eBook is designed for one purpose — to give you practical, ready-to-apply knowledge from the very first page. No fluff, no filler. Just results.</p>
-      </div>
-      <div class="why-list">
-        <div class="why-item">
-          <span class="why-num">01</span>
-          <div>
-            <h4>Practical First</h4>
-            <p>Every concept is paired with a real-world example you can use the same day. Not theory — action.</p>
-          </div>
-        </div>
-        <div class="why-item">
-          <span class="why-num">02</span>
-          <div>
-            <h4>Beginner Friendly</h4>
-            <p>Written in plain English. No coding, no technical background required. If you can send an email, you can apply this.</p>
-          </div>
-        </div>
-        <div class="why-item">
-          <span class="why-num">03</span>
-          <div>
-            <h4>Ready-to-Use Resources</h4>
-            <p>Prompts, templates and checklists included in every guide so you can get started immediately.</p>
-          </div>
-        </div>
-        <div class="why-item">
-          <span class="why-num">04</span>
-          <div>
-            <h4>Focused on Real Results</h4>
-            <p>Save time, work smarter and grow faster. Each book is focused on a specific, measurable outcome.</p>
+            <a href="https://payhip.com/b/8WLPp" class="book-card-btn" target="_blank" rel="noopener" onclick="event.stopPropagation()">Get this guide</a>
           </div>
         </div>
       </div>
@@ -694,197 +1204,91 @@
   </div>
 </section>
 
-<!-- ══════ WHAT YOU'LL ACTUALLY BE ABLE TO DO ══════ -->
-<section class="section todo-section" id="todo">
+<!-- ══════ MORE THAN A BOOK — A WORKING TOOLKIT ══════ -->
+<section class="section toolkit-section" id="toolkit">
   <div class="container">
-    <div class="todo-inner">
-      <div>
-        <div class="section-label">Real skills. Real results.</div>
-        <h2 class="section-h2">What you'll actually<br>be able <span class="hl">to do.</span></h2>
-        <p style="color:rgba(255,255,255,0.5);line-height:1.8;margin-bottom:28px;">After reading our eBooks, you'll have concrete skills and tools you can apply immediately — in your business, your career or your daily work.</p>
-        <a href="https://payhip.com/reevantiglobal" class="btn btn-yellow" target="_blank" rel="noopener">Get Started →</a>
+    <div class="section-label">Practical Value</div>
+    <h2 class="section-h2">More than a book — a working toolkit</h2>
+    <p class="section-sub">Most guides ship with ready-to-use extras so you can act the same day.</p>
+
+    <div class="toolkit-grid">
+      <!-- 1 -->
+      <div class="toolkit-card">
+        <h3>📝 Prompt libraries</h3>
+        <p>Copy-and-adapt prompts, from a 20-prompt library to 100 prompts in The AI-Powered Solopreneur.</p>
       </div>
-      <div class="todo-grid">
-        <div class="todo-item"><span class="todo-check">✦</span> Write faster with AI</div>
-        <div class="todo-item"><span class="todo-check">✦</span> Automate repetitive tasks</div>
-        <div class="todo-item"><span class="todo-check">✦</span> Create better content</div>
-        <div class="todo-item"><span class="todo-check">✦</span> Save 5+ hours per week</div>
-        <div class="todo-item"><span class="todo-check">✦</span> Generate new business ideas</div>
-        <div class="todo-item"><span class="todo-check">✦</span> Improve customer communication</div>
-        <div class="todo-item"><span class="todo-check">✦</span> Make smarter decisions</div>
-        <div class="todo-item"><span class="todo-check">✦</span> Build passive income streams</div>
-        <div class="todo-item"><span class="todo-check">✦</span> Scale your business faster</div>
-        <div class="todo-item"><span class="todo-check">✦</span> Master prompt engineering</div>
+
+      <!-- 2 -->
+      <div class="toolkit-card">
+        <h3>✅ Checklists &amp; scorecards</h3>
+        <p>Use-case scorecard, pre-automation checklist and governance checklist.</p>
+      </div>
+
+      <!-- 3 -->
+      <div class="toolkit-card">
+        <h3>🗓️ 30-day action plans</h3>
+        <p>Step-by-step implementation plans so you start small and stay on track.</p>
+      </div>
+
+      <!-- 4 -->
+      <div class="toolkit-card">
+        <h3>📚 Field guide, glossary &amp; FAQ</h3>
+        <p>Quick references for jargon, risks and common questions.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══════ TRUSTED ACROSS EVERY INDUSTRY ══════ -->
-<section class="section trust-section" id="trust">
+<!-- ══════ FROM CHECKOUT TO RESULTS IN 3 STEPS ══════ -->
+<section class="section steps-section" id="steps">
   <div class="container">
-    <div style="text-align:center; margin-bottom: 0;">
-      <div class="section-label" style="text-align:center;">Trusted across</div>
-      <h2 class="section-h2" style="text-align:center;">every <span class="hl">industry.</span></h2>
-    </div>
-    <div class="trust-grid">
-      <div class="trust-card">
-        <span class="trust-icon">🚀</span>
-        <h4>Entrepreneurs</h4>
-        <p>Build smarter businesses with AI-powered strategies.</p>
+    <div class="section-label">Simple Process</div>
+    <h2 class="section-h2">From checkout to results in 3 steps</h2>
+    <p class="section-sub">No sign-up maze. No waiting for shipping.</p>
+
+    <div class="steps-grid">
+      <!-- Step 1 -->
+      <div class="step-card">
+        <div class="step-number">01</div>
+        <h3>Choose your guide</h3>
+        <p>Pick the title that matches your role or industry.</p>
       </div>
-      <div class="trust-card">
-        <span class="trust-icon">🏢</span>
-        <h4>Business Owners</h4>
-        <p>Automate operations and scale faster.</p>
+
+      <!-- Step 2 -->
+      <div class="step-card">
+        <div class="step-number">02</div>
+        <h3>Download instantly</h3>
+        <p>Check out securely on Payhip and get your link by email.</p>
       </div>
-      <div class="trust-card">
-        <span class="trust-icon">💼</span>
-        <h4>Professionals</h4>
-        <p>Boost productivity and stand out in your career.</p>
-      </div>
-      <div class="trust-card">
-        <span class="trust-icon">✏️</span>
-        <h4>Freelancers</h4>
-        <p>Deliver better work, faster, and serve more clients.</p>
-      </div>
-      <div class="trust-card">
-        <span class="trust-icon">📣</span>
-        <h4>Marketers</h4>
-        <p>Create campaigns, ads and content in minutes.</p>
-      </div>
-      <div class="trust-card">
-        <span class="trust-icon">🎓</span>
-        <h4>Students</h4>
-        <p>Build AI skills that prepare you for the future.</p>
-      </div>
-      <div class="trust-card">
-        <span class="trust-icon">✍️</span>
-        <h4>Content Creators</h4>
-        <p>Generate ideas, write faster and publish consistently.</p>
-      </div>
-      <div class="trust-card">
-        <span class="trust-icon">🏭</span>
-        <h4>Manufacturers</h4>
-        <p>Streamline production and reduce operational costs.</p>
+
+      <!-- Step 3 -->
+      <div class="step-card">
+        <div class="step-number">03</div>
+        <h3>Apply it today</h3>
+        <p>Follow the playbooks and put AI to work in your very first session.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══════ TESTIMONIALS ══════ -->
-<section class="section reviews-section" id="reviews">
+<!-- ══════ THE PROFESSIONALS PULLING AHEAD ══════ -->
+<section class="final-cta" id="cta">
   <div class="container">
-    <div class="reviews-header">
-      <div class="section-label">Real people.</div>
-      <h2 class="section-h2">Real <span style="color:var(--yellow);font-style:italic;">results.</span></h2>
-    </div>
-    <div class="reviews-grid">
-      <div class="review-card">
-        <div class="stars">★★★★★</div>
-        <p class="review-text">"I used the PromptFlow Pro guide on a Monday morning and by Tuesday I had saved three hours on my content calendar. The prompts just work. Highly recommended for any business owner."</p>
-        <div class="reviewer">
-          <div class="reviewer-avatar">R</div>
-          <div>
-            <div class="reviewer-name">Rahul M.</div>
-            <div class="reviewer-role">Digital Marketing Consultant</div>
-          </div>
-        </div>
-      </div>
-      <div class="review-card">
-        <div class="stars">★★★★★</div>
-        <p class="review-text">"The AI for Small Business Owners guide changed how I run my shop. I set up automated follow-ups and it feels like I have a team working while I sleep. Brilliant, practical, and simple."</p>
-        <div class="reviewer">
-          <div class="reviewer-avatar">P</div>
-          <div>
-            <div class="reviewer-name">Priya S.</div>
-            <div class="reviewer-role">Small Business Owner</div>
-          </div>
-        </div>
-      </div>
-      <div class="review-card">
-        <div class="stars">★★★★★</div>
-        <p class="review-text">"I was skeptical — I'm not a tech person at all. But the writing is so clear and the examples are so real that I applied the strategies on day one. Worth every penny and more."</p>
-        <div class="reviewer">
-          <div class="reviewer-avatar">A</div>
-          <div>
-            <div class="reviewer-name">Amara K.</div>
-            <div class="reviewer-role">Freelance Writer &amp; Creator</div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <h2 class="final-cta-h2">The professionals pulling ahead are already using AI.</h2>
+    <p class="final-cta-desc">Every week without a system is time and revenue left on the table. Pick your guide and start today.</p>
+    <a href="https://payhip.com/ReevantiGlobal/collection/aibook" class="btn final-cta-btn" target="_blank" rel="noopener">Browse All AI E-Books →</a>
   </div>
 </section>
 
-<!-- ══════ FAQ ══════ -->
-<section class="section faq-section" id="faq">
+<!-- ══════ AUTHOR SECTION ══════ -->
+<section class="author-section" id="author">
   <div class="container">
-    <div class="faq-inner">
-      <div class="faq-left">
-        <div class="section-label">We have</div>
-        <h2 class="section-h2">answers.</h2>
-        <p>Everything you need to know before you start your AI journey with Reevanti Global.</p>
-        <a href="https://payhip.com/reevantiglobal" class="btn btn-yellow" target="_blank" rel="noopener">Browse All eBooks →</a>
+    <div class="author-box">
+      <div class="author-avatar">GK</div>
+      <div class="author-content">
+        <h3>Written by G. Kamble</h3>
+        <p>An IT professional and entrepreneur who makes emerging technology understandable, useful and approachable — sharing practical frameworks and AI-powered approaches readers can apply in the real world. Published by Reevanti Global.</p>
       </div>
-      <div class="faq-list">
-        <div class="faq-item">
-          <button class="faq-q">Are these eBooks suitable for beginners?<span class="faq-icon">+</span></button>
-          <div class="faq-a"><p>Absolutely. Every guide is written in clear, simple language and walks you through each concept step by step.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q">Do I need coding or technical experience?<span class="faq-icon">+</span></button>
-          <div class="faq-a"><p>Not at all. Our eBooks are designed for everyday users — professionals, business owners, students and creators.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q">Can I apply what I learn immediately?<span class="faq-icon">+</span></button>
-          <div class="faq-a"><p>Yes. Each book includes practical examples, prompts, workflows and templates you can start using right away.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q">Can I read it on my phone?<span class="faq-icon">+</span></button>
-          <div class="faq-a"><p>Yes. The PDF works perfectly on phones, tablets and computers. Download once and access forever.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q">Will I receive it immediately?<span class="faq-icon">+</span></button>
-          <div class="faq-a"><p>Yes. You get instant download access as soon as your payment is confirmed through our secure partner, Payhip.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q">Will new AI books be added?<span class="faq-icon">+</span></button>
-          <div class="faq-a"><p>Yes. Our collection keeps growing as new tools, techniques and business applications emerge.</p></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════ FINAL CTA ══════ -->
-<section class="cta-section" id="cta">
-  <div class="container">
-    <div class="cta-eyebrow">Limited Time Offer</div>
-    <h2 class="cta-h2">Start your AI journey<br><span style="color:var(--yellow);">now.</span></h2>
-    <p class="cta-sub">Join thousands of professionals already using AI to work smarter and grow faster.</p>
-    <div class="countdown" id="countdown">
-      <div class="countdown-unit">
-        <span class="countdown-num" id="cd-h">00</span>
-        <div class="countdown-label">Hours</div>
-      </div>
-      <span class="countdown-sep">:</span>
-      <div class="countdown-unit">
-        <span class="countdown-num" id="cd-m">00</span>
-        <div class="countdown-label">Minutes</div>
-      </div>
-      <span class="countdown-sep">:</span>
-      <div class="countdown-unit">
-        <span class="countdown-num" id="cd-s">00</span>
-        <div class="countdown-label">Seconds</div>
-      </div>
-    </div>
-    <a href="https://payhip.com/reevantiglobal" class="btn btn-yellow" target="_blank" rel="noopener" style="font-size:1.1rem;padding:16px 40px;border-radius:50px;">Shop All eBooks →</a>
-    <div class="cta-badges">
-      <span class="cta-badge">📥 Instant Download</span>
-      <span class="cta-badge">♾️ Lifetime Access</span>
-      <span class="cta-badge">🔒 Secure Checkout via Payhip</span>
-      <span class="cta-badge">✅ No Coding Required</span>
     </div>
   </div>
 </section>
@@ -892,109 +1296,52 @@
 <!-- ══════ FOOTER ══════ -->
 <footer class="footer">
   <div class="container">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <div class="footer-logo">
-          <img src="/Images/reevanti-global-logo.png" alt="Reevanti Global" />
-        </div>
-        <p>Reevanti Global — MSME-registered digital products brand delivering practical AI eBooks and resources to professionals worldwide.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Pages</h4>
-        <a href="https://www.reevantiglobal.com/">Home</a>
-        <a href="https://www.reevantiglobal.com/about-us">About Us</a>
-        <a href="https://www.reevantiglobal.com/products">Products</a>
-        <a href="https://www.reevantiglobal.com/blogs">Blogs</a>
-        <a href="https://www.reevantiglobal.com/contact-us">Contact</a>
-      </div>
-      <div class="footer-col">
-        <h4>Legal</h4>
-        <a href="https://www.reevantiglobal.com/privacy-policy">Privacy Policy</a>
-        <a href="https://www.reevantiglobal.com/terms-of-use">Terms of Use</a>
-        <a href="https://payhip.com/reevantiglobal" target="_blank" rel="noopener">Payhip Store</a>
-      </div>
+    <div class="footer-links-row">
+      <a href="https://payhip.com/ReevantiGlobal/terms-and-conditions" target="_blank" rel="noopener">Terms</a>
+      <a href="https://payhip.com/ReevantiGlobal/privacy-policy" target="_blank" rel="noopener">Privacy</a>
+      <a href="https://payhip.com/ReevantiGlobal/refund-policy" target="_blank" rel="noopener">Refunds</a>
+      <a href="https://payhip.com/ReevantiGlobal/contact" target="_blank" rel="noopener">Contact</a>
     </div>
+
+    <div class="footer-social-row">
+      <a href="https://linkedin.com/company/reevanti-global" target="_blank" rel="noopener">
+        <span>LinkedIn</span>
+      </a>
+      <a href="https://instagram.com/reevantiglobal" target="_blank" rel="noopener">
+        <span>Instagram</span>
+      </a>
+      <a href="https://youtube.com/@reevanti_global" target="_blank" rel="noopener">
+        <span>YouTube</span>
+      </a>
+    </div>
+
     <div class="footer-bottom">
-      <span>© 2026 Reevanti Global. All rights reserved.</span>
-      <div class="footer-social">
-        <a href="https://www.instagram.com/reevantiglobal" class="soc" target="_blank" rel="noopener" aria-label="Instagram">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/></svg>
-        </a>
-        <a href="https://www.linkedin.com/company/reevanti-global" class="soc" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg>
-        </a>
-        <a href="https://www.youtube.com/@reevanti_global" class="soc" target="_blank" rel="noopener" aria-label="YouTube">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/></svg>
-        </a>
-        <a href="https://www.facebook.com/ReevantiGlobalpage" class="soc" target="_blank" rel="noopener" aria-label="Facebook">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/></svg>
-        </a>
-      </div>
+      © 2026 Reevanti Global. All rights reserved.
     </div>
   </div>
 </footer>
 
 <script>
   'use strict';
+  document.addEventListener('DOMContentLoaded', () => {
+    const tabBtns = document.querySelectorAll('.you-tab-btn');
+    const panels = document.querySelectorAll('.you-panel');
 
-  /* Hamburger */
-  document.getElementById('hamburger').addEventListener('click', () => {
-    document.getElementById('navLinks').classList.toggle('open');
-  });
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const targetTab = btn.getAttribute('data-tab');
 
-  /* Stats counter */
-  const SUFFIX_MAP = { 500: '+', 30: '+', 10: 'hrs+', 6: '' };
-  document.querySelectorAll('.stat-num[data-target]').forEach(el => {
-    const target = +el.dataset.target;
-    const suffix = SUFFIX_MAP[target] ?? '';
-    const io = new IntersectionObserver(entries => {
-      if (!entries[0].isIntersecting) return;
-      let cur = 0;
-      const step = Math.max(1, Math.ceil(target / 40));
-      const t = setInterval(() => {
-        cur = Math.min(cur + step, target);
-        el.textContent = cur + suffix;
-        if (cur >= target) clearInterval(t);
-      }, 40);
-      io.disconnect();
-    }, { threshold: 0.5 });
-    io.observe(el);
-  });
+        tabBtns.forEach(b => b.classList.remove('active'));
+        panels.forEach(p => p.classList.remove('active'));
 
-  /* FAQ */
-  document.querySelectorAll('.faq-q').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const ans  = btn.nextElementSibling;
-      const icon = btn.querySelector('.faq-icon');
-      const open = btn.classList.contains('open');
-      document.querySelectorAll('.faq-q.open').forEach(b => {
-        b.classList.remove('open');
-        b.nextElementSibling.style.maxHeight = '0';
-        b.querySelector('.faq-icon').textContent = '+';
+        btn.classList.add('active');
+        const targetPanel = document.getElementById('tab-' + targetTab);
+        if (targetPanel) {
+          targetPanel.classList.add('active');
+        }
       });
-      if (!open) {
-        btn.classList.add('open');
-        ans.style.maxHeight = ans.scrollHeight + 'px';
-        icon.textContent = '−';
-      }
     });
   });
-
-  /* Countdown — resets every 24h from page load */
-  (function() {
-    const end = Date.now() + (22 * 3600 + 31 * 60 + 8) * 1000;
-    function tick() {
-      const diff = Math.max(0, end - Date.now());
-      const h = Math.floor(diff / 3600000);
-      const m = Math.floor((diff % 3600000) / 60000);
-      const s = Math.floor((diff % 60000) / 1000);
-      document.getElementById('cd-h').textContent = String(h).padStart(2,'0');
-      document.getElementById('cd-m').textContent = String(m).padStart(2,'0');
-      document.getElementById('cd-s').textContent = String(s).padStart(2,'0');
-    }
-    tick();
-    setInterval(tick, 1000);
-  })();
 </script>
 
 </body>
