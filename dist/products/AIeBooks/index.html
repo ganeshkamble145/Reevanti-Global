@@ -546,6 +546,102 @@
       padding: 5px 14px;
     }
 
+    /* ── HERO BOOK COVERS STRIP ── */
+    .hero-covers {
+      display: flex; justify-content: center; align-items: flex-end; gap: -12px;
+      margin: 36px auto 0; max-width: 400px; position: relative;
+    }
+    .hero-cover-item {
+      width: 90px; border-radius: 10px; overflow: hidden;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.18); border: 2px solid rgba(255,255,255,0.9);
+      transition: transform 0.3s;
+    }
+    .hero-cover-item:nth-child(1) { transform: rotate(-6deg) translateX(16px); z-index: 1; }
+    .hero-cover-item:nth-child(2) { transform: rotate(0deg) scale(1.08); z-index: 3; }
+    .hero-cover-item:nth-child(3) { transform: rotate(6deg) translateX(-16px); z-index: 1; }
+    .hero-covers:hover .hero-cover-item:nth-child(1) { transform: rotate(-10deg) translateX(20px) translateY(-8px); }
+    .hero-covers:hover .hero-cover-item:nth-child(2) { transform: scale(1.12) translateY(-12px); }
+    .hero-covers:hover .hero-cover-item:nth-child(3) { transform: rotate(10deg) translateX(-20px) translateY(-8px); }
+    .hero-cover-item img { width: 100%; aspect-ratio: 3/4; object-fit: cover; display: block; }
+    .hero-cover-more {
+      display: flex; align-items: center; justify-content: center;
+      width: 90px; aspect-ratio: 3/4; border-radius: 10px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      color: #fff; font-weight: 800; font-size: 1.1rem; flex-direction: column; gap: 4px;
+      box-shadow: 0 12px 32px rgba(79,70,229,0.3); border: 2px solid rgba(255,255,255,0.9);
+      transform: rotate(6deg) translateX(-16px); z-index: 1;
+    }
+    .hero-cover-more span { font-size: 0.75rem; font-weight: 600; opacity: 0.9; }
+
+    /* ── URGENCY / STATS BAND ── */
+    .stats-band {
+      background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+      padding: 28px 0; border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .stats-band-inner {
+      display: flex; justify-content: center; align-items: center;
+      gap: 0; flex-wrap: wrap;
+    }
+    .stats-band-item {
+      display: flex; align-items: center; gap: 14px; padding: 12px 40px;
+      border-right: 1px solid rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.9);
+    }
+    .stats-band-item:last-child { border-right: none; }
+    .stats-band-icon { font-size: 1.8rem; flex-shrink: 0; }
+    .stats-band-val {
+      font-size: 1.3rem; font-weight: 900; color: #ffffff; line-height: 1.1;
+    }
+    .stats-band-label { font-size: 0.78rem; color: rgba(255,255,255,0.65); font-weight: 500; margin-top: 2px; }
+
+    /* ── GUARANTEE STRIP ── */
+    .guarantee-strip {
+      background: #f0fdf4; border-top: 1px solid #bbf7d0; border-bottom: 1px solid #bbf7d0;
+      padding: 22px 0;
+    }
+    .guarantee-strip-inner {
+      display: flex; justify-content: center; align-items: center; gap: 0; flex-wrap: wrap;
+    }
+    .guarantee-item {
+      display: flex; align-items: center; gap: 10px;
+      padding: 8px 36px; border-right: 1px solid #bbf7d0; color: #166534;
+      font-size: 0.9rem; font-weight: 700;
+    }
+    .guarantee-item:last-child { border-right: none; }
+    .guarantee-item-icon { font-size: 1.25rem; }
+
+    /* ── TOOLKIT VISUAL UPGRADE ── */
+    .toolkit-icon-circle {
+      width: 52px; height: 52px; border-radius: 14px; display: flex; align-items: center;
+      justify-content: center; font-size: 1.5rem; margin-bottom: 18px; flex-shrink: 0;
+    }
+    .toolkit-icon-circle.indigo { background: #eef2ff; box-shadow: 0 4px 12px rgba(79,70,229,0.12); }
+    .toolkit-icon-circle.teal   { background: #f0fdfa; box-shadow: 0 4px 12px rgba(13,148,136,0.12); }
+    .toolkit-icon-circle.amber  { background: #fffbeb; box-shadow: 0 4px 12px rgba(245,158,11,0.12); }
+    .toolkit-icon-circle.rose   { background: #fff1f2; box-shadow: 0 4px 12px rgba(225,29,72,0.12); }
+    .toolkit-card h3 { align-items: unset; flex-direction: column; gap: 0; font-size: 1.05rem; }
+
+    /* ── BOOK CARD DOWNLOAD BADGE ── */
+    .book-card-dl-badge {
+      display: inline-flex; align-items: center; gap: 5px;
+      font-size: 0.72rem; font-weight: 700; color: var(--teal);
+      background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 50px;
+      padding: 3px 10px; margin-bottom: 10px;
+    }
+
+    /* ── TABS: SECURE NOTE BELOW CTA ── */
+    .you-secure-note {
+      display: flex; align-items: center; gap: 6px; margin-top: 14px;
+      font-size: 0.78rem; color: var(--text-muted); font-weight: 500;
+    }
+
+    /* ── SCROLL ANIMATION ── */
+    .fade-up {
+      opacity: 0; transform: translateY(28px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 1024px) {
       .library-grid { grid-template-columns: repeat(3, 1fr); }
@@ -566,6 +662,13 @@
       .you-panel { padding: 28px 20px; }
       .you-visual-card { min-height: 320px; padding: 24px; }
       .you-visual-cover-wrap { width: 110px; }
+      .stats-band-item { padding: 10px 20px; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); width: 100%; justify-content: center; }
+      .stats-band-item:last-child { border-bottom: none; }
+      .guarantee-item { border-right: none; border-bottom: 1px solid #bbf7d0; width: 100%; justify-content: center; }
+      .guarantee-item:last-child { border-bottom: none; }
+      .hero-covers { max-width: 280px; }
+      .hero-cover-item { width: 72px; }
+      .hero-cover-more { width: 72px; }
     }
     @media (max-width: 520px) {
       .library-grid { grid-template-columns: 1fr; }
@@ -603,16 +706,65 @@
       Plain-English guides written for the way you actually work — whether you run a shop floor, a trade desk, a one-person brand or a job hunt. No jargon. No coding.
     </p>
     <div class="hero-btns">
-      <a href="#you" class="btn btn-primary">Find Your Guide</a>
-      <a href="https://payhip.com/ReevantiGlobal/collection/aibook" class="btn btn-outline" target="_blank" rel="noopener">Visit the Store</a>
+      <a href="#you" class="btn btn-primary">Find My Guide →</a>
+      <a href="https://payhip.com/ReevantiGlobal/collection/aibook" class="btn btn-outline" target="_blank" rel="noopener">Browse All 10 E-Books</a>
     </div>
     <div class="hero-badges">
       <span class="hero-badge-item">⚡ Instant digital download</span>
       <span class="hero-badge-item">🔒 Secure checkout (Visa, Mastercard, PayPal)</span>
       <span class="hero-badge-item">🧰 Practical, ready-to-use workflows</span>
+      <span class="hero-badge-item">★★★★★ Rated by practitioners</span>
+    </div>
+
+    <!-- Book cover fan -->
+    <div class="hero-covers" aria-hidden="true">
+      <div class="hero-cover-item">
+        <img src="/assets/ebook-ai-manufacturing.jpg" alt="AI for Manufacturing" loading="lazy" />
+      </div>
+      <div class="hero-cover-item">
+        <img src="/assets/ebook-ai-solopreneur.jpg" alt="The AI-Powered Solopreneur" loading="lazy" />
+      </div>
+      <div class="hero-cover-item">
+        <img src="/assets/ebook-ai-exporters.jpg" alt="AI for Import Export" loading="lazy" />
+      </div>
+      <div class="hero-cover-more">+7<span>more</span></div>
     </div>
   </div>
 </section>
+
+<!-- ══════ STATS BAND ══════ -->
+<div class="stats-band">
+  <div class="stats-band-inner">
+    <div class="stats-band-item">
+      <span class="stats-band-icon">📚</span>
+      <div>
+        <div class="stats-band-val">10 guides</div>
+        <div class="stats-band-label">Industry-specific AI playbooks</div>
+      </div>
+    </div>
+    <div class="stats-band-item">
+      <span class="stats-band-icon">⚡</span>
+      <div>
+        <div class="stats-band-val">1st session</div>
+        <div class="stats-band-label">Readers apply the workflows immediately</div>
+      </div>
+    </div>
+    <div class="stats-band-item">
+      <span class="stats-band-icon">🏭</span>
+      <div>
+        <div class="stats-band-val">Real operators</div>
+        <div class="stats-band-label">Shop-floor & trade-floor validated</div>
+      </div>
+    </div>
+    <div class="stats-band-item">
+      <span class="stats-band-icon">🚫</span>
+      <div>
+        <div class="stats-band-val">Zero coding</div>
+        <div class="stats-band-label">No technical skills required</div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- ══════ WHICH DESCRIBES YOU? ══════ -->
 <section class="section you-section" id="you">
@@ -1297,27 +1449,31 @@
 
     <div class="toolkit-grid">
       <!-- 1 -->
-      <div class="toolkit-card">
-        <h3>📝 Prompt libraries</h3>
-        <p>Copy-and-adapt prompts, from a 20-prompt library to 100 prompts in The AI-Powered Solopreneur.</p>
+      <div class="toolkit-card fade-up">
+        <div class="toolkit-icon-circle indigo">📝</div>
+        <h3>Prompt libraries</h3>
+        <p>Copy-and-adapt prompts, from a 20-prompt library to 100 prompts in The AI-Powered Solopreneur — ready to paste into ChatGPT right now.</p>
       </div>
 
       <!-- 2 -->
-      <div class="toolkit-card">
-        <h3>✅ Checklists &amp; scorecards</h3>
-        <p>Use-case scorecard, pre-automation checklist and governance checklist.</p>
+      <div class="toolkit-card fade-up">
+        <div class="toolkit-icon-circle teal">✅</div>
+        <h3>Checklists &amp; scorecards</h3>
+        <p>Use-case scorecard, pre-automation checklist and governance checklist — so you adopt AI confidently and safely.</p>
       </div>
 
       <!-- 3 -->
-      <div class="toolkit-card">
-        <h3>🗓️ 30-day action plans</h3>
-        <p>Step-by-step implementation plans so you start small and stay on track.</p>
+      <div class="toolkit-card fade-up">
+        <div class="toolkit-icon-circle amber">🗓️</div>
+        <h3>30-day action plans</h3>
+        <p>Step-by-step implementation plans so you start small, build momentum and stay on track — week by week.</p>
       </div>
 
       <!-- 4 -->
-      <div class="toolkit-card">
-        <h3>📚 Field guide, glossary &amp; FAQ</h3>
-        <p>Quick references for jargon, risks and common questions.</p>
+      <div class="toolkit-card fade-up">
+        <div class="toolkit-icon-circle rose">📚</div>
+        <h3>Field guide, glossary &amp; FAQ</h3>
+        <p>Quick references for jargon, risks and common questions — plain English you can share with your whole team.</p>
       </div>
     </div>
   </div>
@@ -1332,21 +1488,21 @@
 
     <div class="steps-grid">
       <!-- Step 1 -->
-      <div class="step-card">
+      <div class="step-card fade-up">
         <div class="step-number">01</div>
         <h3>Choose your guide</h3>
         <p>Pick the title that matches your role or industry.</p>
       </div>
 
       <!-- Step 2 -->
-      <div class="step-card">
+      <div class="step-card fade-up">
         <div class="step-number">02</div>
         <h3>Download instantly</h3>
         <p>Check out securely on Payhip and get your link by email.</p>
       </div>
 
       <!-- Step 3 -->
-      <div class="step-card">
+      <div class="step-card fade-up">
         <div class="step-number">03</div>
         <h3>Apply it today</h3>
         <p>Follow the playbooks and put AI to work in your very first session.</p>
@@ -1354,6 +1510,28 @@
     </div>
   </div>
 </section>
+
+<!-- ══════ GUARANTEE STRIP ══════ -->
+<div class="guarantee-strip">
+  <div class="guarantee-strip-inner">
+    <div class="guarantee-item">
+      <span class="guarantee-item-icon">🔒</span>
+      Secure Checkout via Payhip
+    </div>
+    <div class="guarantee-item">
+      <span class="guarantee-item-icon">⚡</span>
+      Instant PDF Download
+    </div>
+    <div class="guarantee-item">
+      <span class="guarantee-item-icon">✅</span>
+      Satisfaction Promise — Reach out if you're not happy
+    </div>
+    <div class="guarantee-item">
+      <span class="guarantee-item-icon">💳</span>
+      Visa · Mastercard · PayPal accepted
+    </div>
+  </div>
+</div>
 
 <!-- ══════ TESTIMONIALS / SOCIAL PROOF ══════ -->
 <section class="reviews-section" id="reviews">
@@ -1386,7 +1564,7 @@
     <div class="reviews-grid">
 
       <!-- Review 1: Manufacturing SME owner -->
-      <div class="review-card">
+      <div class="review-card fade-up">
         <div class="review-stars">★★★★★</div>
         <p class="review-text">"I run a small precision-parts plant and was sceptical AI could touch our floor processes. The AI for Manufacturing SMEs guide changed that — we cut our weekly production report time in half using the prompt templates alone. Genuinely shop-floor-ready."</p>
         <div class="review-author">
@@ -1400,7 +1578,7 @@
       </div>
 
       <!-- Review 2: Solopreneur / content creator -->
-      <div class="review-card">
+      <div class="review-card fade-up">
         <div class="review-stars">★★★★★</div>
         <p class="review-text">"As a one-person content studio, time is everything. The AI-Powered Solopreneur gave me a repeatable system — from ideation to publishing — that I now run daily. My output literally doubled in the first month. Worth every penny."</p>
         <div class="review-author">
@@ -1414,7 +1592,7 @@
       </div>
 
       <!-- Review 3: Import/Export trade professional -->
-      <div class="review-card">
+      <div class="review-card fade-up">
         <div class="review-stars">★★★★★</div>
         <p class="review-text">"Drafting trade documents — proforma invoices, LC terms, compliance summaries — used to eat hours. The AI for Import &amp; Export guide gave me prompts I adapted the same day. It's clearly written by someone who understands trade-floor realities, not just theory."</p>
         <div class="review-author">
@@ -1434,9 +1612,10 @@
 <!-- ══════ THE PROFESSIONALS PULLING AHEAD ══════ -->
 <section class="final-cta" id="cta">
   <div class="container">
-    <h2 class="final-cta-h2">The professionals pulling ahead are already using AI.</h2>
-    <p class="final-cta-desc">Every week without a system is time and revenue left on the table. Pick your guide and start today.</p>
-    <a href="https://payhip.com/ReevantiGlobal/collection/aibook" class="btn final-cta-btn" target="_blank" rel="noopener">Browse All AI E-Books →</a>
+    <h2 class="final-cta-h2">Your competitors are already using AI. <br>Don't let them pull further ahead.</h2>
+    <p class="final-cta-desc">Every week without a system is time and revenue left on the table. Pick your guide, download instantly and start applying it today.</p>
+    <a href="https://payhip.com/ReevantiGlobal/collection/aibook" class="btn final-cta-btn" target="_blank" rel="noopener">Browse All 10 AI E-Books →</a>
+    <p style="margin-top:18px;font-size:0.88rem;color:rgba(255,255,255,0.6);">🔒 Secure checkout &nbsp;·&nbsp; ⚡ Instant PDF &nbsp;·&nbsp; ✅ Satisfaction promise</p>
   </div>
 </section>
 
@@ -1511,6 +1690,7 @@
 <script>
   'use strict';
   document.addEventListener('DOMContentLoaded', () => {
+    /* ── TAB SWITCHING ── */
     const tabBtns = document.querySelectorAll('.you-tab-btn');
     const panels = document.querySelectorAll('.you-panel');
 
@@ -1528,6 +1708,28 @@
         }
       });
     });
+
+    /* ── SCROLL ANIMATIONS ── */
+    const fadeEls = document.querySelectorAll('.fade-up');
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, i) => {
+          if (entry.isIntersecting) {
+            // Stagger siblings
+            const siblings = Array.from(entry.target.parentElement.querySelectorAll('.fade-up'));
+            const idx = siblings.indexOf(entry.target);
+            setTimeout(() => {
+              entry.target.classList.add('visible');
+            }, idx * 80);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      fadeEls.forEach(el => observer.observe(el));
+    } else {
+      // Fallback for old browsers
+      fadeEls.forEach(el => el.classList.add('visible'));
+    }
   });
 </script>
 
