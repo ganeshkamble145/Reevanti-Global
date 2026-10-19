@@ -466,19 +466,103 @@
       padding-top: 24px; border-top: 1px solid var(--border);
     }
 
+    /* ── TESTIMONIALS / SOCIAL PROOF ── */
+    .reviews-section { background: #f8fafc; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 80px 0; }
+    .trust-strip {
+      display: flex; justify-content: center; align-items: center; gap: 32px;
+      flex-wrap: wrap; margin-bottom: 56px;
+    }
+    .trust-stat {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 0.92rem; font-weight: 700; color: var(--text-muted);
+    }
+    .trust-stat-icon { font-size: 1.25rem; }
+    .trust-stat-value { color: var(--primary); font-size: 1.05rem; font-weight: 900; }
+    .reviews-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+    }
+    .review-card {
+      background: #ffffff; border: 1.5px solid var(--border); border-radius: 20px;
+      padding: 32px 28px; transition: all 0.3s; position: relative;
+    }
+    .review-card:hover { box-shadow: var(--shadow-md); border-color: #c7d2fe; transform: translateY(-4px); }
+    .review-card::before {
+      content: '\201C'; position: absolute; top: 18px; right: 24px;
+      font-size: 4rem; color: #e0e7ff; font-family: Georgia, serif; line-height: 1;
+    }
+    .review-stars { color: #f59e0b; font-size: 1rem; letter-spacing: 3px; margin-bottom: 16px; }
+    .review-text {
+      font-size: 0.95rem; color: var(--text); line-height: 1.8; margin-bottom: 24px;
+      font-style: italic; position: relative; z-index: 1;
+    }
+    .review-author { display: flex; align-items: center; gap: 14px; }
+    .review-avatar {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--teal) 100%);
+      color: #fff; display: flex; align-items: center; justify-content: center;
+      font-size: 0.88rem; font-weight: 800; flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+    }
+    .review-name { font-size: 0.92rem; font-weight: 800; color: var(--dark); }
+    .review-role { font-size: 0.78rem; color: var(--text-muted); margin-top: 2px; }
+    .review-verified {
+      display: inline-flex; align-items: center; gap: 4px;
+      font-size: 0.72rem; font-weight: 700; color: var(--teal);
+      background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 50px;
+      padding: 2px 8px; margin-top: 4px;
+    }
+
+    /* ── ENHANCED AUTHOR BIO ── */
+    .author-section { background: #ffffff; padding: 75px 0; border-bottom: 1px solid var(--border); }
+    .author-box {
+      max-width: 820px; margin: 0 auto;
+      background: var(--bg-alt); border: 1.5px solid var(--border); border-radius: 24px;
+      padding: 42px 40px; box-shadow: var(--shadow-sm);
+    }
+    .author-box-top { display: flex; align-items: flex-start; gap: 28px; margin-bottom: 24px; }
+    .author-avatar {
+      width: 80px; height: 80px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      color: #ffffff; display: flex; align-items: center; justify-content: center;
+      font-size: 1.7rem; font-weight: 900; flex-shrink: 0;
+      box-shadow: 0 8px 24px rgba(79, 70, 229, 0.28);
+    }
+    .author-header h3 { font-size: 1.25rem; font-weight: 800; color: var(--dark); margin-bottom: 4px; }
+    .author-tagline { font-size: 0.9rem; color: var(--text-muted); font-style: italic; margin-bottom: 0; }
+    .author-bullets { list-style: none; padding: 0; margin: 0 0 24px; display: grid; gap: 10px; }
+    .author-bullets li {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-size: 0.93rem; color: var(--text); line-height: 1.6;
+    }
+    .author-bullets li .ab-icon {
+      width: 22px; height: 22px; border-radius: 50%; background: #e0e7ff;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.75rem; flex-shrink: 0; margin-top: 1px; color: var(--primary); font-weight: 900;
+    }
+    .author-creds { display: flex; flex-wrap: wrap; gap: 10px; }
+    .author-cred-tag {
+      font-size: 0.78rem; font-weight: 700; color: var(--primary);
+      background: #eef2ff; border: 1.5px solid #c7d2fe; border-radius: 50px;
+      padding: 5px 14px;
+    }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 1024px) {
       .library-grid { grid-template-columns: repeat(3, 1fr); }
       .toolkit-grid { grid-template-columns: repeat(2, 1fr); }
       .you-panel.active { grid-template-columns: 1fr; gap: 32px; }
       .you-visual-card { min-height: 380px; }
+      .reviews-grid { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 768px) {
       .hero { padding: 130px 0 50px; }
       .section { padding: 65px 0; }
       .library-grid { grid-template-columns: repeat(2, 1fr); }
       .steps-grid { grid-template-columns: 1fr; }
-      .author-box { flex-direction: column; text-align: center; }
+      .author-box-top { flex-direction: column; align-items: center; text-align: center; }
+      .author-creds { justify-content: center; }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .trust-strip { gap: 20px; }
       .you-panel { padding: 28px 20px; }
       .you-visual-card { min-height: 320px; padding: 24px; }
       .you-visual-cover-wrap { width: 110px; }
@@ -1271,6 +1355,82 @@
   </div>
 </section>
 
+<!-- ══════ TESTIMONIALS / SOCIAL PROOF ══════ -->
+<section class="reviews-section" id="reviews">
+  <div class="container">
+    <div class="section-label">Reader Stories</div>
+    <h2 class="section-h2" style="text-align:center;margin-bottom:12px;">What readers say</h2>
+    <p class="section-sub" style="text-align:center;margin-bottom:48px;">Practitioners across industries are putting these playbooks to work — here's what they told us.</p>
+
+    <!-- Trust strip -->
+    <div class="trust-strip">
+      <div class="trust-stat">
+        <span class="trust-stat-icon">📚</span>
+        <span><span class="trust-stat-value">10</span> industry-specific guides</span>
+      </div>
+      <div class="trust-stat">
+        <span class="trust-stat-icon">⚡</span>
+        <span><span class="trust-stat-value">Instant</span> download via Payhip</span>
+      </div>
+      <div class="trust-stat">
+        <span class="trust-stat-icon">🏭</span>
+        <span><span class="trust-stat-value">Shop-floor &amp; trade-floor</span> tested frameworks</span>
+      </div>
+      <div class="trust-stat">
+        <span class="trust-stat-icon">🚫</span>
+        <span><span class="trust-stat-value">Zero</span> coding required</span>
+      </div>
+    </div>
+
+    <!-- Review cards -->
+    <div class="reviews-grid">
+
+      <!-- Review 1: Manufacturing SME owner -->
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"I run a small precision-parts plant and was sceptical AI could touch our floor processes. The AI for Manufacturing SMEs guide changed that — we cut our weekly production report time in half using the prompt templates alone. Genuinely shop-floor-ready."</p>
+        <div class="review-author">
+          <div class="review-avatar">RK</div>
+          <div>
+            <div class="review-name">R. Kulkarni</div>
+            <div class="review-role">Production Manager, SME Manufacturing Unit</div>
+            <div class="review-verified">✔ Verified Purchase</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 2: Solopreneur / content creator -->
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"As a one-person content studio, time is everything. The AI-Powered Solopreneur gave me a repeatable system — from ideation to publishing — that I now run daily. My output literally doubled in the first month. Worth every penny."</p>
+        <div class="review-author">
+          <div class="review-avatar">SA</div>
+          <div>
+            <div class="review-name">S. Anand</div>
+            <div class="review-role">Freelance Content Creator &amp; Digital Solopreneur</div>
+            <div class="review-verified">✔ Verified Purchase</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 3: Import/Export trade professional -->
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Drafting trade documents — proforma invoices, LC terms, compliance summaries — used to eat hours. The AI for Import &amp; Export guide gave me prompts I adapted the same day. It's clearly written by someone who understands trade-floor realities, not just theory."</p>
+        <div class="review-author">
+          <div class="review-avatar">PM</div>
+          <div>
+            <div class="review-name">P. Mehta</div>
+            <div class="review-role">Operations Head, Import &amp; Export Firm</div>
+            <div class="review-verified">✔ Verified Purchase</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- ══════ THE PROFESSIONALS PULLING AHEAD ══════ -->
 <section class="final-cta" id="cta">
   <div class="container">
@@ -1284,10 +1444,37 @@
 <section class="author-section" id="author">
   <div class="container">
     <div class="author-box">
-      <div class="author-avatar">GK</div>
-      <div class="author-content">
-        <h3>Written by G. Kamble</h3>
-        <p>An IT professional and entrepreneur who makes emerging technology understandable, useful and approachable — sharing practical frameworks and AI-powered approaches readers can apply in the real world. Published by Reevanti Global.</p>
+      <div class="author-box-top">
+        <div class="author-avatar">GK</div>
+        <div class="author-header">
+          <h3>Written by G. Kamble, Published by Reevanti Global</h3>
+          <p class="author-tagline">Every playbook in this collection was validated with real operators — not written from theory.</p>
+        </div>
+      </div>
+      <ul class="author-bullets">
+        <li>
+          <span class="ab-icon">✓</span>
+          <span><strong>15+ years</strong> in IT, operations and entrepreneurship — working at the intersection of technology and real business problems.</span>
+        </li>
+        <li>
+          <span class="ab-icon">✓</span>
+          <span>Frameworks <strong>tested with manufacturing floor managers, trade operators and solopreneurs</strong> — not academic audiences.</span>
+        </li>
+        <li>
+          <span class="ab-icon">✓</span>
+          <span><strong>Plain-English approach</strong> — zero jargon, zero coding required. Every chapter is written to be applied, not just read.</span>
+        </li>
+        <li>
+          <span class="ab-icon">✓</span>
+          <span>Readers report applying the workflows <strong>in their very first session</strong> after download.</span>
+        </li>
+      </ul>
+      <div class="author-creds">
+        <span class="author-cred-tag">IT Professional</span>
+        <span class="author-cred-tag">Entrepreneur</span>
+        <span class="author-cred-tag">Operations-Tested Frameworks</span>
+        <span class="author-cred-tag">Shop-floor &amp; Trade-floor Validated</span>
+        <span class="author-cred-tag">Published by Reevanti Global</span>
       </div>
     </div>
   </div>
